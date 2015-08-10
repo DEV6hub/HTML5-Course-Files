@@ -1,0 +1,16 @@
+{
+    "books" : [
+        {
+            "title" : "JavaScript: The Good Parts",
+            "publisher" : "O'Reilly"
+        },
+        {
+            "title" : "Teach Yourself JavaScript in 21 Days",
+            "publisher" : "SAMS"
+        },
+        {
+            "title" : "jQuery: Novice to Ninja",
+            "publisher" : "sitepoint"
+        }
+    ]
+}

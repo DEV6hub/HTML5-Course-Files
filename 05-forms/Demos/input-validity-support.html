@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Form - Validity Support</title>
+    <script>
+        function check() {
+            var input = document.createElement("input");
+            if (input.validity) {
+                alert("validity is supported");
+            } else {
+                alert("validity is NOT supported");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="check( );">Check Validity</button>
+</body>
+</html>

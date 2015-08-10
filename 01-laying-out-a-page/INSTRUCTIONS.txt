@@ -1,0 +1,8 @@
+In this exercise, you will convert a basic HTML 4 page to an HTML5 page. The
+CSS documents have already been created for you, such that, when you're finished,
+your HTML5 page should render exactly like the HTML 4 page.
+1. Open html5-laying-out-a-page/Exercises/html4-layout.html.
+2. Save the file as html5-layout.html.
+3. Turn the page from an HTML 4 page into an HTML5 page. Make sure to
+change the stylesheet reference to point to style-html5.css.
+

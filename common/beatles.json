@@ -1,0 +1,23 @@
+{
+    "Beatles" : {
+        "bandMembers" : [
+            { "name" : "George", "instrument" : "guitar" },
+            { "name" : "John", "instrument" : "guitar" },
+            { "name" : "Paul", "instrument" : "bass" },
+            { "name" : "Ringo", "instrument" : "drums" }
+        ],
+        "albums" : [
+            { "title" : "Please Please Me", "released" : "63" },
+            { "title" : "Twist and Shout", "released" : "64" },
+            { "title" : "A Hard Day's Night", "released" : "64" },
+            { "title" : "Help!", "released" : "65" },
+            { "title" : "Rubber Soul", "released" : "65" },
+            { "title" : "Revolver", "released" : "66" },
+            { "title" : "Sgt. Pepper's Lonely Hearts Club Band", "released" : "67" },
+            { "title" : "Magical Mystery Tour", "released" : "67" },
+            { "title" : "Yellow Submarine", "released" : "69" },
+            { "title" : "Abbey Road", "released" : "69" },
+            { "title" : "Let It Be", "released" : "70" }
+        ]
+    }
+}

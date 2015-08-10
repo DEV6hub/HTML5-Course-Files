@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Quiz</title>
+    <link href="style-quiz.css" rel="stylesheet" type="text/css">
+    <script src="../../common/dateFormat.js" type="text/javascript"></script>
+    <script>
+        window.addEventListener("load", addLoadEvents, false);
+
+        var prefix = "quiz-";
+        var dateMask = "yyyy-mm-dd H:MM:ss";
+        function addLoadEvents() {
+            document.getElementById('quiz').addEventListener("change", function () {
+                updateMeasures();
+            }, false);
+            var questions = document.getElementById("quiz").getElementsByTagName("input");
+            for (var i = 0; i < questions.length; ++i) {
+                questions[i].addEventListener("change", function () {
+                    var now = new Date();
+                    sessionStorage.setItem(prefix + this.id, this.value);
+                    document.getElementById("dateLastSaved").innerHTML = now.format(dateMask);
+                    sessionStorage.setItem(prefix + "dateLastSaved", now.format(dateMask));
+                }, false);
+            }
+            document.getElementById("save").addEventListener("click", saveAnswers, false);
+            refill();
+        }
+
+        function saveAnswers() {
+            var questions = document.getElementById("quiz").getElementsByTagName("input");
+            var now = new Date();
+            for (var i = 0; i < questions.length; ++i) {
+                localStorage.setItem(prefix + questions[i].id, questions[i].value);
+            }
+            localStorage.setItem(prefix + "dateLastSaved", now.format(dateMask));
+        }
+
+        function refill() {
+            var fillFrom = hasAnswers();
+            if (!fillFrom) return;
+            var now;
+            var confirmed = false;
+            var msg = "It appears you have already started with the quiz. Would you like to continue from where you left off? (" + fillFrom + ")";
+            var questions = document.getElementById("quiz").getElementsByTagName("input");
+            for (var i = 0; i < questions.length; ++i) {
+                if (!confirmed && !confirm(msg)) {
+                    deleteAnswers();
+                    return;
+                }
+                confirmed = true;
+                if (fillFrom == "session") {
+                    questions[i].value = sessionStorage.getItem(prefix + questions[i].id) || "";
+                    //We need the || "" for IE, which returns null if the key is not found.
+                } else { //fillFrom == "local"
+                    questions[i].value = localStorage.getItem(prefix + questions[i].id) || "";
+                    sessionStorage.setItem(prefix + questions[i].id, questions[i].value);
+                }
+            }
+
+            if (fillFrom == "session") {
+                now = sessionStorage.getItem(prefix + "dateLastSaved");
+            } else {
+                now = localStorage.getItem(prefix + "dateLastSaved");
+                sessionStorage.setItem(prefix + "dateLastSaved", now);
+            }
+
+            document.getElementById("dateLastSaved").innerHTML = now;
+            updateMeasures();
+        }
+
+        function hasAnswers() {
+            var numItems = sessionStorage.length;
+            for (var i = 0; i < numItems; ++i) {
+                if (sessionStorage.key(i).substring(0, prefix.length) == prefix) {
+                    return "session";
+                }
+            }
+            numItems = localStorage.length;
+            for (i = 0; i < numItems; ++i) {
+                if (localStorage.key(i).substring(0, prefix.length) == prefix) {
+                    return "local";
+                }
+            }
+            return false;
+        }
+
+        function deleteAnswers() {
+            var numItems = sessionStorage.length;
+            for (var i = numItems - 1; i >= 0; --i) {
+                if (sessionStorage.key(i).substring(0, prefix.length) == prefix) {
+                    sessionStorage.removeItem(sessionStorage.key(i));
+                }
+            }
+            numItems = localStorage.length;
+            for (var i = numItems - 1; i >= 0; --i) {
+                if (localStorage.key(i).substring(0, prefix.length) == prefix) {
+                    localStorage.removeItem(localStorage.key(i));
+                }
+            }
+        }
+
+        function updateMeasures() {
+            var questions = document.getElementsByTagName("input");
+            var numQuestions = questions.length;
+            var numAnswers = 0;
+            var numCorrectAnswers = 0;
+            var answers = ["orange", "23", "99+9/9", "1963-11-22", "http://www.google.com"];
+            for (var i = 0; i < numQuestions; i++) {
+                if ((!questions[i].validity || questions[i].validity.valid) && questions[i].value.length > 0) {
+                    numAnswers++;
+                }
+                if (questions[i].value == answers[i]) {
+                    numCorrectAnswers++;
+                }
+            }
+            var progress = Math.round(numAnswers / numQuestions * 100);
+            var score = Math.round(numCorrectAnswers / numQuestions * 100);
+            document.getElementById("quiz-progress").value = progress;
+            document.getElementById("quiz-progress").getElementsByTagName("span")[0].innerHTML = progress;
+            document.getElementById("quiz-success").value = score;
+            document.getElementById("quiz-success").getElementsByTagName("span")[0].innerHTML = score;
+        }
+    </script>
+</head>
+<body>
+    <h1>Quiz</h1>
+
+    <form method="post" action="../../html5-storage/Solutions/process.xyz" id="quiz" autocomplete="off">
+        <button type="button" id="save">Save My Answers for Later</button>
+        <ol>
+            <li>
+                <label for="q1">What color do you get when you mix red and yellow?</label>
+                <input type="color" name="q1" id="q1" required placeholder="Enter Color">
+            </li>
+            <li>
+                <label for="q2">What is the first primary number greater than 20?</label>
+                <input type="number" name="q2" id="q2" min="20" step="1" required placeholder="Enter Number">
+            </li>
+            <li>
+                <label for="q3">Using exactly four 9s and no other digits, write an equation which evaluates to 100. You
+                    may use addition (+), subtraction (-), multiplication (*), and division (/). Do not include
+                    spaces.</label>
+                <input type="text" name="q3" id="q3" required placeholder="Enter Equation" pattern="[9\+\-\*/]{4,7}">
+            </li>
+            <li>
+                <label for="q4">What date was John F. Kennedy assasinated?</label>
+                <input type="date" name="q4" id="q4" required placeholder="Enter Date">
+            </li>
+            <li>
+                <label for="q5">What is the world's most popular search engine?</label>
+                <input type="url" name="q5" id="q5" required placeholder="Enter URL" list="q5list">
+                <datalist id="q5list">
+                    <option value="http://www.yahoo.com">
+                    <option value="http://www.google.com">
+                    <option value="http://www.excite.com">
+                    <option value="http://www.dogpile.com">
+                </datalist>
+            </li>
+        </ol>
+        <strong>Progress:</strong>
+        <progress id="quiz-progress" min="0" max="100" title="Shows percentage of valid answers"><span>0</span>%
+        </progress>
+        <strong>Success:</strong>
+        <meter id="quiz-success" min="0" max="100" title="Shows percentage of correct answers"><span>0</span>%</meter>
+    </form>
+    <hr>
+    <small>Answers last saved:
+        <output id="dateLastSaved">not saved</output>
+    </small>
+</body>
+</html>

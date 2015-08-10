@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>CSS3 3D Transforms - Perspective</title>
+
+<style>
+	div {
+		width: 350px;
+		padding: 20px;
+		font-size: 1.5em;
+		text-align:center;
+	}
+	
+	#parentBox {
+		border:dashed thin black;
+		background-color: white;
+		/* withough perspective, 3d is meaningless
+		-webkit-perspective: 500px; */
+	}
+	
+	#childBox {
+		border:solid thick blue;
+		background-color:lightblue;
+		margin-top: 50px;
+		-webkit-transform: rotateX(15deg) rotateY(15deg) rotateZ(15deg);
+	}
+</style>
+
+<script>
+	window.addEventListener('load', function () {
+		document.getElementById('perspective').addEventListener('change', updateParentPerspective);	
+		document.getElementById('reset').addEventListener('change', doReset);	
+	});
+	
+	function updateParentPerspective() {
+		var targetValue = document.getElementById('perspective').value;
+		document.getElementById('perspectiveOD').innerHTML = targetValue;
+		document.getElementById(event.target.id+'OD').innerHTML = targetValue;
+		document.getElementById('parentBox').style['webkitPerspective']=targetValue+'px';
+	}
+	function doReset() {
+		document.getElementById('parentBox').style['webkitPerspective']='';
+	}
+</script>
+</head>
+<body>
+
+<div id="parentBox">
+  Perspective
+  <form>
+    100 <input id="perspective" type="range" min="100" max="900" value="500" step="25"> 900<br>
+    <output id="perspectiveOD">[not applied]</output><br>
+    <button id="reset">reset</button>
+  </form>
+  <div id="childBox">
+    rotateX(<output id="rotateXO">15</output>deg);<br>
+    rotateY(<output id="rotateYO">15</output>deg);<br>
+    rotateZ(<output id="rotateZO">15</output>deg);
+  </div>
+</div>
+
+
+</body>
+</html>

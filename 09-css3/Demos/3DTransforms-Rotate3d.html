@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>CSS3 3D Transforms - Rotate3D</title>
+
+<link rel="stylesheet" type="text/css" href="3DTransformBaseStyles.css">
+<style>
+#multiplierXO { background-color: orange; }
+#multiplierYO { background-color: yellow; }
+#multiplierZO { background-color: lightgray; }
+#rotateDegO { background-color: darkgray; }
+
+#childBox {
+	-webkit-transform: rotate3d(0, 0, 0, 0deg);
+}
+</style>
+<script>
+window.addEventListener('load', function () {
+	document.getElementById('resetBtn').addEventListener('click', doReset);
+	document.getElementById('perspective').addEventListener('change', updateParentPerspective);	
+	document.getElementById('multiplierX').addEventListener('change', updateChildRotation);
+	document.getElementById('multiplierY').addEventListener('change', updateChildRotation);
+	document.getElementById('multiplierZ').addEventListener('change', updateChildRotation);
+	document.getElementById('rotateDeg').addEventListener('change', updateChildRotation);
+	document.getElementById('backface').addEventListener('change', updateChildBackface);
+
+	document.getElementById('transformOriginX').addEventListener('change', updateChildTransformOrigin);
+	document.getElementById('transformOriginY').addEventListener('change', updateChildTransformOrigin);
+});
+
+function updateParentPerspective(event) {
+	var targetValue = document.getElementById(event.target.id).value;
+	document.getElementById(event.target.id+'OT').innerHTML = targetValue;
+	document.getElementById(event.target.id+'OD').innerHTML = targetValue;
+	document.getElementById('parentBox').style['webkitPerspective']=targetValue+'px';
+}
+
+function updateChildTransformOrigin(event) {
+
+	var xOutputT = document.getElementById('transformOriginXOT');
+	var yOutputT = document.getElementById('transformOriginYOT');
+	var xValue = document.getElementById('transformOriginX').value+'%';
+	var yValue = document.getElementById('transformOriginY').value+'%';
+	
+	xOutputT.innerHTML = xValue;
+	yOutputT.innerHTML = yValue;
+	
+	document.getElementById('childBox').style['webkitTransformOriginX'] = xValue;
+	document.getElementById('childBox').style['webkitTransformOriginY'] = yValue;
+}
+
+
+function updateChildRotation(event) {
+	if (event.target.type == 'range') {
+		var xOutput = document.getElementById('multiplierXO');
+		var xOutputT = document.getElementById('multiplierXOT');
+		
+		var yOutput = document.getElementById('multiplierYO');
+		var yOutputT = document.getElementById('multiplierYOT');
+		
+		var zOutput = document.getElementById('multiplierZO');
+		var zOutputT = document.getElementById('multiplierZOT');
+		
+		var degOutput = document.getElementById('rotateDegO');
+		var degOutputT = document.getElementById('rotateDegOT');
+		
+		var xValue = document.getElementById('multiplierX').value / 10;
+		var yValue = document.getElementById('multiplierY').value / 10;
+		var zValue = document.getElementById('multiplierZ').value / 10;
+		var degValue = document.getElementById('rotateDeg').value;
+
+		xOutput.innerHTML = xValue;
+		xOutputT.innerHTML = xValue;
+		yOutput.innerHTML = yValue;
+		yOutputT.innerHTML = yValue;
+		zOutput.innerHTML = zValue;
+		zOutputT.innerHTML = zValue;
+		degOutput.innerHTML = degValue;
+		degOutputT.innerHTML = degValue;
+		
+		document.getElementById('childBox').style['webkitTransform'] = 'rotate3d(' + xValue + ', ' + yValue + ', ' + zValue + ', ' + degValue + 'deg)';
+	} 
+}
+
+function updateChildBackface(event) {
+	var visibilityPropertyValue = document.getElementById('backface').checked ? 'visible' : 'hidden';		
+	document.getElementById('backfaceOT').innerHTML = visibilityPropertyValue;
+	document.getElementById('childBox').style['webkitBackfaceVisibility'] = visibilityPropertyValue;
+	
+}
+
+function doReset() {
+	document.getElementById('perspective').value = 500;
+	
+	document.getElementById('transformOriginX').value = 50;
+	document.getElementById('transformOriginY').value = 50;
+	
+	document.getElementById('multiplierX').value = 10;
+	document.getElementById('multiplierY').value = 10;
+	document.getElementById('multiplierZ').value = 10;
+	document.getElementById('backface').value = 1;
+	document.getElementById('preserve3d').value = 1;
+}
+
+</script>
+</head>
+<body>
+
+
+<form>
+  <table border="1" cellspacing="0" cellpadding="5">
+  	<tr>
+    	<th>property</th>
+    	<th>min</th>
+    	<th>change it here</th>
+    	<th>max</th>
+    	<th>current</th>
+    </tr>
+    <tr>
+    	<td><label for="perspective">perspective</label></td>
+      <td class="min">100</td>
+      <td><input id="perspective" type="range" min="100" max="900" value="500" step="25"></td>
+      <td class="max">900</td>
+      <td class="currVal"><output id="perspectiveOT">500</output></td>
+    </tr>
+
+
+    <tr>
+    	<td><label for="transformOriginX">transform origin X</label></td>
+      <td class="min">0</td>
+      <td><input id="transformOriginX" type="range" min="0" max="100" value="50" step="10"></td>
+      <td class="max">100</td>
+      <td class="currVal"><output id="transformOriginXOT">50%</output></td>
+    </tr>
+    <tr>
+    	<td><label for="transformOriginY">transform origin Y</label></td>
+      <td class="min">0</td>
+      <td><input id="transformOriginY" type="range" min="0" max="100" value="50" step="10"></td>
+      <td class="max">100</td>
+      <td class="currVal"><output id="transformOriginYOT">50%</output></td>
+    </tr>
+
+
+    <tr>
+    	<td><label for="multiplierX">multiplierX</label></td>
+      <td class="min">0</td>
+      <td><input id="multiplierX" type="range" min="0" max="10" value="0" step="1"></td>
+      <td class="max">1</td>
+      <td class="currVal" bgcolor="orange"><output id="multiplierXOT">0</output></td>
+    </tr>
+    <tr>
+    	<td><label for="multiplierY">multiplierY</label></td>
+      <td class="min">0</td>
+      <td><input id="multiplierY" type="range" min="0" max="10" value="0" step="1"></td>
+      <td class="max">1</td>
+      <td class="currVal" bgcolor="yellow"><output id="multiplierYOT">0</output></td>
+    </tr>
+    <tr>
+    	<td><label for="multiplierZ">multiplierZ</label></td>
+      <td class="min">0</td>
+      <td><input id="multiplierZ" type="range" min="0" max="10" value="0" step="1"></td>
+      <td class="max">1</td>
+      <td class="currVal" bgcolor="lightgray"><output id="multiplierZOT">0</output></td>
+    </tr>
+    <tr>
+    	<td><label for="rotateDeg">rotateDeg</label></td>
+      <td class="min">-100</td>
+      <td><input id="rotateDeg" type="range" min="-100" max="100" value="0" step="5"></td>
+      <td class="max">100</td>
+      <td class="currVal" bgcolor="darkgray"><output id="rotateDegOT">0</output></td>
+    </tr>
+    
+    
+		<tr>
+      <td><label for="backface">backface visible</label></td>
+      <td colspan="3"><input id="backface" type="checkbox" value="1" checked></td>
+      <td class="currVal"><output id="backfaceOT">visible</output></td>
+    </tr>
+
+		<tr>
+    	<td colspan="4"></td>
+      <td><button id="resetBtn">Reset</button></td>
+		</tr>
+  </table>
+</form>
+
+
+<div id="floater">
+  <div id="parentBox">
+		Perspective: <output id="perspectiveOD">500</output>
+    <div id="childBox">
+      rotate3d(<output id="multiplierXO">0</output>, <output id="multiplierYO">0</output>, <output id="multiplierZO">0</output>, <output id="rotateDegO">0</output>deg);
+    </div>
+ </div>
+</div>
+
+</body>
+</html>

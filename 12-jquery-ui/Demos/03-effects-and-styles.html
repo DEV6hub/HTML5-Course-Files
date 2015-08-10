@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>jQuery UI &mdash; Effects</title>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+    <script src="../../common/jquery-ui-1.8.20.custom.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../common/css/start/jquery-ui-1.8.20.custom.css"/>
+
+    <script>
+        var APP = {
+            loginDialog:null,
+            openDialog:null
+        };
+
+        $(document).ready(function () {
+
+            APP.loginDialog = $('#loginDialog');
+
+            // Configure the dialog:
+            $(function () {
+                APP.loginDialog.dialog({
+                    autoOpen:false,
+
+                    // Block 1: Try these below!
+                    // blind
+                    // bounce
+                    // clip
+                    // drop
+                    // explode
+                    // fade
+                    // fold
+                    // highlight
+                    // puff
+                    // pulsate
+                    // scale
+                    // shake
+                    // size
+                    // slide
+                    // transfer
+
+                    hide:'drop',
+                    //show : 'blind'
+
+                    // Block 2: Complex parameters
+                    show:{
+                        effect:'fold',
+                        duration:1000
+                    }
+                });
+            });
+
+            $('#openDialogBtn').on('click',
+                    function () {
+                        APP.openDialog();
+                    }
+            );
+
+            $('#loginBtn').on('click', function () {
+                APP.loginDialog.dialog('close');
+            });
+        });
+
+        // Open the dialog:
+        APP.openDialog = function () {
+            APP.loginDialog.dialog('open');
+        };
+
+    </script>
+    <style>
+        div#loginDialog {
+            font-size: 1em;
+        }
+
+        div#loginDialog p {
+            font-size: 0.9em;
+            margin: 0;
+            padding: 0;
+        }
+
+            /* Override */
+        .ui-dialog {
+            font-size: 0.8em;
+        }
+
+    </style>
+</head>
+<body>
+<h1>jQuery UI &mdash; Effects</h1>
+Some simple effects on a dialog box.
+<br/>
+<br/>
+<button id="openDialogBtn">Open dialog box</button>
+
+<div id="loginDialog">
+    <h3>Please enter your credentials</h3>
+
+    <p>User Name:</p>
+    <input id="username" name="username" type="text" value="fred" class="loginInput">
+    <br/><br/>
+
+    <p>Password:</p>
+    <input id="password" name="password" type="password" value="123" class="loginInput">
+
+    <br/><br/>
+    <button id="loginBtn">
+        <!-- Block 3: Style the button according to the theme -->
+        <!--class="ui-state-default ui-corner-all"-->
+        Log In
+    </button>
+</div>
+
+</body>
+</html>

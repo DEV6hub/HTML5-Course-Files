@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>JavaScript &mdash; JSON</title>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+    <script>
+
+        // *** Run this through localhost ***
+        // For example: http://localhost/HTML5/ClassFiles/11-jquery-intro/Demos/06-json.html
+
+        var APP = {
+            booksTable:{}
+        };
+
+        $(document).ready(function () {
+            $('#getButton').click(APP.getData);
+
+            APP.booksTable = $('#booksTable');
+
+        });
+
+        APP.getData = function () {
+            $.getJSON(
+                '../../common/data.json',
+                APP.onDataReceived
+            );
+        };
+
+        APP.onDataReceived = function (data) {
+
+            console.log(data);
+
+            // Block 1:
+//			var books = $(data.dataPacket.books);
+//
+//			var newTable = $('<table id="booksTable"></table>');
+//
+//			newTable.append('<tr><th>Title</th><th>Author</th><th>Price</th></tr>');
+//
+//			books.each(function () {
+//				console.log(this);
+//				var book = this;
+//				newTable.append('<tr><td>' + book.title + '</td><td>' + book.author + '</td><td>' + book.price + '</td></tr>');
+//			});
+//
+//			APP.booksTable.replaceWith(newTable);
+        };
+    </script>
+
+    <style>
+        #booksTable {
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        #booksTable th {
+            border: 1px solid #000;
+            padding: 4px;
+        }
+
+        #booksTable td {
+            border: 1px solid #000;
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript &mdash; JSON</h1>
+
+    For best results, run this through a Web Server
+    <br/>
+    <br/>
+
+    <button id="getButton">Get Data</button>
+    <br/>
+    <br/>
+
+    <table id="booksTable">
+        <tr>
+            <td>Search results will appear here...</td>
+        </tr>
+    </table>
+</body>
+</html>

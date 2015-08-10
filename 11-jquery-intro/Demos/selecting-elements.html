@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>jQuery &mdash; DOM Traversal</title>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+//            allButtons();
+//            allChildren();
+//            evenChildren();
+//            oddChildren();
+//            parents();
+//            find();
+        });
+
+        function allChildren(){
+            console.log('allChildren');
+            var elements = $('#outerDiv').children();
+            dump(elements);
+        }
+        function evenChildren(){
+            console.log('evenChildren');
+            var elements = $('#outerDiv').children("p").filter(":even");
+            dump(elements);
+        }
+        function oddChildren(){
+            console.log('oddChildren');
+            var elements = $('#outerDiv').children("p");
+            elements = $(elements).filter(":odd");
+            dump(elements);
+        }
+        function allButtons(){
+            console.log('allButtons');
+            var elements = $(':button');
+            dump(elements);
+        }
+
+        function parents(){
+            console.log('parents');
+            var elements = $('#button1').parents();
+            console.log(elements);
+            dump(elements);
+        }
+
+        function find() {
+            console.log('find');
+            var elements = $('body').find('p.random');
+            dump(elements);
+        }
+
+        function dump(elements){
+            $(elements).each(function(){
+                console.log(this.outerHTML);
+            });
+            console.log("");
+        }
+    </script>
+    <style>
+        div#outerDiv {
+            padding: 20px;
+            margin: 10px auto;
+            background-color: #def;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<h1>JavaScript &mdash; Selectors</h1>
+
+<div id="outerDiv">
+    <p id="p1">this is paragraph 1</p>
+    <button id="button1">I'm button 1</button>
+    <br/>
+    <p id="p2" class="random">this is paragraph 2</p>
+    <button id="button2">I'm button 2</button>
+    <br/>
+    <p id="p3">this is paragraph 3</p>
+    <button id="button3">I'm button 3</button>
+    <br/>
+    <p id="p4">this is paragraph 4</p>
+    <button id="button4">I'm button 4</button>
+    <br/>
+    <p id="p5" class="random">this is paragraph 5</p>
+    <button id="button5">I'm button 5</button>
+    <br/>
+    <p id="p6" class="random">this is paragraph 6</p>
+    <button id="button6">I'm button 6</button>
+    <br/>
+</div>
+
+
+</body>
+</html>

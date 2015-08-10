@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Form Field Attribute - pattern</title>
+    <style>
+        input:invalid {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="">
+        <label for="telephone">Telephone: </label>
+        <input type="tel" name="telephone" id="telephone" pattern="^\(?([2-9]\d\d)\)?[\-\. ]?([2-9]\d\d)[\-\. ]?(\d{4})$">
+        <input type="submit">
+    </form>
+</body>
+</html>

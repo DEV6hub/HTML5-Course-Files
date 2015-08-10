@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>jQuery &mdash; DOM Manipulation</title>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("body").prepend("<h1>This is an H1 element</h1>");
+            $("h2").before("<hr>");
+            $("div[id]").attr("style", "text-decoration:underline;");
+
+            $('h2').each(function(index, h2element){
+                $(h2element).html($(h2element).html() + " " + (index+1));
+                $(this).attr("style", "color:red");
+            });
+
+            $('h2:nth-of-type(2)').replaceWith('<h3>H3 inserted by jQuery</h3>');
+            $('<h3>H3 inserted by jQuery</h3>').replaceAll('h2:nth-of-type(2)');
+
+            $('div').wrapInner('<p>');
+        });
+    </script>
+</head>
+<body>
+
+<h2>Sample H2</h2>
+<div id="d0">this is a div</div>
+<div>this should not be underlined</div>
+<div>this should not be underlined</div>
+<div>this should not be underlined</div>
+<div>this should not be underlined</div>
+<div>this should not be underlined</div>
+<div>this should not be underlined</div>
+
+<h2>Sample H2</h2>
+<div id="d1">this is a div</div>
+<div>this should not be underlined</div>
+<div>this should not be underlined</div>
+
+<h2>Sample H2</h2>
+<div id="d2">this is a div</div>
+<div>this should not be underlined</div>
+<div>this should not be underlined</div>
+
+<h2>Sample H2</h2>
+<div id="d3">this is a div</div>
+<div>this should not be underlined</div>
+<div>this should not be underlined</div>
+
+</body>
+</html>

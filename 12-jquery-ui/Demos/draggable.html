@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <link type="text/css"
+            rel="stylesheet"
+            href="../../common/css/ui-lightness/jquery-ui-1.8.23.custom.css"
+            />
+
+    <script type="text/javascript"
+            src="../../common/jquery-1.7.2.min.js"></script>
+
+    <script type="text/javascript"
+            src="../../common/jquery-ui-1.8.23.custom.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#dragThis").draggable();
+            $("#dropHere").droppable({
+                drop:function (event, ui) {
+                    $(this).find("p").html("Dropped!");
+                }
+            });
+
+        });
+    </script>
+    <style>
+        div {
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        #dragThis {
+            width: 100px;
+            height: 100px;
+            cursor: move;
+        }
+
+        #dropHere {
+            width: 250px;
+            height: 250px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div id="dragThis">
+    <p>Drag this around</p>
+</div>
+
+<div id="dropHere">
+    <p>Drop it here</p>
+</div>
+
+</body>
+</html>
+
+

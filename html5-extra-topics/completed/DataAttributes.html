@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Data Attributes</title>
+    <script src="js/jquery-1.6.2.min.js"></script>
+
+    <script>
+        var app = {};
+
+        $(document).ready(function () {
+            $('#getDataBrandButton').click(function () {
+                app.getDataBrand();
+            })
+            $('#getDataModelButton').click(function () {
+                app.getDataModel();
+            })
+        });
+
+        app.getDataBrand = function () {
+            var dataDiv = document.getElementById('dataDiv')
+            alert(dataDiv.dataset.brand);
+        };
+        app.getDataModel = function () {
+            var dataDiv = document.getElementById('dataDiv')
+            alert(dataDiv.dataset.model);
+        };
+    </script>
+</head>
+
+<body>
+
+    <div id="dataDiv" data-brand="General Motors" data-model="Saturn Vue">
+        Oliver is very happy with his Saturn Vue, because he saves on gas.
+    </div>
+
+    <input type="button" value="Get Brand" id="getDataBrandButton"/><br/>
+    <input type="button" value="Get Model" id="getDataModelButton"/><br/>
+
+</body>
+</html>

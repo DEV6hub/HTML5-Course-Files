@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <link type="text/css"
+            rel="stylesheet"
+            href="../../common/css/ui-lightness/jquery-ui-1.8.23.custom.css"
+            />
+
+    <script type="text/javascript"
+            src="../../common/jquery-1.7.2.min.js"></script>
+
+    <script type="text/javascript"
+            src="../../common/jquery-ui-1.8.23.custom.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#accordion").accordion();
+
+            var availableTags = [
+                "Option 1",
+                "Option Two",
+                "Third Option",
+                "Option Three A",
+                "Option Four"
+            ];
+            $( "#tags" ).autocomplete({
+                source: availableTags
+            });
+
+
+            $( "#dialog" ).dialog({
+                autoOpen: false,
+                title: 'Basic Dialog',
+                modal: true,
+                buttons: [
+                    {text: "Yes", click: function() { $(this).dialog("close"); }},
+                    {text: "No", click: function() { $(this).dialog("close"); }},
+                ]
+            });
+
+            //$( "#dialog" ).dialog('open');
+
+            //$( "#tabs" ).tabs();
+            $( "#btnjqui" ).button();
+
+        });
+    </script>
+</head>
+<body>
+
+
+<button id="btnReg">A button element</button>
+<br>
+<br>
+<button id="btnjqui">A button element</button>
+
+
+<!--
+
+<div id="accordion">
+    <h3><a href="#">Section heading</a></h3>
+    <div>This is the content for section one</div>
+    <h3><a href="#">Section heading</a></h3>
+    <div>This is the content for section two</div>
+</div>
+
+<input id="tags" class="ui-widget">
+
+
+
+<div id="dialog" title="Basic Dialog">this is the body</div>
+
+
+
+<div id="tabs">
+    <ul>
+        <li><a href="#tab1">Tab 1 title</a></li>
+        <li><a href="#tab2">Tab 2 title</a></li>
+        <li><a href="#tab3">Tab 3 title</a></li>
+    </ul>
+    <div id="tab1">Content for tab 1</div>
+    <div id="tab2">Content for tab 2</div>
+    <div id="tab3">Content for tab 3</div>
+</div>
+-->
+</body>
+</html>
+
+

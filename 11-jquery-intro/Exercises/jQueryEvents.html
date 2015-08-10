@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery &mdash; Event Delegation</title>
+    <style>
+        #d1 {
+            float: left;
+            margin-right: 50px;
+        }
+    </style>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var count1 = 1, count2 = 2;
+
+            var addNewRowToTB1 = function () {
+                // HTML snippet to append to the table
+                // ("<tr><td>" + (++count1) + "</td><td><button>This new button does nothing</button></td></tr>")
+
+            }
+
+            var addNewRowToTB2 = function () {
+                // HTML snippet to append to the table
+                // ("<tr><td>" + (++count2) + "</td><td><button>Add a new row</button></td></tr>")
+
+            }
+        });
+    </script>
+</head>
+<body>
+
+<div id="d1">
+
+    <table>
+        <tbody id="tb1">
+        <tr>
+            <td>1</td>
+            <td>
+                <button>Add a new row</button>
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2">New rows SHOULD NOT trigger the click handler</td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+
+<div>
+
+    <table>
+        <tbody id="tb2">
+        <tr>
+            <td>1</td>
+            <td>
+                <button>Add a new row</button>
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2">New rows SHOULD trigger the click handler</td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>jQuery &mdash; Effects</title>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btnShow').click(function(){
+                $('#animateThis').show();
+            });
+            $('#btnHide').click(function(){
+                $('#animateThis').hide();
+            });
+            $('#btnToggle').click(function(){
+                $('#animateThis').toggle();
+            });
+
+            $('#btnSlideUp').click(function(){
+                $('#animateThis').slideUp();
+            });
+            $('#btnSlideDown').click(function(){
+                $('#animateThis').slideDown();
+            });
+            $('#btnSlideToggle').click(function(){
+                $('#animateThis').slideToggle();
+            });
+
+            $('#btnFadeIn').click(function(){
+                $('#animateThis').fadeIn();
+            });
+            $('#btnFadeOut').click(function(){
+                $('#animateThis').fadeOut();
+            });
+            $('#btnFadeToggle').click(function(){
+                $('#animateThis').fadeToggle();
+            });
+            $('#btnFadeTo0').click(function(){
+                $('#animateThis').fadeTo(1000, 0);
+            });
+            $('#btnFadeTo1').click(function(){
+                $('#animateThis').fadeTo(1000, 1);
+            });
+            $('#btnFadeToHalf').click(function(){
+                $('#animateThis').fadeTo(1000, .5);
+            });
+        });
+    </script>
+    <style>
+        #animateThis {
+            background-color: #dddddd;
+            width: 200px;
+            height: 100px;
+            margin: auto;
+            padding-top: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>jQuery &mdash; Effects</h1>
+
+<div id="buttons">
+    <button id="btnShow">Show</button>
+    <button id="btnHide">Hide</button>
+    <button id="btnToggle">Toggle</button>
+    <br />
+    <button id="btnSlideUp">Slide Up</button>
+    <button id="btnSlideDown">Slide Down</button>
+    <button id="btnSlideToggle">Slide Toggle</button>
+    <br />
+    <button id="btnFadeIn">Fade In</button>
+    <button id="btnFadeOut">Fade Out</button>
+    <button id="btnFadeToggle">Fade Toggle</button>
+    <button id="btnFadeTo0">Fade To 0</button>
+    <button id="btnFadeTo1">Fade To 1</button>
+    <button id="btnFadeToHalf">Fade To .5</button>
+</div>
+
+
+<div id="animateThis">animate this element</div>
+
+
+</body>
+</html>

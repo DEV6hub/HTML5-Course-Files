@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Effects - Animate demo</title>
+    <link type="text/css"
+            rel="stylesheet"
+            href="../../common/css/ui-lightness/jquery-ui-1.8.23.custom.css"
+            />
+
+    <script type="text/javascript"
+            src="../../common/jquery-1.7.2.min.js"></script>
+
+    <script type="text/javascript"
+            src="../../common/jquery-ui-1.8.23.custom.min.js"></script>
+    <style>
+        #effected {
+            border: 2px solid black;
+            margin: 10px;
+            padding: 10px;
+            width: 250px;
+            background-color: #eeeeee;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            //Blind, Bounce, Clip, Drop, Explode, Fold, Fade, Highlight, Puff, Pulsate, Scale, Shake, Size, Slide, Transfer
+
+            $("#btnEffect").on('click', function () {
+                $("#effected").effect('puff', {}, 350);
+            });
+
+            $("#btnHide").on('click', function () {
+                $("#effected").hide('slide', {}, 450, function(){alert('... and then it was gone')} );
+            });
+
+            $("#btnShow").on('click', function () {
+                $("#effected").show('slide', {}, 175, function(){alert('... but then it came back')} );
+            });
+
+            $("#btnToggle").on('click', function () {
+                $("#effected").toggle('fold', {}, 1000);
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+
+<button id="btnEffect">Apply Effect</button>
+<button id="btnHide">Hide Animated</button>
+<button id="btnShow">Show Animated</button>
+<button id="btnToggle">Toggle Animated</button>
+
+<div id="effected">
+    <p>Check this out</p>
+</div>
+
+</body>
+</html>

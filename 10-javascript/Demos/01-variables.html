@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>JavaScript Variables</title>
+    <script>
+
+        // null
+        var nothing = null;
+
+        // Boolean
+        var isSunny = true;
+
+        // String
+        var greeting = 'hello';
+
+        // Number
+        var age = 25.2;
+
+        // Date
+        var now = new Date();
+
+        var show = function (value) {
+            alert(value);
+            // console.log(value);
+        };
+    </script>
+</head>
+<body>
+    <h1>JavaScript Variables</h1>
+    Untyped but not typeless.
+    <br/>
+    <br/>
+
+    <button onclick="show(nothing)">Show null: nothing</button>
+    <br/>
+    <button onclick="show(isSunny)">Show Boolean: isSunny</button>
+    <br/>
+    <button onclick="show(greeting)">Show String: greeting</button>
+    <br/>
+    <button onclick="show(age)">Show Number: age</button>
+    <br/>
+    <button onclick="show(now)">Show Date: now</button>
+    <br/>
+    <button onclick="show(this)">Show "this" Object</button>
+    <br/>
+    <button onclick="show(window)">Show "window" (GLOBAL) Object</button>
+    <br/>
+
+</body>
+</html>

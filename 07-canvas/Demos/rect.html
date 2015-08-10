@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangles</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script>
+        function drawPath() {
+            var canvas = document.getElementById("my-canvas");
+            if (canvas.getContext) {
+                context = canvas.getContext("2d");
+                context.strokeStyle = "red";
+                context.fillStyle = "blue";
+                context.fillRect(80, 80, 40, 40);
+                context.strokeRect(60, 60, 80, 80);
+                context.clearRect(90, 90, 20, 20);
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="my-canvas" height="200" width="200">Your browser doesn't support canvas.</canvas>
+    <button onclick="drawPath();">Draw</button>
+</body>
+</html>

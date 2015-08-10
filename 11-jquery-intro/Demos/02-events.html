@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>JavaScript &mdash; Events</title>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            var theButton;
+
+            $('#controlButton').click(function () {
+
+                theButton = $('#theButton');
+                theButton.html('Now I DO :)');
+
+// Block 1:
+				theButton.unbind();
+				theButton.bind('click', function() {
+					alert('Click handled with bind()');
+				});
+
+// Block 2 (re-comment block 1):
+//				theButton.unbind();
+//                theButton.click(function() {
+//					alert('Click handled with click()');
+//				});
+
+// Block 3 (re-comment block 2):
+//				theButton.off();
+//				theButton.on('click', function() {
+//					alert('Click handled with on()');
+//				});
+
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <h1>JavaScript &mdash; Events</h1>
+
+    <button id="theButton">I do not have a click handler :(</button>
+    <br/>
+
+    <button id="controlButton">OK, so add one!</button>
+    <br/>
+
+</body>
+</html>

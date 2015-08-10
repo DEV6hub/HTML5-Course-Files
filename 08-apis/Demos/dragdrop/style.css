@@ -1,0 +1,27 @@
+#dropzone {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+}
+
+#drag {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    float: left;
+    cursor: move;
+}
+
+#output {
+    background-color: white;
+    float: left;
+    width: 200px;
+    margin-right: 25px;
+}
+
+time {
+    text-decoration: underline;
+}

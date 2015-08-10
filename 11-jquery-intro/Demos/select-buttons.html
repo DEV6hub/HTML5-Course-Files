@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>jQuery &mdash; Selecting Buttons</title>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+    <style>
+        .bg1 {
+            background-color: #aaaaaa;
+        }
+        .bg2 {
+            background-color: #eeeeee;
+        }
+    </style>
+
+    <script>
+        change1 = function () {
+            $("button, input[type='button']").attr('class', 'bg1');
+        };
+        change2 = function () {
+            $(":button").attr('class', 'bg2');
+        };
+        reset = function () {
+            // one is faster to execute, the other is faster to write
+            // but both options will work
+
+            //$(":button").attr('class', '');
+            //$("button, input[type='button']").attr('class', '');
+        };
+    </script>
+</head>
+<body>
+Select and modify the elements below:
+<br/>
+<input id="rb1" type="radio" onclick="change1()" name="rb" />
+<label for="rb1">using <strong>CSS selector</strong> $("button, input[type='button']")</label>
+<br/>
+<input id="rb2" type="radio" onclick="change2()" name="rb" />
+<label for="rb2">using <strong>jQuery extension</strong> $(":button")</label>
+<br/>
+<input id="rb3" type="radio" onclick="reset()" name="rb" />
+<label for="rb3">reset</label>
+<br/>
+<br/>
+
+
+
+<button>&lt;button&gt;</button>
+<br/>
+<input type="button" value="&lt;input type='button'&gt;"/>
+
+</body>
+</html>

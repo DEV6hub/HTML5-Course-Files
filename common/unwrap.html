@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div { border: 2px solid blue; }
+        article { border: 2px solid #adff2f; }
+        section { border: 2px solid red; }
+        p { background:yellow; margin:4px; }
+        #unl {text-decoration: underline;}
+        #bld {font-weight: 700;}
+
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<div id="unl">
+    <p>goodbye</p>
+    <p>cruel</p>
+    <p>world</p>
+</div>
+<button id="twuw">wrap/unwrap</button>
+<button id="emp">empty</button>
+<button id="repl">replaceWith</button>
+
+<script>
+    $("#twuw").toggle(function(){
+        $("p").wrap("<section></section>");
+    }, function(){
+        $("p").unwrap();
+    });
+    $("#emp").click(function(){
+        $("p").empty();
+    });
+    $("#repl").click(function(){
+        $("p:nth-of-type(2)").replaceWith("<p>This is new</p>");
+    });
+
+
+</script>
+
+</body>
+</html>

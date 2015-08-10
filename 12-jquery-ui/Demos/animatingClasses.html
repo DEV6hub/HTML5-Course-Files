@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Effects - Animating Classes</title>
+    <link type="text/css"
+            rel="stylesheet"
+            href="../../common/css/ui-lightness/jquery-ui-1.8.23.custom.css"
+            />
+
+    <script type="text/javascript"
+            src="../../common/jquery-1.7.2.min.js"></script>
+
+    <script type="text/javascript"
+            src="../../common/jquery-ui-1.8.23.custom.min.js"></script>
+    <style>
+        #effected {
+            border: 2px solid black;
+            margin: 10px;
+        }
+        .bigMargin {
+            padding-left: 100px;
+        }
+        .wideDark {
+            width: 500px;
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        .narrowLight {
+            width: 100px;
+            background-color: #ffffff;
+            color: #000000;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            //Blind, Bounce, Clip, Drop, Explode, Fold, Fade, Highlight, Puff, Pulsate, Scale, Shake, Size, Slide, Transfer
+            $("#btnAdd").on('click', function () {
+                $("#effected").addClass('bigMargin', 250);
+            });
+            $("#btnRemove").on('click', function () {
+                $("#effected").removeClass('bigMargin', 500);
+            });
+            $("#btnToggle").on('click', function () {
+                $("#effected").toggleClass('bigMargin', 750);
+            });
+            $("#btnSwitch1").on('click', function () {
+                $("#effected").switchClass('wideDark','narrowLight', 1500);
+            });
+            $("#btnSwitch2").on('click', function () {
+                $("#effected").switchClass('narrowLight','wideDark', 1500);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<button id="btnAdd">Add Class</button>
+<button id="btnRemove">Remove Class</button>
+<button id="btnToggle">Toggle Class</button>
+
+<br />
+
+<button id="btnSwitch1">Switch Class</button>
+wideDark --> <-- narrowLight
+<button id="btnSwitch2">Switch Class</button>
+
+<div id="effected" class="wideDark">
+    <p>Check this out</p>
+</div>
+
+</body>
+</html>

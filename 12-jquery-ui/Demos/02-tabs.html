@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>jQuery UI &mdash; Tabs</title>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+    <script src="../../common/jquery-ui-1.8.20.custom.min.js"></script>
+    <script src="../../common/jquery.cookie.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../common/css/start/jquery-ui-1.8.20.custom.css"/>
+
+    <script>
+        var APP = {
+            tabs : null
+        };
+
+        $(document).ready(function () {
+
+            APP.tabs = $('#tabs');
+
+            $(function () {
+                APP.tabs.tabs({
+                    collapsible : false
+
+                    //Block 1: Put a fade effect on the tab transition
+                    ,
+                    fx : {
+                        opacity : 'toggle',
+                        duration : 'fast'
+                    }
+
+                    //Block 2: Remember the last-selected tab
+                    ,
+                    cookie : {
+                        expires : 1
+                    }
+
+                });
+            });
+
+            // Block 3: Make the tabs sortable
+            //APP.tabs.tabs().find('.ui-tabs-nav').sortable({ axis : 'x' });
+
+            //// Block 4: Handle the tab-select event
+            APP.tabs.bind('tabsselect', function (event, ui) {
+                console.log(ui.tab);        // anchor element of the selected (clicked) tab
+                console.log(ui.panel);      // element, that contains the selected/clicked tab contents
+                console.log(ui.index);      // zero-based index of the selected (clicked) tab
+            });
+        });
+
+    </script>
+    <style>
+        div#tabs {
+            font-size: .8em;
+            min-height: 400px;
+            max-height: 800px;
+            min-width: 600px;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery UI &mdash; Tabs</h1>
+    Tabs example.
+    <br/>
+    <br/>
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-home">Home</a></li>
+            <li><a href="#tabs-about">About</a></li>
+            <li><a href="#tabs-show-details">Show Details</a></li>
+            <li><a href="#tabs-photographers">The Photographers</a></li>
+        </ul>
+        <div id="tabs-home">
+            <h1>Home</h1>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum ullamcorper dolor, id pretium elit
+                commodo hendrerit. Vestibulum consequat, felis in porttitor lacinia, sem lacus volutpat augue, eget
+                iaculis sapien odio sit amet nunc. Sed ut eros eget sem tempus fringilla ut vel ante. Nam vestibulum
+                facilisis tortor ullamcorper ullamcorper. Maecenas mauris turpis, volutpat eget gravida fringilla,
+                rhoncus sit amet velit. Quisque velit tellus, bibendum varius sodales ut, convallis nec velit. Nullam
+                accumsan urna id ligula tempus quis aliquam neque tincidunt. Vestibulum ultricies lacus fermentum ipsum
+                consectetur lobortis. Vestibulum ac ipsum velit, sit amet lobortis ante. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos. Praesent nec mollis erat. In aliquam ipsum
+                aliquam diam tempus eget mollis ligula porta.
+            </p>
+
+            <p>
+                Donec bibendum, augue ac lobortis pellentesque, lorem nibh cursus mi, at interdum felis erat vel ligula.
+                Praesent mi quam, pellentesque vitae eleifend vitae, gravida in dui. Aliquam placerat imperdiet est quis
+                laoreet. In ut nibh dui, in dapibus tortor. Mauris consequat dolor quis elit egestas in luctus diam
+                rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                Praesent gravida risus quis libero tristique ac pulvinar odio pellentesque. Vestibulum posuere ornare
+                ipsum vel molestie. Nulla id imperdiet felis. Aliquam ipsum neque, consectetur sed blandit vitae, rutrum
+                eget diam.
+            </p>
+
+            <p>
+                Aliquam imperdiet nibh auctor erat adipiscing placerat. Suspendisse potenti. Suspendisse nec odio nec
+                urna pretium pharetra id elementum eros. Aenean felis augue, volutpat in convallis id, tincidunt quis
+                libero. Quisque tempor nisl non est consequat lobortis fringilla diam rhoncus. Maecenas rutrum lacus
+                laoreet eros interdum aliquam. Nam consequat pharetra tortor, non feugiat orci elementum in. Duis sed
+                turpis felis. Praesent ac lorem augue. Ut diam elit, pulvinar ac elementum vel, sollicitudin sed purus.
+                Praesent a lectus tortor, vel ultricies lorem. Sed sed elit turpis. Mauris et lectus non eros auctor
+                pellentesque.
+            </p>
+
+            <p>
+                Sed sed metus urna. Donec diam lacus, feugiat nec dapibus non, vulputate quis ante. Ut ac erat id velit
+                venenatis ullamcorper vitae sed dolor. Phasellus tortor nulla, posuere ut iaculis sed, sodales ac nunc.
+                In vel nulla vitae elit tincidunt egestas. Sed feugiat feugiat neque, non tempus risus dapibus et.
+                Suspendisse ut felis vel arcu hendrerit gravida. Curabitur id felis ut leo sagittis fringilla ac ac
+                enim. Maecenas ac justo non odio aliquet dictum.
+            </p>
+
+            <p>
+                Nunc pretium tincidunt purus, non fermentum dui aliquet at. Vivamus non mi id enim mollis faucibus quis
+                vitae quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut
+                tellus justo, eleifend eu placerat vel, blandit nec augue. Donec venenatis eros vel nunc auctor sodales.
+                Sed quam tellus, varius in vehicula id, ullamcorper quis turpis. Sed pulvinar augue id tellus
+                ullamcorper posuere. Vestibulum ac dui mi. Etiam erat lectus, bibendum sit amet interdum a, scelerisque
+                vel dui. Quisque justo eros, tincidunt nec mollis vitae, cursus quis massa.
+            </p>
+        </div>
+
+        <div id="tabs-about">
+            <h1>About Us</h1>
+
+            <p>
+                Donec bibendum, augue ac lobortis pellentesque, lorem nibh cursus mi, at interdum felis erat vel ligula.
+                Praesent mi quam, pellentesque vitae eleifend vitae, gravida in dui. Aliquam placerat imperdiet est quis
+                laoreet. In ut nibh dui, in dapibus tortor. Mauris consequat dolor quis elit egestas in luctus diam
+                rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                Praesent gravida risus quis libero tristique ac pulvinar odio pellentesque. Vestibulum posuere ornare
+                ipsum vel molestie. Nulla id imperdiet felis. Aliquam ipsum neque, consectetur sed blandit vitae, rutrum
+                eget diam.
+            </p>
+
+            <p>
+                Aliquam imperdiet nibh auctor erat adipiscing placerat. Suspendisse potenti. Suspendisse nec odio nec
+                urna pretium pharetra id elementum eros. Aenean felis augue, volutpat in convallis id, tincidunt quis
+                libero. Quisque tempor nisl non est consequat lobortis fringilla diam rhoncus. Maecenas rutrum lacus
+                laoreet eros interdum aliquam. Nam consequat pharetra tortor, non feugiat orci elementum in. Duis sed
+                turpis felis. Praesent ac lorem augue. Ut diam elit, pulvinar ac elementum vel, sollicitudin sed purus.
+                Praesent a lectus tortor, vel ultricies lorem. Sed sed elit turpis. Mauris et lectus non eros auctor
+                pellentesque.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum ullamcorper dolor, id pretium elit
+                commodo hendrerit. Vestibulum consequat, felis in porttitor lacinia, sem lacus volutpat augue, eget
+                iaculis sapien odio sit amet nunc. Sed ut eros eget sem tempus fringilla ut vel ante. Nam vestibulum
+                facilisis tortor ullamcorper ullamcorper. Maecenas mauris turpis, volutpat eget gravida fringilla,
+                rhoncus sit amet velit. Quisque velit tellus, bibendum varius sodales ut, convallis nec velit. Nullam
+                accumsan urna id ligula tempus quis aliquam neque tincidunt. Vestibulum ultricies lacus fermentum ipsum
+                consectetur lobortis. Vestibulum ac ipsum velit, sit amet lobortis ante. Class aptent taciti sociosqu ad
+                litora torquent per conubia nostra, per inceptos himenaeos. Praesent nec mollis erat. In aliquam ipsum
+                aliquam diam tempus eget mollis ligula porta.
+            </p>
+
+        </div>
+
+        <div id="tabs-show-details">
+            <h1>Show Details</h1>
+
+            <p>
+                Aliquam imperdiet nibh auctor erat adipiscing placerat. Suspendisse potenti. Suspendisse nec odio nec
+                urna pretium pharetra id elementum eros. Aenean felis augue, volutpat in convallis id, tincidunt quis
+                libero. Quisque tempor nisl non est consequat lobortis fringilla diam rhoncus. Maecenas rutrum lacus
+                laoreet eros interdum aliquam. Nam consequat pharetra tortor, non feugiat orci elementum in. Duis sed
+                turpis felis. Praesent ac lorem augue. Ut diam elit, pulvinar ac elementum vel, sollicitudin sed purus.
+                Praesent a lectus tortor, vel ultricies lorem. Sed sed elit turpis. Mauris et lectus non eros auctor
+                pellentesque.
+            </p>
+
+            <p>
+                Sed sed metus urna. Donec diam lacus, feugiat nec dapibus non, vulputate quis ante. Ut ac erat id velit
+                venenatis ullamcorper vitae sed dolor. Phasellus tortor nulla, posuere ut iaculis sed, sodales ac nunc.
+                In vel nulla vitae elit tincidunt egestas. Sed feugiat feugiat neque, non tempus risus dapibus et.
+                Suspendisse ut felis vel arcu hendrerit gravida. Curabitur id felis ut leo sagittis fringilla ac ac
+                enim. Maecenas ac justo non odio aliquet dictum.
+            </p>
+
+            <p>
+                Nunc pretium tincidunt purus, non fermentum dui aliquet at. Vivamus non mi id enim mollis faucibus quis
+                vitae quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut
+                tellus justo, eleifend eu placerat vel, blandit nec augue. Donec venenatis eros vel nunc auctor sodales.
+                Sed quam tellus, varius in vehicula id, ullamcorper quis turpis. Sed pulvinar augue id tellus
+                ullamcorper posuere. Vestibulum ac dui mi. Etiam erat lectus, bibendum sit amet interdum a, scelerisque
+                vel dui. Quisque justo eros, tincidunt nec mollis vitae, cursus quis massa.
+            </p>
+        </div>
+
+        <div id="tabs-photographers">
+            <h1>The Photographers</h1>
+
+            <p>
+                Sed sed metus urna. Donec diam lacus, feugiat nec dapibus non, vulputate quis ante. Ut ac erat id velit
+                venenatis ullamcorper vitae sed dolor. Phasellus tortor nulla, posuere ut iaculis sed, sodales ac nunc.
+                In vel nulla vitae elit tincidunt egestas. Sed feugiat feugiat neque, non tempus risus dapibus et.
+                Suspendisse ut felis vel arcu hendrerit gravida. Curabitur id felis ut leo sagittis fringilla ac ac
+                enim. Maecenas ac justo non odio aliquet dictum.
+            </p>
+
+            <p>
+                Nunc pretium tincidunt purus, non fermentum dui aliquet at. Vivamus non mi id enim mollis faucibus quis
+                vitae quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut
+                tellus justo, eleifend eu placerat vel, blandit nec augue. Donec venenatis eros vel nunc auctor sodales.
+                Sed quam tellus, varius in vehicula id, ullamcorper quis turpis. Sed pulvinar augue id tellus
+                ullamcorper posuere. Vestibulum ac dui mi. Etiam erat lectus, bibendum sit amet interdum a, scelerisque
+                vel dui. Quisque justo eros, tincidunt nec mollis vitae, cursus quis massa.
+            </p>
+        </div>
+
+</body>
+</html>

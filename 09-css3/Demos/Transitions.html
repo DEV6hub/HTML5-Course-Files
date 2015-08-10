@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>CSS3 Transitions - single property</title>
+<style>
+body { margin: 10px; padding: 10px; }
+p {
+	margin-top: -10px
+	margin-bottom: 40px;
+	font-size: 1.5em;
+	border:solid thick blue;
+	background-color: #eee;
+	text-align:center;
+}
+code { color: red; font-size:1.25em; }
+</style>
+
+<style id="styleBlock">
+/* starting state */
+p	{ margin-left: 100px; }
+
+/* ending state */
+p:hover { margin-left: 300px;}
+
+/* HOW the margin-left property changes */
+.transitionable {
+	-webkit-transition: margin-left 0.5s ease-in 0s;
+}
+</style>
+
+</head>
+<script>
+window.addEventListener('load', function () {
+	document.getElementById('durationSeconds').addEventListener('change', updateStyles);
+	document.getElementById('delaySeconds').addEventListener('change', updateStyles);
+	document.getElementById('easingFunction').addEventListener('change', updateStyles);
+});
+
+function updateStyles(event) {
+	
+	var targetOutput = event.target.id+'O';
+	var targetValue = document.getElementById(event.target.id).value;
+	
+	var easingFunction = document.getElementById('easingFunction').value;
+	var durationSeconds = document.getElementById('durationSeconds').value;
+	var delaySeconds = document.getElementById('delaySeconds').value;
+	
+	var transitionStyleValue  			= 'margin-left ' + durationSeconds + 's ' + easingFunction + ' ' + delaySeconds + 's';
+	var transitionRule		 					= '-webkit-transition: ' + transitionStyleValue + '; ';
+
+	document.getElementById(targetOutput).innerHTML = targetValue;
+	document.getElementById('styleRule').innerHTML = '<code><pre>.transitionable { ' + transitionRule + '}</pre></code>';
+	document.getElementById('p2').setAttribute('style', transitionRule);
+}
+</script>
+
+<body>
+
+<code>&lt;p&gt;</code>
+<p>hover here to switch<br><u>instantly</u></p>
+
+<code>&lt;p class="transitionable"&gt;</code>
+<p id="p2" class="transitionable">hover here to switch<br><u>gradually</u></p>
+
+<!--
+<code>&lt;p class="transitionable" onMouseOver="..." onMouseOut="..."&gt;</code>
+<p id="p3" class="transitionable" onMouseOver="this.style.marginLeft=300" onMouseOut="this.style.marginLeft=100">hover here to switch <u>gradually</u><br>uses javascript</p>
+-->
+
+<aside id="styleRule"><code><pre>
+.transitionable { -webkit-transition: opacity 0.5s ease-in 0s; }
+</pre></code></aside>
+
+Adjust these settings and hover over the second paragraph
+<form>
+  <table id="t1" border="1" cellspacing="0" cellpadding="5">
+    <tr>
+      <td><label for="durationSeconds">Duration</label></td>
+      <td><input id="durationSeconds" type="range" min="0.5" max="3" value="0.5" step=".5"></td>
+      <td class="currVal"><output id="durationSecondsO">0.5</output></td>
+    </tr>
+    <tr>
+      <td><label for="easingFunction">Timing</label></td>
+      <td>
+      	<select id="easingFunction">
+          <option>linear</option>
+          <option>ease</option>
+          <option selected>ease-in</option>
+          <option>ease-out</option>
+          <option>ease-in-out</option>
+          <!--
+          <option>step-start</option>
+          <option>step-end</option>
+          <option>steps</option>
+          <option>cubic-bezier</option>
+          -->
+        </select>
+      </td>
+      <td class="currVal"><output id="easingFunctionO">ease-in</output></td>
+    </tr>
+    <tr>
+      <td><label for="delaySeconds">Delay</label></td>
+      <td><input id="delaySeconds" type="range" min="0" max="2" value="0" step=".5"></td>
+      <td class="currVal"><output id="delaySecondsO">0</output></td>
+    </tr>
+  </table>
+</form>
+
+
+
+<aside>
+<script type="text/javascript" src="../../common/prettify.js"></script>
+<link type="text/css" rel="stylesheet" href="../../common/prettify.css">
+<pre id="styleCodeBlock" class="prettyprint">
+<script src="../../common/displayStyleBlock.js"></script>
+</pre>
+<button id="toggleBtn" onClick="toggle()">toggle style code</button>
+</aside>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <link type="text/css"
+            rel="stylesheet"
+            href="../../common/css/ui-lightness/jquery-ui-1.8.23.custom.css"
+            />
+
+    <script type="text/javascript"
+            src="../../common/jquery-1.7.2.min.js"></script>
+
+    <script type="text/javascript"
+            src="../../common/jquery-ui-1.8.23.custom.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#iAmResizable").resizable({
+                maxWidth: 200,
+                maxHeight: 200,
+                minHeight: 100,
+                minWidth: 100
+            });
+
+        });
+    </script>
+    <style>
+        #iAmResizable {
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid black;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="iAmResizable">
+    <p>I am resizable</p>
+</div>
+
+</body>
+</html>
+
+

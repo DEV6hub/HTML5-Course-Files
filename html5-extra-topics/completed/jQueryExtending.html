@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Extending</title>
+    <script src="js/jquery-1.6.2.min.js"></script>
+    <script src="js/jquery.render.table.js"></script>
+    <script>
+        var app = {};
+
+        $(document).ready(function () {
+            $('#getDataButton').click(function () {
+                app.getData();
+            })
+        });
+
+        app.getData = function () {
+            $.getJSON('data/data.json', function (data, textStatus, jqXHR) {
+                app.listBooks(data.dataPacket.books);
+            });
+        };
+
+        app.listBooks = function (books) {
+
+            var booksTable = $('#booksTable');
+
+            // Call to custom jQuery function:
+            $(this).renderTable({ 'books' : books, 'booksTable' : booksTable });
+
+        };
+    </script>
+
+    <style>
+        #booksTable {
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        #booksTable th {
+            border: 1px solid #000;
+            padding: 4px;
+        }
+
+        #booksTable td {
+            border: 1px solid #000;
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="button" value="Get JSON Data" id="getDataButton"/><br/>
+
+    <table id="booksTable">
+        <tr>
+            <td>Search results will appear here...</td>
+        </tr>
+    </table>
+
+</body>
+</html>

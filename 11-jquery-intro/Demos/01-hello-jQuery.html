@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>JavaScript &mdash; Hello jQuery!</title>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+    <script>
+
+        var APP = {
+            changeButton1 : null,
+            changeButton2 : null
+        };
+
+        console.log('Does $===jQuery? ' + ($ === jQuery));
+
+        // Block 1:
+        		APP.changeButton1 = function () {
+        			var button = $('#theButton');
+
+        			console.log(button);
+
+
+        			button.html('Changed this with a <strong>CSS</strong> selector.');
+        		};
+
+        // Block 2:
+        		APP.changeButton2 = function (buttonReference) {
+        			var button = $(buttonReference);
+
+        			console.log(button);
+
+        			button.html('Changed this with a <strong>reference</strong> selector.');
+        		};
+    </script>
+</head>
+<body>
+    <h1>JavaScript &mdash; Hello jQuery!</h1>
+    <pre>jQuery === $</pre>
+
+    <!-- Block 1 -->
+    <button id="theButton" onclick="APP.changeButton1()">Change this button's text</button>
+    <br/>
+
+    <!-- Block 2 -->
+    <button onclick="APP.changeButton2(this)">Change this button's text</button>
+    <br/>
+
+</body>
+</html>

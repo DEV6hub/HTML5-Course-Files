@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>JavaScript &mdash; Event Bubbling</title>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            var outerDiv = $('#outerDiv'),
+                    id,
+                    button1;
+
+            outerDiv.on('click', function (event) {
+
+                console.log('event.target: ' + event.target.id);
+                console.log('event.currentTarget: ' + event.currentTarget.id);
+
+// Block 1: Determine which button was clicked.
+				id = event.target.id;
+
+				switch (id) {
+					case 'button1':
+						console.log('Clicked BUTTON ONE!');
+						break;
+					case 'button2':
+						console.log('Clicked BUTTON TWO!');
+						break;
+					case 'button3':
+						console.log('Clicked BUTTON THREE!');
+						break;
+					default:
+						console.log('Clicked something else...');
+						break;
+				}
+
+                console.log('------------------------------------');
+
+            });
+
+// Block 2: Prevent the event from bubbling any further.
+			button1 = $('#button1');
+			button1.on('click', function(event) {
+				console.log('Button 1 was clicked.');
+				event.stopPropagation();
+			});
+
+        });
+    </script>
+    <style>
+        div#outerDiv {
+            padding: 20px;
+            margin: 10px auto;
+            background-color: #def;
+            border: 1px solid #000;
+        }
+
+        div#innerDiv {
+            padding: 20px;
+            margin: 10px auto;
+            background-color: #fed;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript &mdash; Event Bubbling</h1>
+
+    <div id="outerDiv">
+        <div id="innerDiv">
+            <button id="button1">I'm button 1</button>
+            <br/>
+            <button id="button2">I'm button 2</button>
+            <br/>
+            <button id="button3">I'm button 3</button>
+        </div>
+    </div>
+
+</body>
+</html>

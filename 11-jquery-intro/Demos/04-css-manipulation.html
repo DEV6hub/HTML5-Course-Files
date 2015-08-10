@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>JavaScript &mdash; CSS Manipulation</title>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            var outerDiv,
+                innerDiv,
+                saveColor,
+                message;
+
+            outerDiv = $('#outerDiv');
+            innerDiv = $('#innerDiv');
+
+            $('#changeButton').click(function () {
+                outerDiv.css('background-color', '#00f');
+                innerDiv.css('background-color', '#d0d');
+            });
+
+// Block 1:
+//			innerDiv.bind('mouseover', function () {
+//				innerDiv
+//					.css('background-color', '#ee5')
+//					.css('border-width', '4px')
+//					.css('border-color', '#f00')
+//				;
+//			});
+//			innerDiv.bind('mouseout', function () {
+//				innerDiv
+//					.css('background-color', '#c00')
+//					.css('border-width', '1px')
+//					.css('border-color', '#000')
+//				;
+//			});
+
+// Block 2:
+//			message = $('<p id="text">First Class!</p>').hide();
+//			outerDiv.append(message);
+//
+//			outerDiv.bind('mouseover', function () {
+//				innerDiv.addClass('invisible'); // Can use toggleClass as well
+//				outerDiv.addClass('firstClass');
+//				message.show();
+//			});
+//			outerDiv.bind('mouseout', function () {
+//				innerDiv.removeClass('invisible'); // Can use toggleClass as well
+//				outerDiv.removeClass('firstClass');
+//				message.hide();
+//			});
+
+        });
+    </script>
+    <style>
+        div#outerDiv {
+            padding: 20px;
+            margin: 10px auto;
+            background-color: #080;
+            border: 1px solid #000;
+            min-height: 100px;
+        }
+
+        div#innerDiv {
+            padding: 20px;
+            margin: 10px auto;
+            background-color: #c00;
+            border: 1px solid #000;
+        }
+
+        p {
+            font: 2em 'Arial' bold;
+            width: 100%;
+            text-align: center;
+        }
+
+        .firstClass {
+            background: -webkit-radial-gradient(center, ellipse cover, #eab92d 0%, #c79810 51%, #c6bea9 99%);
+        }
+
+        .invisible {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript &mdash; CSS Manipulation</h1>
+
+    <div id="outerDiv">
+        <div id="innerDiv">
+            <button id="changeButton">Change CSS</button>
+            <br/>
+        </div>
+    </div>
+
+</body>
+</html>

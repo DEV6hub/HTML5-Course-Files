@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>CSS3 3D Transforms - Skew</title>
+
+<link rel="stylesheet" type="text/css" href="3DTransformBaseStyles.css">
+<style>
+#skewXO { background-color: orange; }
+#skewYO { background-color: yellow; }
+
+#childBox {
+	-webkit-transform: skew(5deg, 5deg);
+}
+</style>
+
+<script>
+window.addEventListener('load', function () {
+	document.getElementById('resetBtn').addEventListener('click', doReset);
+	document.getElementById('perspective').addEventListener('change', updateParentPerspective);	
+	document.getElementById('skewX').addEventListener('change', updateChildSkew);
+	document.getElementById('skewY').addEventListener('change', updateChildSkew);
+
+	document.getElementById('transformOriginX').addEventListener('change', updateChildTransformOrigin);
+	document.getElementById('transformOriginY').addEventListener('change', updateChildTransformOrigin);
+});
+
+function updateParentPerspective(event) {
+	var targetValue = document.getElementById(event.target.id).value;
+	document.getElementById(event.target.id+'OT').innerHTML = targetValue;
+	document.getElementById(event.target.id+'OD').innerHTML = targetValue;
+	document.getElementById('parentBox').style['webkitPerspective']=targetValue+'px';
+}
+
+function updateChildTransformOrigin(event) {
+
+	var xOutputT = document.getElementById('transformOriginXOT');
+	var yOutputT = document.getElementById('transformOriginYOT');
+	var xValue = document.getElementById('transformOriginX').value+'%';
+	var yValue = document.getElementById('transformOriginY').value+'%';
+	
+	xOutputT.innerHTML = xValue;
+	yOutputT.innerHTML = yValue;
+	
+	document.getElementById('childBox').style['webkitTransformOriginX'] = xValue;
+	document.getElementById('childBox').style['webkitTransformOriginY'] = yValue;
+}
+
+
+function updateChildSkew(event) {
+	if (event.target.type == 'range') {
+		var xOutput = document.getElementById('skewXO');
+		var xOutputT = document.getElementById('skewXOT');
+		var yOutput = document.getElementById('skewYO');
+		var yOutputT = document.getElementById('skewYOT');
+		
+		var xValue = document.getElementById('skewX').value;
+		var yValue = document.getElementById('skewY').value;
+
+		xOutput.innerHTML = xValue;
+		xOutputT.innerHTML = xValue;
+		yOutput.innerHTML = yValue;
+		yOutputT.innerHTML = yValue;
+		
+		document.getElementById('childBox').style['webkitTransform'] = 'skew(' + xValue + 'deg ,' + yValue + 'deg)';
+//		document.getElementById('childBox').style['webkitTransform'] = 'skewX(' + xValue + 'deg) skewY(' + yValue + 'deg)';
+	} 
+}
+
+function doReset() {
+	document.getElementById('perspective').value = 500;
+	
+	document.getElementById('transformOriginX').value = 50;
+	document.getElementById('transformOriginY').value = 50;
+	
+	document.getElementById('skewX').value = 10;
+	document.getElementById('skewY').value = 10;
+	document.getElementById('preserve3d').value = 1;
+}
+
+</script>
+</head>
+<body>
+
+
+<form>
+  <table border="1" cellspacing="0" cellpadding="5">
+  	<tr>
+    	<th>property</th>
+    	<th>min</th>
+    	<th>change it here</th>
+    	<th>max</th>
+    	<th>current</th>
+    </tr>
+    <tr>
+    	<td><label for="perspective">perspective</label></td>
+      <td class="min">100</td>
+      <td><input id="perspective" type="range" min="100" max="900" value="500" step="25"></td>
+      <td class="max">900</td>
+      <td class="currVal"><output id="perspectiveOT">500</output></td>
+    </tr>
+
+
+    <tr>
+    	<td><label for="transformOriginX">transform origin X</label></td>
+      <td class="min">0</td>
+      <td><input id="transformOriginX" type="range" min="0" max="100" value="50" step="10"></td>
+      <td class="max">100</td>
+      <td class="currVal"><output id="transformOriginXOT">50%</output></td>
+    </tr>
+    <tr>
+    	<td><label for="transformOriginY">transform origin Y</label></td>
+      <td class="min">0</td>
+      <td><input id="transformOriginY" type="range" min="0" max="100" value="50" step="10"></td>
+      <td class="max">100</td>
+      <td class="currVal"><output id="transformOriginYOT">50%</output></td>
+    </tr>
+
+
+    <tr>
+    	<td><label for="skewX">skewX</label></td>
+      <td class="min">-30</td>
+      <td><input id="skewX" type="range" min="-30" max="30" value="5" step="5"></td>
+      <td class="max">30</td>
+      <td class="currVal" bgcolor="orange"><output id="skewXOT">5deg</output></td>
+    </tr>
+    <tr>
+    	<td><label for="skewY">skewY</label></td>
+      <td class="min">-30</td>
+      <td><input id="skewY" type="range" min="-30" max="30" value="5" step="5"></td>
+      <td class="max">30</td>
+      <td class="currVal" bgcolor="yellow"><output id="skewYOT">5deg</output></td>
+    </tr>
+
+		<tr>
+    	<td colspan="4"></td>
+      <td><button id="resetBtn">Reset</button></td>
+		</tr>
+  </table>
+</form>
+
+
+<div id="floater">
+  <div id="parentBox">
+		Perspective: <output id="perspectiveOD">500</output>
+    <div id="childBox">
+      skewX(<output id="skewXO">5deg</output>);<br>
+      skewY(<output id="skewYO">5deg</output>);
+    </div>
+ </div>
+</div>
+
+</body>
+</html>

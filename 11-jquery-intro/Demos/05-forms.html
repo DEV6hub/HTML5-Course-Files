@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>JavaScript &mdash; Forms</title>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+    <script>
+
+        var APP = {
+            validate:null,
+            populateForm:null,
+            lightenColors:null
+        };
+
+        $(document).ready(function () {
+            $('#submitButton').click(APP.validate);
+            $('#populateButton').click(APP.populateForm);
+            $('#lightenButton').click(APP.lightenColors);
+        });
+
+        APP.validate = function () {
+            var firstName,
+                gender,
+                color;
+
+            firstName = $('#firstName').val().trim();
+            console.log(firstName);
+
+            gender = $('input:radio[name=gender]:checked').val();
+            console.log(gender);
+
+            color = $('select#color option:selected').val();
+            console.log(color);
+
+            if (!((firstName.length > 0) && gender && color)) {
+                alert('Please complete all fields.');
+            }
+        };
+
+        // Block 1:
+                		APP.populateForm = function () {
+                			$('#firstName').val('Holly');
+
+                			var radios = $('input:radio[name="gender"]');
+                			radios.filter('[value="M"]').attr('checked', false);
+                			radios.filter('[value="F"]').attr('checked', true);
+
+                			$('select#color').val('green');
+                		};
+
+        // Block 2:
+                		APP.lightenColors = function () {
+                			$('select#color option').each(function () {
+                				console.log(this);
+                				this.text = 'Light ' + this.text;
+                			});
+                		};
+    </script>
+
+    <style>
+        .form {
+            display: table;
+            border: 1px solid #eee;
+        }
+
+        .row {
+            display: table-row;
+            border: 1px solid #eee;
+        }
+
+        .col {
+            display: table-cell;
+            border: 1px solid #eee;
+            padding: 4px;
+        }
+
+        .col:nth-child(odd) {
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>JavaScript &mdash; Forms</h1>
+
+    <div class="form">
+        <div class="row">
+            <div class="col">First Name:</div>
+            <div class="col"><input id="firstName" type="text"></div>
+        </div>
+        <div class="row">
+            <div class="col">Gender:</div>
+            <div class="col">
+                Male <input name="gender" type="radio" value="M"/>
+                &nbsp;
+                Female <input name="gender" type="radio" value="F"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">Favorite Color</div>
+            <div class="col">
+                <select id="color">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="orange">Orange</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <button id="submitButton">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="populateButton">Populate form</button>
+
+    <button id="lightenButton">Lighten Colors</button>
+
+</body>
+</html>

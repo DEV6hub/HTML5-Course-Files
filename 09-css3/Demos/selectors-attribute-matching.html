@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>CSS3: attribute substring selectors</title>
+<style id="styleBlock">
+	/* the id must begin with 'paragraph' */
+	p[id^="paragraph"] {
+		color:red;
+	}
+	
+	/* the id must end with 'abc' */
+	p[id$="abc"] {
+		color:green;
+	}
+	
+	/* the id must contain 'xyz' */
+	p[id*="xyz"] {
+		color:blue;
+	}
+</style>
+<style>
+	section { 
+		border: 1px solid black; 
+		margin: 10px; padding: 10px;
+	}
+</style>
+</head>
+<body>
+
+    
+    <section>
+        <h1>the begins with attribute selector</h1>
+        <p id="paragraph1">this paragraph's id = 'paragraph1'</p>
+        <p id="secondParagraph">this paragraph's id = 'secondParagraph'</p>
+    </section>
+
+    <section>
+        <h1>the ends with attribute selector</h1>
+        <p id="abc">this paragraph's id = 'abc'</p>
+        <p id="_abc">this paragraph's id = '_abc'</p>
+        <p id="abc_">this paragraph's id = 'abc_'</p>
+    </section>
+
+    <section>
+        <h1>the contains attribute selector</h1>
+        <p id="xyz">this paragraph's id = 'xyz'</p>
+        <p id="__xyz">this paragraph's id = '__xyz'</p>
+        <p id="xyz__">this paragraph's id = 'xyz__'</p>
+        <p id="_x_y_z_">this paragraph's id = '_x_y_z_'</p>
+	</section>
+
+<aside>
+<script type="text/javascript" src="../../common/prettify.js"></script>
+<link type="text/css" rel="stylesheet" href="../../common/prettify.css">
+<pre id="styleCodeBlock" class="prettyprint">
+<script src="../../common/displayStyleBlock.js"></script>
+</pre>
+<button id="toggleBtn" onClick="toggle()">toggle style code</button>
+</aside>
+
+</body>
+</html>

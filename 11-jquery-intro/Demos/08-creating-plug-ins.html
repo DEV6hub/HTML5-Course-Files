@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>JavaScript &mdash; Plug-ins</title>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+
+    <!-- Import the plug-in -->
+    <script src="jquery.render.table.js"></script>
+
+    <script>
+
+        // *** Run this through localhost ***
+        // For example: http://localhost/html5/11-jquery-intro/Demos/07-creating-plug-ins.html
+
+        var APP = {
+            booksTable:{}
+        };
+
+        $(document).ready(function () {
+            $('#getButton').click(APP.getData);
+
+
+        });
+
+        APP.getData = function () {
+            APP.booksTable = $('#booksTable');
+            $.getJSON(
+                '../../common/data.json',
+                APP.onDataReceived
+            );
+        };
+
+        APP.onDataReceived = function (data) {
+
+            APP.booksTable.fadeOut(1000, function () {
+
+                console.log(data);
+
+                var books = $(data.dataPacket.books);
+
+                // Call the custon jQuery method:
+                $(this).renderTable({ 'books':books, 'booksTable':APP.booksTable });
+            });
+        };
+    </script>
+
+    <style>
+        #booksTable {
+            border-collapse: collapse;
+            text-align: left;
+            background-color: #f0f0f0;
+        }
+
+        #booksTable th {
+            border: 1px solid #000;
+            padding: 4px;
+        }
+
+        #booksTable td {
+            border: 1px solid #000;
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript &mdash; Plug-ins</h1>
+
+    For best results, run this through a Web Server
+    <br/>
+    <br/>
+
+    <button id="getButton">Get Data</button>
+    <br/>
+    <br/>
+
+    <table id="booksTable">
+        <tr>
+            <td>Search results will appear here...</td>
+        </tr>
+    </table>
+</body>
+</html>

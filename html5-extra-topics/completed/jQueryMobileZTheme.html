@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Mobile Flow 1</title>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/jquery.mobile-1.0b2.css"/>
+    <script src="js/jquery-1.6.2.min.js"></script>
+    <script src="js/jquery.mobile-1.0b2.min.js"></script>
+
+    <link rel="stylesheet" href="css/MyJQMTheme.css"/>
+</head>
+
+<body>
+
+    <div data-role="page" id="homePage" data-theme="z">
+
+        <div data-role="header" data-theme="z">
+            Header Text
+        </div>
+
+        <div data-role="content" data-theme="z">
+            Main Content Here<br/>
+            <a href="#secondPage">Go to internal Second Page</a>
+        </div>
+
+        <div data-role="footer" data-theme="z">
+            Footer
+        </div>
+    </div>
+
+    <div data-role="page" id="secondPage" data-theme="z">
+
+        <div data-role="header" data-theme="z">
+            Second Page
+        </div>
+
+        <div data-role="content" data-theme="z">
+            Page 2 Content Here<br/>
+            <a href="#homePage" data-direction="reverse">Go HOME</a>
+        </div>
+    </div>
+
+</body>
+</html>

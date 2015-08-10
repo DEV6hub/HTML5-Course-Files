@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery &mdash; Event Delegation</title>
+    <style>
+        #d1 {
+            float: left;
+            margin-right: 50px;
+        }
+    </style>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var count1 = 1, count2 = 1;
+
+            var addNewRowToTB1 = function () {
+                $("#tb1").append("<tr><td>" + (++count1) + "</td><td><button>This new button does nothing</button></td></tr>");
+            }
+
+            // the element targeted by the selector $("#tb1 button") exists at this time
+            // so the handler will be triggered by a click on that element
+            // but newly generated elements that also match that selector will not trigger the handler
+            // since the binding happened too early, before they existed
+            $("#tb1 button").on("click", addNewRowToTB1);
+
+            var addNewRowToTB2 = function () {
+                $("#tb2").append("<tr><td>" + (++count2) + "</td><td><button>Add a new row</button></td></tr>");
+            }
+            // using this event delegation syntax, any "button" element that is a descendant of $("#tb2")
+            // will trigger the event handler regardless of when it comes into existence
+            $("#tb2").on("click", "button", addNewRowToTB2);
+
+
+            $("#stop1").on("click", function () {
+                $("#tb1 button").off("click", addNewRowToTB1)
+            });
+            $("#stop2").on("click", function () {
+                $("#tb2").off("click", addNewRowToTB2)
+            });
+
+        });
+    </script>
+</head>
+<body>
+
+<div id="d1">
+    <button id="stop1">Disable Handler</button>
+    <table>
+        <tbody id="tb1">
+        <tr>
+            <td>1</td>
+            <td>
+                <button>Add a new row</button>
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2">New rows SHOULD NOT trigger the click handler</td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+
+<div>
+    <button id="stop2">Disable Handler</button>
+    <table>
+        <tbody id="tb2">
+        <tr>
+            <td>1</td>
+            <td>
+                <button>Add a new row</button>
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2">New rows SHOULD trigger the click handler</td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+
+</body>
+</html>

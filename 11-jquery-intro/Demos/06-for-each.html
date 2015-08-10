@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>JavaScript &mdash; For-Each</title>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+    <script>
+        var APP = {
+            testArrayForEach : null,
+            testJQEach : null,
+            testForIn : null,
+            testArray : ['cat', 'dog', 'rabbit']
+        };
+
+        $(document).ready(function () {
+            // Block 1: Uncomment. See buttons at bottom of this file.
+            $('#testForInBtn').on('click', APP.testForIn);
+            $('#testArrayBtn').on('click', APP.testArrayForEach);
+            $('#testJQBtn').on('click', APP.testJQEach);
+        });
+
+        // Good old for-in loop
+        APP.testForIn = function () {
+            console.log(this);      // With onclick, it's APP. With $.on(), it's the button.
+            for (var key in APP.testArray) {
+                console.log(key);
+                console.log(APP.testArray[key]);
+                console.log(this);
+                console.log('--------------------');
+            }
+        };
+
+        // Block 2: New ECMAScript 5 Array.forEach loop
+        APP.testArrayForEach = function () {
+            APP.testArray.forEach(function (item) {
+                    console.log(item);
+                    console.log(this);
+                    console.log('--------------------');
+                }
+                // Block 3: Change 'this' object
+            , {test:'val'}
+            );
+        };
+
+        // Block 4: jQuery each loop
+        APP.testJQEach = function () {
+            $.each(APP.testArray, function (index, value) {
+                console.log(index);
+                console.log(value);
+                console.log(this);
+                console.log('--------------------');
+            });
+        };
+
+    </script>
+</head>
+<body>
+    <h1>JavaScript &mdash; For-Each</h1>
+    Comparing for-in with Array.forEach() with jQuery.each().
+    <br/>
+    <br/>
+
+    <!-- Block 1: Comment these out -->
+    <button id="testForInBtn" onclick="APP.testForIn()">Test for-in</button>
+    <br/>
+    <button id="testArrayBtn" onclick="APP.testArrayForEach()">Test Array forEach</button>
+    <br/>
+    <button id="testJQBtn" onclick="APP.testJQEach()">Test jQuery each()</button>
+    <br/>
+
+    <!-- Block 1: Uncomment. Add click handlers with jQuery -->
+    <button id="testForInBtn">Test for-in</button>
+    <br/>
+    <button id="testArrayBtn">Test Array forEach</button>
+    <br/>
+    <button id="testJQBtn">Test jQuery each()</button>
+    <br/>
+
+</body>
+</html>

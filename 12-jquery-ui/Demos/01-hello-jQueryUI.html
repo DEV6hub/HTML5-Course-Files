@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>jQuery UI &mdash; Hello jQuery UI!</title>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+
+    <!-- jQuery UI-specific tags -->
+    <script src="../../common/jquery-ui-1.8.20.custom.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../common/css/start/jquery-ui-1.8.20.custom.css"/>
+
+    <script>
+        var APP = {
+            loginDialog : null,
+            openDialog : null
+        };
+
+        $(document).ready(function () {
+
+            APP.loginDialog = $('#loginDialog');
+
+            // Configure the dialog:
+            $(function () {
+                APP.loginDialog.dialog({
+                    autoOpen : false,
+                    minWidth : 360,
+                    minHeight : 300,
+                    height : 300,
+                    closeOnEscape : true,
+                    draggable : true,
+                    resizable : true,
+                    modal : true,
+                    position : [ 'center', 50 ],
+                    title : 'Please Log In',
+                    hide : {
+                        effect : 'fade'
+                    },
+// Block 1:
+                    buttons : {
+                        'Cancel' : function () {
+                            $(this).dialog('close');
+                        }
+                    },
+                    close : function (event, ui) {
+                    }
+                });
+            });
+
+// Block 2:
+            $('#loginBtn').on('click', function() {
+                alert('Logged In!');
+                APP.loginDialog.dialog('close');
+            });
+
+            $('#openDialogBtn').on('click',
+                function () {
+                    APP.openDialog();
+                }
+            );
+        });
+
+        // Open the dialog:
+        APP.openDialog = function () {
+            APP.loginDialog.dialog('open');
+        };
+
+    </script>
+    <style>
+        div#loginDialog {
+            font-size: 1em;
+        }
+
+        div#loginDialog p {
+            font-size: 0.9em;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Override */
+        .ui-dialog {
+            font-size: 0.8em;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>jQuery UI &mdash; Hello jQuery UI!</h1>
+    Let's start with a simple dialog.
+    <br/>
+    <br/>
+    <button id="openDialogBtn">Open a dialog box</button>
+
+    <div id="loginDialog">
+        <h3>Please enter your credentials</h3>
+
+        <p>User Name:</p>
+        <input id="username" name="username" type="text" value="fred" class="loginInput">
+        <br/><br/>
+
+        <p>Password:</p>
+        <input id="password" name="password" type="password" value="123" class="loginInput">
+
+        <br/><br/>
+        <button id="loginBtn">Log In</button>
+    </div>
+
+</body>
+</html>

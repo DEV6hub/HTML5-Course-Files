@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>jQuery Mobile &mdash; Multi-File Pages</title>
+    <script src="../../common/jquery-1.7.2.min.js"></script>
+
+    <!-- jQuery Mobile-specific tags -->
+    <script src="../../common/jquery.mobile-1.1.0.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../common/jquery.mobile-1.1.0.css"/>
+
+    <script>
+        var APP = {
+        };
+
+        $(document).ready(function () {
+
+        });
+
+    </script>
+    <style>
+        div {
+            padding: 4px;
+        }
+
+        [data-role=footer] {
+            /* Footer bug fix */
+            bottom: 0px;
+            position: absolute !important;
+            top: auto !important;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page1" data-role="page">
+
+        <div data-role="header">
+            jQuery Mobile &mdash; Multi-File Pages
+        </div>
+
+        <div data-role="content">
+            <a href="03-page2.html">Go to Page 2</a><br/>
+            <a href="03-page3.html">Go to Page 3</a><br/>
+        </div>
+
+        <div data-role="footer">
+            I'll foot the bill.
+        </div>
+
+    </div>
+
+</body>
+</html>

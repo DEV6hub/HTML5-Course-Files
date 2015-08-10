@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>gradient angle calculator using degrees</title>
+		<style type="text/css">
+			div				{ width: 100px; height: 100px; }
+			div[id^="div"] 	{ display: inline-block; margin: 5px; }
+			p 				{ font-size: 1em; color: white; padding: 10px }
+			#frameContainer	{ width: 600px; height:400px;  padding: 10px }
+			#frame			{ width: 600px; height:400px; border: none; }			
+			#divsContainer	{ width: 455px; height: 225px; border: 5px solid black; padding: 7px; } 
+			
+			
+			#div0 { 
+				background-color: red;
+				background-image: -webkit-linear-gradient(0deg, red, blue); /* Chrome 10+, Saf5.1+, iOS 5+ */
+				background-image:    -moz-linear-gradient(0deg, red, blue); /* FF3.6 */
+				background-image:     -ms-linear-gradient(0deg, red, blue); /* IE10 */
+				background-image:      -o-linear-gradient(0deg, red, blue); /* Opera 11.10+ */
+				background-image:         linear-gradient(to right, red, blue);			
+			}
+			#div45 { 
+				background-color: red;
+				background-image: -webkit-linear-gradient(45deg, red, blue); /* Chrome 10+, Saf5.1+, iOS 5+ */
+				background-image:    -moz-linear-gradient(45deg, red, blue); /* FF3.6 */
+				background-image:     -ms-linear-gradient(45deg, red, blue); /* IE10 */
+				background-image:      -o-linear-gradient(45deg, red, blue); /* Opera 11.10+ */
+				background-image:         linear-gradient(to top right, red, blue);			
+			}
+			#div90 { 
+				background-color: red;
+				background-image: -webkit-linear-gradient(90deg, red, blue); /* Chrome 10+, Saf5.1+, iOS 5+ */
+				background-image:    -moz-linear-gradient(90deg, red, blue); /* FF3.6 */
+				background-image:     -ms-linear-gradient(90deg, red, blue); /* IE10 */
+				background-image:      -o-linear-gradient(90deg, red, blue); /* Opera 11.10+ */
+				background-image:         linear-gradient(to top, red, blue);			
+			}
+			#div135 { 
+				background-color: red;
+				background-image: -webkit-linear-gradient(135deg, red, blue); /* Chrome 10+, Saf5.1+, iOS 5+ */
+				background-image:    -moz-linear-gradient(135deg, red, blue); /* FF3.6 */
+				background-image:     -ms-linear-gradient(135deg, red, blue); /* IE10 */
+				background-image:      -o-linear-gradient(135deg, red, blue); /* Opera 11.10+ */
+				background-image:         linear-gradient(to top left, red, blue);			
+			}
+			#div180 { 
+				background-color: red;
+				background-image: -webkit-linear-gradient(180deg, red, blue); /* Chrome 10+, Saf5.1+, iOS 5+ */
+				background-image:    -moz-linear-gradient(180deg, red, blue); /* FF3.6 */
+				background-image:     -ms-linear-gradient(180deg, red, blue); /* IE10 */
+				background-image:      -o-linear-gradient(180deg, red, blue); /* Opera 11.10+ */
+				background-image:         linear-gradient(to left, red, blue);			
+			}
+			#div225 { 
+				background-color: red;
+				background-image: -webkit-linear-gradient(225deg, red, blue); /* Chrome 10+, Saf5.1+, iOS 5+ */
+				background-image:    -moz-linear-gradient(225deg, red, blue); /* FF3.6 */
+				background-image:     -ms-linear-gradient(225deg, red, blue); /* IE10 */
+				background-image:      -o-linear-gradient(225deg, red, blue); /* Opera 11.10+ */
+				background-image:         linear-gradient(to bottom left, red, blue);			
+			}
+			#div270 { 
+				background-color: red;
+				background-image: -webkit-linear-gradient(270deg, red, blue); /* Chrome 10+, Saf5.1+, iOS 5+ */
+				background-image:    -moz-linear-gradient(270deg, red, blue); /* FF3.6 */
+				background-image:     -ms-linear-gradient(270deg, red, blue); /* IE10 */
+				background-image:      -o-linear-gradient(270deg, red, blue); /* Opera 11.10+ */
+				background-image:         linear-gradient(to bottom, red, blue);			
+			}
+			#div315 { 
+				background-color: red;
+				background-image: -webkit-linear-gradient(315deg, red, blue); /* Chrome 10+, Saf5.1+, iOS 5+ */
+				background-image:    -moz-linear-gradient(315deg, red, blue); /* FF3.6 */
+				background-image:     -ms-linear-gradient(315deg, red, blue); /* IE10 */
+				background-image:      -o-linear-gradient(315deg, red, blue); /* Opera 11.10+ */
+				background-image:         linear-gradient(to bottom right, red, blue);			
+			}
+		</style>		
+    </head>
+    <body>  
+		<div id="frameContainer">
+			<iframe id="frame" src="linear-gradient-degrees-iframe.html"></iframe>
+		</div>		
+		<br>
+		<div id="divsContainer">
+			<div id="div0"> <p>0/360 deg</p> </div> 
+			<div id="div45"> <p>45 deg</p> </div> 
+			<div id="div90"> <p>90 deg</p> </div> 
+			<div id="div135"> <p>135 deg</p> </div> <br>
+			<div id="div180"> <p>180 deg</p> </div> 
+			<div id="div225"> <p>225 deg</p> </div> 
+			<div id="div270"> <p>270 deg</p> </div> 
+			<div id="div315"> <p>315 deg</p> </div>
+		</div>
+		<p style="color: black">demo based on: http://blog.johnpencola.com/2011/04/24/html5-canvas-basics-drawing-an-angle/</p>
+	</body>
+</html>
+
+
