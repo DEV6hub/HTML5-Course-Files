@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas: Triangle</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script>
+        window.addEventListener("load", setup, false);
+
+        function setup() {
+            var canvas = document.getElementById("my-canvas");
+            var context;
+            if (canvas.getContext) {
+                context = canvas.getContext("2d");
+                draw(context);
+            }
+        }
+
+        function draw(context) {
+            context.beginPath();
+            context.moveTo(50, 50);
+            context.lineTo(100, 100);
+            context.lineTo(150, 50);
+            context.closePath();
+            context.stroke();
+        }
+    </script>
+</head>
+<body>
+    <canvas id="my-canvas" height="400" width="400">Your browser doesn't support canvas.</canvas>
+</body>
+</html>

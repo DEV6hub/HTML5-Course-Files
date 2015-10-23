@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Degrees</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script>
+        window.addEventListener("load", function () {
+            var canvas = document.getElementById("my-canvas");
+            if (canvas.getContext) {
+                context = canvas.getContext("2d");
+                context.beginPath();
+                context.moveTo(50, 50);
+                context.arc(50, 50, 40, 0, degreesToRadians(360), true);
+                context.fillStyle = "rgba(255,0,0,.1)";
+                context.fill();
+            }
+        }, false);
+
+        function centerPoint() {
+            var canvas = document.getElementById("my-canvas");
+            if (canvas.getContext) {
+                context.fillStyle = "rgba(0,0,0,1)";
+                context = canvas.getContext("2d");
+                context.beginPath();
+                context.arc(50, 50, 2, 0, degreesToRadians(360), true);
+                context.fill();
+            }
+        }
+
+        function radius() {
+            var canvas = document.getElementById("my-canvas");
+            if (canvas.getContext) {
+                context = canvas.getContext("2d");
+                context.beginPath();
+                context.moveTo(50, 50);
+                context.lineTo(50 + 40, 50);
+                context.stroke();
+            }
+        }
+
+        function showArc(ccw) {
+            var canvas = document.getElementById("my-canvas");
+            if (canvas.getContext) {
+                context = canvas.getContext("2d");
+                context.beginPath();
+                context.arc(50, 50, 40, 0, degreesToRadians(90), ccw);
+                context.stroke();
+            }
+        }
+
+        function degreesToRadians(degrees) {
+            return (Math.PI / 180) * degrees;
+        }
+
+    </script>
+</head>
+<body>
+    <canvas id="my-canvas" height="100" width="100">Your browser doesn't support canvas.</canvas>
+    <br>
+    <ol>
+        <li>Identify the center point:
+            <button onclick="centerPoint();">Show</button>
+        </li>
+        <li>Choose a radius (e.g., 40). We draw the radius directly out to the right. Its end marks the 0 degree/radians
+            point of the circle/arc.
+            <button onclick="radius();">Show</button>
+        </li>
+        <li>Choose a starting point along the (usually 0) and an ending point (e.g, 90 degrees):
+            <button onclick="showArc(true);">Show CCW</button>
+            <button onclick="showArc(false);">Show CW</button>
+        </li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>CSS3 Transforms</title>
+<style>
+body { margin: 10px; padding: 10px; }
+#t1 { float: left; }
+.min, .max { color: #33F; }
+.min { text-align:right; }
+.currVal, .min, .max { text-align:center; }
+label { font-family: Verdana, Geneva, sans-serif; }
+output { font-weight:700;	color: #F00; width:50px; }
+code { color: red; font: 1.5em sans-serif; }
+div {
+	position:absolute;
+	width: 250px;
+	padding: 20px;
+	margin:auto;
+	margin-top: 50px;
+	border:solid thick blue;
+	font-size: 2em;
+	background-color: #eee;
+	color: blue;
+	text-align:center;
+}
+#original { opacity:0.4; }
+
+</style>
+<style id="styleBlock">
+#transformed, #original {
+  transform:         skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
+  -webkit-transform: skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
+  -moz-transform:    skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
+  -o-transform:      skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
+  -ms-transform:     skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
+  transform-origin:         0% 0%;
+  -webkit-transform-origin: 0% 0%;
+  -moz-transform-origin:    0% 0%;
+  -o-transform-origin:      0% 0%;
+  -ms-transform-origin:     0% 0%;
+}
+</style>
+<script>
+window.addEventListener('load', function () {
+	document.getElementById('skewDegrees').addEventListener('change', updateDivStyles);
+	document.getElementById('scaleX').addEventListener('change', updateDivStyles);
+	document.getElementById('scaleY').addEventListener('change', updateDivStyles);
+	document.getElementById('rotateDegrees').addEventListener('change', updateDivStyles);
+	document.getElementById('translateX').addEventListener('change', updateDivStyles);
+	document.getElementById('translateY').addEventListener('change', updateDivStyles);
+	document.getElementById('originX').addEventListener('change', updateDivStyles);
+	document.getElementById('originY').addEventListener('change', updateDivStyles);
+	document.getElementById('resetBtn').addEventListener('click', doReset);
+});
+
+function updateDivStyles(event) {
+	
+	var prefixW = '-webkit-';
+	var prefixM = '-moz-';
+	var prefixO = '-o-';
+	var prefixI = '-ms-';
+	
+	var targetOutput = event.target.id+'O';
+	var targetValue = document.getElementById(event.target.id).value;
+	
+	var skewDegrees = document.getElementById('skewDegrees').value;
+	var scaleX = document.getElementById('scaleX').value;
+	var scaleY = document.getElementById('scaleY').value;
+	var rotateDegrees = document.getElementById('rotateDegrees').value;
+	var translateX = document.getElementById('translateX').value;
+	var translateY = document.getElementById('translateY').value;
+	var originX = document.getElementById('originX').value;
+	var originY = document.getElementById('originY').value;
+	
+	var transformStyleValue  = 'skew(' + skewDegrees + 'deg) ';
+			transformStyleValue += 'scale(' + scaleX + ', ' + scaleY + ') ';
+			transformStyleValue += 'rotate(' + rotateDegrees + 'deg) ';
+			transformStyleValue += 'translate(' + translateX + 'px, ' + translateY + 'px)';
+	var baseTransformRule 					= 'transform: ' + transformStyleValue + '; ';
+	var	webkitTransformRule 				= prefixW + 'transform: ' + transformStyleValue + '; ';
+	var	mozTransformRule 						= prefixM + 'transform: ' + transformStyleValue + '; '; 
+	var operaTransformRule 					= prefixO + 'transform: ' + transformStyleValue + '; ';
+	var ieTransformRule 						= prefixI + 'transform: ' + transformStyleValue + '; ';
+	var transformStyleRuleToApply 	= baseTransformRule + webkitTransformRule + mozTransformRule + operaTransformRule + ieTransformRule;
+
+	var transformOriginStyleValue 			= originX + '% ' + originY + '%';
+	var baseTransformOriginRule 				= 'transform-origin: ' + transformOriginStyleValue + '; ';
+	var	webkitTransformOriginRule 			= prefixW + 'transform-origin: ' + transformOriginStyleValue + '; ';
+	var	mozTransformOriginRule 					= prefixM + 'transform-origin: ' + transformOriginStyleValue + '; '; 
+	var operaTransformOriginRule 				= prefixO + 'transform-origin: ' + transformOriginStyleValue + '; ';
+	var ieTransformOriginRule 					= prefixI + 'transform-origin: ' + transformOriginStyleValue + '; ';
+	var transformOriginStyleRuleToApply 	= baseTransformOriginRule + webkitTransformOriginRule + mozTransformOriginRule + operaTransformOriginRule + ieTransformOriginRule;
+
+	var styleRuleToDisplay = '<code><pre>' + baseTransformRule + '<br>' + baseTransformOriginRule + '</pre></code>';	
+	var styleRuleToApply = transformStyleRuleToApply + transformOriginStyleRuleToApply;
+
+
+	document.getElementById(targetOutput).innerHTML = targetValue;
+	document.getElementById('styleRule').innerHTML = styleRuleToDisplay;
+	document.getElementById('transformed').setAttribute('style', styleRuleToApply);
+}
+
+function doReset() {
+	document.getElementById('skewDegrees').value = 0;
+	document.getElementById('scaleX').value = 0;
+	document.getElementById('scaleY').value = 0;
+	document.getElementById('rotateDegrees').value = 0;
+	document.getElementById('translateX').value = 0;
+	document.getElementById('translateY').value = 0;
+	document.getElementById('originX').value = 0;
+	document.getElementById('originY').value = 0;
+}
+</script>
+</head>
+<body>
+
+<aside id="styleRule"><code><pre>
+transform: skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px); 
+transform-origin: 0% 0%;
+</pre></code></aside>
+
+<form>
+  <button id="resetBtn">Reset</button>
+  <hr>
+  <table id="t1" border="1" cellspacing="0" cellpadding="5">
+    <tr>
+      <td><label for="originX">Origin X</label></td>
+      <td class="min">0</td>
+      <td><input id="originX" type="range" min="0" max="100" value="0" step="10"></td>
+      <td class="max">100</td>
+      <td class="currVal"><output id="originXO">0</output></td>
+    </tr>
+    <tr>
+      <td><label for="originY">Origin Y</label></td>
+      <td class="min">0</td>
+      <td><input id="originY" type="range" min="0" max="100" value="0" step="10"></td>
+      <td class="max">100</td>
+      <td class="currVal"><output id="originYO">0</output></td>
+    </tr>
+    <tr>
+      <td><label for="skewDegrees">Skew Degrees</label></td>
+      <td class="min">-45</td>
+      <td><input id="skewDegrees" type="range" min="-45" max="45" value="0" step="15"></td>
+      <td class="max">45</td>
+      <td class="currVal" width="30"><output id="skewDegreesO">0</output></td>
+    </tr>
+    <tr>
+      <td><label for="rotateDegrees">Rotate Degrees</label></td>
+      <td class="min">-360</td>
+      <td><input id="rotateDegrees" type="range" min="-360" max="360" value="0" step="15"></td>
+      <td class="max">360</td>
+      <td class="currVal"><output id="rotateDegreesO">0</output></td>
+    </tr>
+  </table>
+  <table id="t2" border="1" cellspacing="0" cellpadding="5">
+    <tr>
+      <td><label for="scaleX">ScaleX</label></td>
+      <td class="min">.5</td>
+      <td><input id="scaleX" type="range" min=".5" max="2" value="1" step=".5"></td>
+      <td class="max">2</td>
+      <td class="currVal" width="30"><output id="scaleXO">1</output></td>
+    </tr>
+    <tr>
+      <td><label for="scaleY">ScaleY</label></td>
+      <td class="min">.5</td>
+      <td><input id="scaleY" type="range" min=".5" max="2" value="1" step=".5"></td>
+      <td class="max">2</td>
+      <td class="currVal"><output id="scaleYO">1</output></td>
+    </tr>
+    <tr>
+      <td><label for="translateX">TranslateX</label></td>
+      <td class="min">0</td>
+      <td><input id="translateX" type="range" min="0" max="200" value="0" step="10"></td>
+      <td class="max">200</td>
+      <td class="currVal"><output id="translateXO">0</output></td>
+    </tr>
+    <tr>
+      <td><label for="translateY">TranslateY</label></td>
+      <td class="min">0</td>
+      <td><input id="translateY" type="range" min="0" max="200" value="0" step="10"></td>
+      <td class="max">200</td>
+      <td class="currVal"><output id="translateYO">0</output></td>
+    </tr>
+  </table>
+  <hr>
+</form>
+
+<div id="original">the<br>original<br>element</div>
+<div id="transformed">experiment with the controls above to transform this</div>
+
+<aside> 
+  <script type="text/javascript" src="../../common/prettify.js"></script>
+  <link type="text/css" rel="stylesheet" href="../../common/prettify.css">
+  <pre id="styleCodeBlock" class="prettyprint">
+<script src="../../common/displayStyleBlock.js"></script>
+</pre>
+  <button id="toggleBtn" onClick="toggle()">toggle style code</button>
+</aside>
+
+</body>
+</html>

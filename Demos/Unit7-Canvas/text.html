@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Text</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script>
+        window.addEventListener("load", draw, false);
+
+        function draw() {
+            var canvas = document.getElementById("my-canvas");
+            if (canvas.getContext) {
+                var context = canvas.getContext("2d");
+                context.fillStyle = "red";
+                context.strokeStyle = "blue";
+
+                context.font = "italic small-caps bold 44pt 'Comic Sans MS'";
+                context.textAlign = "left";
+                context.strokeText("Hello", 10, 100);
+                context.fillText("World!", 10 + context.measureText("Hello ").width, 100);
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="my-canvas" height="200" width="400">Your browser doesn't support canvas.</canvas>
+</body>
+</html>

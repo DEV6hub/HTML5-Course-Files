@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Form - New HTML5 Elements</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="../../common/modernizr.min.js" type="text/javascript"></script>
+    <script src="../../common/dateFormat.js" type="text/javascript"></script>
+    <script>
+        var formFieldCount = 0;
+        var formFieldsCompleted = 0;
+        if (window.addEventListener) {
+            window.addEventListener("load", addLoadEvents, false);
+        }
+
+        function addLoadEvents() {
+            setFormDates();
+            if (Modernizr.inputtypes.range) {
+                document.getElementById('rangeoutput').style.display = "inline";
+            }
+            document.getElementById("range").addEventListener("change", function () {
+                if (Modernizr.inputtypes.range) {
+                    document.getElementById('rangeoutput').innerHTML = this.value;
+                }
+            }, false);
+        }
+
+        function setFormDates() {
+            var dateFieldTypes = ["date", "datetime", "datetime-local", "time", "month", "week"];
+            var myForm = document.getElementById("my-form");
+            var field;
+            var currentDate = new Date();
+            var formFieldCount = 0;
+            //updateProgress();
+            for (var i = 0; i < myForm.elements.length; ++i) {
+                field = myForm.elements[i];
+                formFieldCount++;
+                switch (field.type) {
+                    case "date" :
+                        field.value = currentDate.format("yyyy-mm-dd", true);
+                        break;
+                    case "datetime" :
+                        field.value = currentDate.format("yyyy-mm-dd'T'HH:MM'Z'", true);
+                        break;
+                    case "datetime-local" :
+                        field.value = currentDate.format("yyyy-mm-dd'T'HH:MM");
+                        break;
+                    case "time" :
+                        field.value = currentDate.format("HH:MM", true);
+                        break;
+                    case "month" :
+                        field.value = currentDate.format("yyyy-mm", true);
+                        break;
+                    case "week" :
+                        field.value = currentDate.format("yyyy-'W'w");
+                        break;
+                    case "range" :
+                        document.getElementById(field.id + "output").innerHTML = field.value;
+                        field.addEventListener("change", function () {
+                            document.getElementById(this.id + "output").innerHTML = this.value;
+                        }, false);
+                    case undefined :
+                        break;
+                        formFieldCount--;
+                    default :
+                        if (Modernizr.input.placeholder) {
+                            field.placeholder = "enter valid " + field.type;
+                        } else if (field.value.length == 0) {
+                            field.value = "enter valid " + field.type;
+                            field.style.opacity = .5;
+                            field.addEventListener("focus", function () {
+                                this.style.opacity = 1;
+                                if (this.value == "enter valid " + this.type) {
+                                    this.value = "";
+                                }
+                            }, false);
+                        }
+                        field.addEventListener("blur", function () {
+                            if (Modernizr.input.validity && !this.validity.valid) {
+                                this.value = "enter valid " + this.type;
+                                if (!Modernizr.input.placeholder) {
+                                    this.style.opacity = .5;
+                                }
+                            } else if (!Modernizr.input.placeholder) {
+                                this.style.opacity = 1;
+                            }
+                        }, false);
+                }
+            }
+            //myForm.addEventListener("formchange",updateProgress,false);
+        }
+
+        function updateProgress() {
+            var progressBar = document.getElementById("progress-bar");
+            progressBar.max = formFieldCount;
+            progressBar.value = formFieldsCompleted;
+        }
+    </script>
+</head>
+<body>
+    <h1>HTML5 Form - New HTML5 Elements</h1>
+
+    <form method="post" action="" id="my-form">
+        <fieldset>
+            <legend>Input Types</legend>
+            <fieldset>
+                <legend>Date Picker</legend>
+                <div>
+                    <label for="date">date:</label>
+                    <input type="date" name="date" id="date" required>
+                </div>
+                <div>
+                    <label for="datetime">datetime:</label>
+                    <input type="datetime" name="datetime" id="datetime" required>
+                </div>
+                <div>
+                    <label for="datetime-local">datetime-local:</label>
+                    <input type="datetime-local" name="datetime-local" id="datetime-local" required>
+                </div>
+                <div>
+                    <label for="time">time:</label>
+                    <input type="time" name="time" id="time" required>
+                </div>
+                <div>
+                    <label for="month">month:</label>
+                    <input type="month" name="month" id="month" required>
+                </div>
+                <div>
+                    <label for="week">week:</label>
+                    <input type="week" name="week" id="week" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Contact Information</legend>
+                <div>
+                    <label for="tel">tel:</label>
+                    <input type="tel" name="tel" id="tel" required>
+                </div>
+                <div>
+                    <label for="email">email:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div>
+                    <label for="url">url:</label>
+                    <input type="url" name="url" id="url" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Other</legend>
+                <div>
+                    <label for="number">number:</label>
+                    <input type="number" name="number" id="number" required>
+                </div>
+                <div>
+                    <label for="range">range:</label>
+                    <input type="range" name="range" id="range" min="0" max="10" value="5">
+                    <output for="range" id="rangeoutput"></output>
+                </div>
+                <div>
+                    <label for="color">color:</label>
+                    <input type="color" name="color" id="color" required>
+                </div>
+                <div>
+                    <label for="search">search:</label>
+                    <input type="search" name="search" id="search" autocomplete="off" required>
+                </div>
+            </fieldset>
+        </fieldset>
+        <fieldset>
+            <legend>New HTML5 Form Elements</legend>
+            <div>
+                <label for="superhero">Favorite Superhero:</label>
+                <input type="text" list="hero_list" name="superhero" id="superhero" required>
+                <datalist id="hero_list">
+                    <option label="Spiderman" value="Spiderman">
+                    <option label="Batman" value="Batman">
+                    <option label="Superman" value="Superman">
+                    <option label="Iron Man" value="Iron Man">
+                </datalist>
+            </div>
+            <div>
+                <label for="security">Encryption:</label>
+                <keygen name="security">
+            </div>
+        </fieldset>
+        <input type="submit">
+        <progress id="progress-bar" value="0" max="10"></progress>
+    </form>
+
+</body>
+</html>
