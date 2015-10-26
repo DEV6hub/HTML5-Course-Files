@@ -1,5 +1,5 @@
 body {
-	font-family:tahoma;	
+	font-family:tahoma;
 }
 
 header {
@@ -13,23 +13,29 @@ header {
 
 header hgroup {
 	display:block;
-	float:left;	
+	float:left;
 }
 
 header hgroup h1 {
 	font-size:x-large;
 	margin-bottom:5px;
-	color:#006;
+	color: #E44B32;
 }
 
 header hgroup h2 {
 	font-size:large;
-	margin:0px;	
-	color:#006;
+	margin:0px;
+	color: #F16338;
 }
 
 header #logo {
 	float:right;
+	width: 80px;
+	margin-top: 10px;
+}
+
+img {
+	width: 77px;
 }
 
 nav#mainnav {
@@ -37,8 +43,8 @@ nav#mainnav {
 	float:left;
 	width:80px;
 	margin:10px 0px 0px 20px;
-	border-left:3px solid #ccf;
-	border-bottom:3px solid #ccf;
+	border-left: 3px solid #E44B32;
+	border-bottom: 3px solid #F16338;
 	padding:15px;
 	background-color:#eee;
 	font-size:small;
@@ -53,6 +59,10 @@ nav#mainnav li {
 	display:block;
 }
 
+nav#mainnav a {
+	color: #B4AFAD;
+}
+
 #content {
 	margin:0px 20px;
 }
@@ -61,26 +71,26 @@ nav#mainnav li {
 	margin:0px;
 	padding-top:10px;
 	font-size:x-large;
-	color:#006;
-	letter-spacing:10px;
+	letter-spacing:2px;
 	font-variant:small-caps;
 }
 
 #content div h2  {
 	float:right;
 	font-size:xx-large;
-	color:#006;
+	color: #F16338;
 }
 
 #content>div {
-	clear:both;	
+	clear:both;
 }
 
 #content div div {
 	float:left;
 	padding:10px;
 	width: 500px;
-	border:1px solid #006;
+	height: 200px;
+	border: 1px solid #F16338;
 	font-size:small;
 }
 
@@ -100,14 +110,13 @@ aside#partners div {
 aside#partners h2 {
 	margin-bottom:0px;
 	font-size:large;
-	color:#006;	
 }
 
 footer {
 	display:block;
 	margin:0px 20px;
 	clear:both;
-	border-top:1px solid #006;
+	border-top: 1px solid #F16338;
 	font-style:italic;
 	width:1050px;
 	text-align:right;

@@ -52,3 +52,8 @@ section#coordinates {
     display: block;
     float: left;
 }
+
+canvas {
+    margin-top: 10px;
+    margin-left: 10px;
+}
