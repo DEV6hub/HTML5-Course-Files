@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>HTML5 Quiz</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <script>
         if (window.addEventListener) {
             window.addEventListener("load", addLoadEvents, false);
@@ -27,16 +28,19 @@
 <body>
     <div class="container">
         <h1>Quiz</h1>
-
         <form method="post" action="../../html5-forms/Exercises/process.xyz" id="quiz">
             <ol>
                 <li>
-                    <label for="q1">What color do you get when you mix red and yellow?</label>
-                    <input type="text" name="q1" id="q1">
+                    <label for="q1">
+                        What color do you get when you mix red and yellow?
+                    </label>
+                    <input type="text" name="q1" id="q1"/>
                 </li>
                 <li>
-                    <label for="q2">What is the first primary number greater than 20?</label>
-                    <input type="text" name="q2" id="q2">
+                    <label for="q2">
+                        What is the first primary number greater than 20?
+                    </label>
+                    <input type="text" name="q2" id="q2"/>
                 </li>
                 <li>
                     <label for="q3">
@@ -44,15 +48,19 @@
                         may use addition (+), subtraction (-), multiplication (*), and division (/). Do not include
                         spaces.
                     </label>
-                    <input type="text" name="q3" id="q3">
+                    <input type="text" name="q3" id="q3"/>
                 </li>
                 <li>
-                    <label for="q4">What date was John F. Kennedy assasinated?</label>
-                    <input type="text" name="q4" id="q4">
+                    <label for="q4">
+                        What date was John F. Kennedy assasinated?
+                    </label>
+                    <input type="text" name="q4" id="q4"/>
                 </li>
                 <li>
-                    <label for="q5">What is the world's most popular search engine?</label>
-                    <input type="text" name="q5" id="q5">
+                    <label for="q5">
+                        What is the world's most popular search engine?
+                    </label>
+                    <input type="text" name="q5" id="q5"/>
                 </li>
             </ol>
             <!--add bar showing percentage of valid (but not necessarily correct) answers-->
