@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>CSS3: structural pseudo classes - the not selector</title>
+<style id="styleBlock">
+	/* target any paragraph whose class attribute is not set to styleMeNot */
+	p:not(.styleMeNot) { color: red; }
+</style>
+</head>
+<body>
+
+<p class="styleMe">styled paragraph one - because class != 'styleMeNot'</p>
+<p class="styleMe">styled paragraph two - because class != 'styleMeNot'</p>
+<p class="styleMeNot">unstyled paragraph - because class = = 'styleMeNot'</p>
+<p class="styleMe">styled paragraph three - because class != 'styleMeNot'</p>
+
+<aside>
+<script type="text/javascript" src="../../common/prettify.js"></script>
+<link type="text/css" rel="stylesheet" href="../../common/prettify.css">
+<pre id="styleCodeBlock" class="prettyprint">
+<script src="../../common/displayStyleBlock.js"></script>
+</pre>
+<button id="toggleBtn" onClick="toggle()">toggle style code</button>
+</aside>
+
+</body>
+</html>

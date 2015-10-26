@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>CSS3: structural pseudo classes - the nth child selector</title>
+<style id="styleBlock">
+	/* target the second paragraph */
+	p:nth-child(2) { color: red; }
+
+	/* target the second last child, only if it's a div */
+	div:nth-last-child(2) { color: blue; }
+
+	/* target all even numbered child elements, only if they are paragraphs */
+	p:nth-child(even) { text-decoration: underline; }
+</style>
+
+</head>
+<body>
+	<p>p1</p>
+	<p>p2 this p is the second child of its parent</p>
+	<p>p3</p>
+	<p>p4</p>
+	<p>p5</p>
+    <div>div5 this div is the second last child of its parent</div>
+	
+<aside>
+<script type="text/javascript" src="../../common/prettify.js"></script>
+<link type="text/css" rel="stylesheet" href="../../common/prettify.css">
+<pre id="styleCodeBlock" class="prettyprint">
+<script src="../../common/displayStyleBlock.js"></script>
+</pre>
+<button id="toggleBtn" onClick="toggle()">toggle style code</button>
+</aside>
+
+</body>
+</html>

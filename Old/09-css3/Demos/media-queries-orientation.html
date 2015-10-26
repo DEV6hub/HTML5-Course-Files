@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>CSS3: media queries - orientation</title>
+<style id="styleBlock">
+
+	/* styles for portrait mode  */
+	@media screen and (orientation: portrait) {
+		#landscape { display: none; }
+	}
+
+	/* styles for landscape mode  */
+	@media screen and (orientation: landscape) {
+		#portrait { display: none; }
+	}
+	
+	/* default text size on iPhone is too small */
+	@media screen and (max-device-width: 480px) {
+		h1, p, button { font-size: 2em; }
+	}
+
+</style>
+</head>
+<body>
+
+<h1 id="portrait">portrait mode</h1>
+<h1 id="landscape">landscape mode</h1>
+
+<p>Resize your browser or reorient your device to see the effect of the media query applied to this page.</p>
+
+<aside>
+<script type="text/javascript" src="../../common/prettify.js"></script>
+<link type="text/css" rel="stylesheet" href="../../common/prettify.css">
+<pre id="styleCodeBlock" class="prettyprint">
+<script src="../../common/displayStyleBlock.js"></script>
+</pre>
+<button id="toggleBtn" onClick="toggle()">toggle style code</button>
+</aside>
+
+</body>
+</html>

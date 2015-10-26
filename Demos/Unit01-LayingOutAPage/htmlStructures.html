@@ -1,0 +1,27 @@
+<!doctype html>
+<head>
+    <title>html4 vs html5</title>
+    <script type="application/x-javascript">
+        function draw() {
+            var ctx = document.getElementById('canvas').getContext('2d');
+            var img = new Image();
+            img.src = 'images/html5Structure.png';
+            img.onload = function () {
+                ctx.drawImage(img, 0, 0);
+            }
+        }
+    </script>
+</head>
+
+<body onLoad="draw();">
+    <h1>HTML5 Structure</h1>
+
+    <div>
+        <canvas id="canvas" width="500" height="350"></canvas>
+        <div>
+            <h2>HTML4 Structure</h2>
+            <img src="../../html5-laying-out-a-page/Demos/images/html4Structure.png">
+        </div>
+    </div>
+</body>
+</html>

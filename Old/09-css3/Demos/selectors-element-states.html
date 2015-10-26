@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>CSS3: pseudo classes - element states</title>
+<style id="styleBlock">
+	/* select any text input that is enabled */
+	input[type="text"]:enabled { font-weight: bold; color: blue; }
+
+	/* select any text input that is disabled */
+	input[type="text"]:disabled { font-style: italic; }
+
+</style>
+</head>
+<body>
+
+<form>
+	<input type="text" placeholder="enter your first name" />
+	<input type="text" placeholder="middle name" disabled  />
+	<input type="text" placeholder="enter your last name" />
+</form>
+
+<aside>
+<script type="text/javascript" src="../../common/prettify.js"></script>
+<link type="text/css" rel="stylesheet" href="../../common/prettify.css">
+<pre id="styleCodeBlock" class="prettyprint">
+<script src="../../common/displayStyleBlock.js"></script>
+</pre>
+<button id="toggleBtn" onClick="toggle()">toggle style code</button>
+</aside>
+
+</body>
+</html>

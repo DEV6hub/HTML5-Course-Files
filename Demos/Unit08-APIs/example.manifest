@@ -1,0 +1,17 @@
+CACHE MANIFEST
+#Version 1.2
+offline.html
+offline/style.css
+offline/script.js
+
+NETWORK:
+*
+
+FALLBACK:
+Images/online.gif Images/offline.gif
+
+#COMMENTS
+##We could use the following fallback settings to use 
+##a different stylesheet and script when offline
+##style.css offline-style.css
+##script.js offline-script.js

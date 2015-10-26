@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>CSS3 Transitions - triggering transitions with css and javascript</title>
+<style>
+body { margin: 10px; padding: 10px; }
+p {
+	margin-top: -10px
+	margin-bottom: 40px;
+	font-size: 1.5em;
+	border:solid thick blue;
+	background-color: #eee;
+	text-align:center;
+}
+code { color: red; font-size:1.25em; }
+</style>
+
+<style id="styleBlock">
+/* define HOW the margin-left property changes */
+p	{ -webkit-transition: margin-left 0.5s; }
+
+/* trigger the switch to the ending state using a dynamic pseudo class */
+#cssTransition:hover { 
+	margin-left: 100px; 
+}
+
+/* trigger the switch to the ending state using a class selector that can be applied in JavaScript */
+#jsTransition.transitionable { 
+	margin-left: 100px; 
+}
+</style>
+
+</head>
+<script>
+window.addEventListener('load', function () {
+	document.getElementById('durationSeconds').addEventListener('change', updateStyles);
+	document.getElementById('delaySeconds').addEventListener('change', updateStyles);
+	document.getElementById('easingFunction').addEventListener('change', updateStyles);
+});
+
+function updateStyles(event) {
+	
+	var targetOutput = event.target.id+'O';
+	var targetValue = document.getElementById(event.target.id).value;
+	
+	var easingFunction = document.getElementById('easingFunction').value;
+	var durationSeconds = document.getElementById('durationSeconds').value;
+	var delaySeconds = document.getElementById('delaySeconds').value;
+	
+	var transitionStyleValue  			= 'margin-left ' + durationSeconds + 's ' + easingFunction + ' ' + delaySeconds + 's';
+	var transitionRule		 					= '-webkit-transition: ' + transitionStyleValue + '; ';
+
+	document.getElementById(targetOutput).innerHTML = targetValue;
+	document.getElementById('styleRule').innerHTML = '<code><pre>.transitionable { ' + transitionRule + '}</pre></code>';
+	document.getElementById('p2').setAttribute('style', transitionRule);
+}
+</script>
+
+<body>
+
+
+<code>&lt;p id="cssTransition"&gt;</code>
+<p id="cssTransition">hover here<br><u>trigger the switch using a dynamic pseudo class: CSS</u></p>
+
+<code>&lt;p id="jsTransition" onMouseOver="this.className='transitionable'" onMouseOut="this.className=''&gt;</code>
+<p id="jsTransition" onMouseOver="this.className='transitionable'" onMouseOut="this.className=''">hover here<br><u>trigger the switch by setting this element's class property: JavaSript</u></p>
+
+
+<aside>
+<script type="text/javascript" src="../../common/prettify.js"></script>
+<link type="text/css" rel="stylesheet" href="../../common/prettify.css">
+<pre id="styleCodeBlock" class="prettyprint">
+<script src="../../common/displayStyleBlock.js"></script>
+</pre>
+<button id="toggleBtn" onClick="toggle()">toggle style code</button>
+</aside>
+
+</body>
+</html>

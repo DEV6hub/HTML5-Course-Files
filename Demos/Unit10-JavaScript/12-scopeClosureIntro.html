@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Scope &mdash; Introduction to Closure</title>
+    <script>
+        var getCounter = function () {    // First-class Object
+            var i = 0;					// Acts as a private, instance variable
+            return function () {        // Anonynmous function
+                i += 1;
+                console.log(i);
+            };
+        };
+
+        var counter = getCounter();
+    </script>
+</head>
+<body>
+    <h1>Scope &mdash; Introduction to Closure</h1>
+    Closures are functions with persistent state.
+    <br/>
+    <br/>
+    <button onclick="counter()">Get Count</button>
+</body>
+</html>

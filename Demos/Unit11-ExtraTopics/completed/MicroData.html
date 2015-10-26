@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MicroData</title>
+</head>
+<body>
+
+    <div itemscope itemtype="http://data-vocabulary.org/Person">
+
+        My name is <span itemprop="name">Bob McKenzie</span>,
+        but people call me <span itemprop="nickname">Spuds</span>.
+
+        Here is my homepage:
+        <a href="http://www.hoser.ca" itemprop="url">www.hoser.ca</a>.
+        I live in
+	   <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+	      <span itemprop="locality">Toronto</span>,
+	      <span itemprop="region">ON</span>
+	      <span itemprop="country-name">Canada</span>
+	   </span>
+        and work as an <span itemprop="title">engineer</span>
+        at <span itemprop="affiliation">ACME Corp</span>.
+    </div>
+
+    Check out
+    <a href="http://roomswithaview.merkphotography.com/">http://roomswithaview.merkphotography.com/</a>
+    and
+    <a href="http://www.torontoflex.org">http://www.torontoflex.org</a>
+    and
+    <a href="http://www.google.com/webmasters/tools/richsnippets?url=http%3A%2F%2Froomswithaview.merkphotography.com%2F&view=">http://www.google.com/webmasters/tools/richsnippets</a>
+
+</body>
+</html>

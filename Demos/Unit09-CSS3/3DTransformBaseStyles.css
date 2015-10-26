@@ -1,0 +1,29 @@
+body { margin: 10px; padding: 10px; }
+table { float:left; }
+#floater { border:0px; margin-left: 400px; }
+.min, .max { color: #33F; }
+.min { text-align:right; }
+.currVal, .min, .max { text-align:center; }
+
+output { font-weight:700;	color: red; width:50px; }
+
+div {
+	width: 350px;
+	padding: 20px;
+	margin:auto;
+	border:solid thick blue;
+	font-size: 1.2em;
+	text-align:center;
+}
+
+#parentBox {
+	-webkit-perspective: 500px;
+	-webkit-perspective-origin: top left;
+	border:dashed thin black;
+	background-color: white;
+}
+
+#childBox {
+	-webkit-backface-visibility:visible;
+	background-color:lightblue;
+}

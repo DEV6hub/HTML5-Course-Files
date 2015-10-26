@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>JavaScript &mdash; ECMAScript 5</title>
+    <script>
+        var APP = {
+            strictFunction : null,
+            parseJSONNatively : null,
+            testRestrictedProperty : null
+        };
+
+        // Strict Mode
+        APP.strictFunction = function () {
+
+            'use strict';
+
+            myVar = 10;
+
+            // eval('var evil = true;');
+            // console.log('evil: ' + evil);
+
+            // with(this) {
+            // };
+        };
+
+        // Block 1: Native JSON parsing
+//        APP.parseJSONNatively = function () {
+//            var myObject = JSON.parse('{"name":"value", "obj":{"otherName":"otherVal"}}');
+//            console.log('myObject:');
+//            console.log(myObject);
+//        };
+
+        // Block 2: Defining restrictive properties
+//        APP.testRestrictedProperty = function () {
+//            var person = Object.create(null);
+//            Object.defineProperty(person,
+//                "dateOfBirth",
+//                {   value : (new Date()),
+//                    writable : false, // allows re-assignment
+//                    enumerable : true, // shows up in for...in loop
+//                    configurable : false // property can be deleted (using "delete" syntax")
+//                }
+//            );
+//
+//            person.dateOfBirth = 'what?';
+//            console.log('person.dateOfBirth: ' + person.dateOfBirth);
+//
+//            // console.log('Starting enumeration...');
+//            // for(var prop in person) {
+//            //     console.log('person[prop]: ' + person[prop]);
+//            // }
+//            // console.log('Finished enumeration.');
+//
+//        }
+
+    </script>
+</head>
+<body>
+    <h1>JavaScript &mdash; ECMAScript 5</h1>
+    Goals:
+    <ul>
+        <li>Don’t break the web</li>
+        <li>Improve the language for the users of the language</li>
+        <li>Third party security (mashups)</li>
+        <li>No new syntax</li>
+        <li>And a non-goal was “protect stupid people from themselves”</li>
+    </ul>
+
+    <a href="http://ejohn.org/blog/ecmascript-5-objects-and-properties/" target="_BLANK">http://ejohn.org/blog/ecmascript-5-objects-and-properties/</a>
+    <br/>
+    <a href="https://github.com/kriskowal/es5-shim/" target="_BLANK">https://github.com/kriskowal/es5-shim/</a>
+    <br/>
+    <a href="http://www.slideshare.net/douglascrockford/level-7-ecmascript-5-the-new-parts" target="_BLANK">http://www.slideshare.net/douglascrockford/level-7-ecmascript-5-the-new-parts</a>
+    <br/>
+    <a href="http://ie.microsoft.com/testdrive/HTML5/ECMAScript5Array/Default.html" target="_BLANK">http://ie.microsoft.com/testdrive/HTML5/ECMAScript5Array/Default.html</a>
+    <br/>
+    <br/>
+
+    <button onclick="APP.strictFunction()">Call strict function</button>
+    <br/>
+    <button onclick="APP.parseJSONNatively()">Parse some JSON (without jQuery)</button>
+    <br/>
+    <button onclick="APP.testRestrictedProperty()">Test Object with restricted property</button>
+    <br/>
+
+</body>
+</html>

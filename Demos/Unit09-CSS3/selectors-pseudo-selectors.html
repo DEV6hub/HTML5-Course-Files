@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <title>CSS3: pseudo classes</title>
+<style id="styleBlock">
+	/* the third child of its parent, any element */
+	:nth-child(3) {
+		color: red;
+	} 
+
+	/* the second last element of any parent */
+	p:nth-last-child(2) {
+		color: blue;
+	}
+
+	/* the second div element */
+	div:nth-of-type(3) {
+		color: green;
+	}
+
+	/* the second last div element */
+	div:nth-last-of-type(2){
+		text-decoration: underline;
+	}
+</style>
+<style>
+	section { 
+		border: 1px solid black; 
+		margin: auto; padding: 10px;
+		background-color: #ddd;
+	}
+	article { 
+		border: 2px solid black; 
+		margin: auto; padding: 10px;
+		background-color: #eee;
+	}
+</style>
+</head>
+<body>
+
+	<article>
+        <section>
+            <div><code>&lt;div&gt;</code> sample div in a section element</div>
+            <p><code>&lt;p&gt;</code> sample paragraph in a section element</p>
+            <div><code>&lt;div&gt;</code> third child of its parent, any element</div>
+            <div><code>&lt;div&gt;</code> this is the third (and also the second last) div in this section</div>
+            <p><code>&lt;p&gt;</code> second last child of its parent, any element</p>
+            <div><code>&lt;div&gt;</code> sample div in a section element</div>
+        </section>
+	
+        <p><code>&lt;p&gt;</code> 1: </p>
+        <p><code>&lt;p&gt;</code> 2: third child of its parent, any element</p>
+        <p><code>&lt;p&gt;</code> 3: this is the third element in this section but it isn't a div</p>
+        <p><code>&lt;p&gt;</code> 4: </p>
+        <p><code>&lt;p&gt;</code> 5: second last child of its parent, any element</p>
+        <p><code>&lt;p&gt;</code> 6: </p>
+	</article>
+
+<aside>
+<script type="text/javascript" src="../../common/prettify.js"></script>
+<link type="text/css" rel="stylesheet" href="../../common/prettify.css">
+<pre id="styleCodeBlock" class="prettyprint">
+<script src="../../common/displayStyleBlock.js"></script>
+</pre>
+<button id="toggleBtn" onClick="toggle()">toggle style code</button>
+</aside>
+	
+</body>
+</html>

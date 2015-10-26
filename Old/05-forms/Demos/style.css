@@ -1,0 +1,28 @@
+label {
+    display: block;
+    float: left;
+    clear: both;
+    font-weight: bold;
+    width: 100px;
+}
+
+div {
+    margin: 8px 0px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+fieldset fieldset legend {
+    font-size: large;
+}
+
+*:invalid {
+    color: #f00;
+}
+
+#rangeoutput {
+    display: none;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Video - controls</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>HTML5 Video - controls</h1>
+    <video controls>
+        <source src="../Media/justin.mp4" type="video/mp4">
+        <source src="../Media/justin.ogv" type="video/ogg">
+        <object type="application/x-shockwave-flash" data="../Media/justin.swf">
+            <!-- Firefox uses the `data` attribute above, IE/Safari uses the param below -->
+            <param name="movie" value="../Media/justin.swf">
+            <param name="flashvars" value="controlbar=over&amp;&amp;file=Media/justin.mp4">
+            <!-- fallback image. note the title field below, put the title of the video there -->
+            <h3>Download Video</h3>
+            <ul>
+                <li><a href="../Media/justin.mp4">MP4</a></li>
+                <li><a href="../Media/justin.ogv">OGG</a></li>
+            </ul>
+        </object>
+    </video>
+</body>
+</html>

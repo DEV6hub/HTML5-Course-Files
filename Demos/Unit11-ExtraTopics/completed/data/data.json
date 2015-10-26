@@ -1,0 +1,29 @@
+{
+    "dataPacket" : {
+
+        "error" : 0,
+        "errorMessage" : "",
+        "books" : [
+            {
+                "title" : "How to Make Money with HTML5",
+                "author" : "Connie Coder",
+                "price" : "12.95"
+            },
+            {
+                "title" : "How to Make Friends with CSS5",
+                "author" : "Stylin Sammy",
+                "price" : "22.99"
+            },
+            {
+                "title" : "How to Use JSON with HTML5",
+                "author" : "Jason Packette",
+                "price" : "50.00"
+            },
+            {
+                "title" : "Why NOT JavaScript?",
+                "author" : "Typeless Timmy",
+                "price" : "19.50"
+            }
+        ]
+    }
+}

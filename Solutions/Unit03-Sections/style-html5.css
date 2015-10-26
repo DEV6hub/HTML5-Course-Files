@@ -1,0 +1,119 @@
+body {
+    font-family: tahoma;
+}
+
+header, footer, aside, section, article, nav, hgroup {
+    display: block;
+}
+
+header {
+    padding: 0px 0px 5px 0px;
+    margin: 0px 20px;
+    height: 80px;
+    width: 890px;
+    float: left;
+}
+
+header hgroup {
+    display: block;
+    float: left;
+}
+
+header hgroup h1 {
+    font-size: x-large;
+    margin-bottom: 5px;
+    color: #006;
+}
+
+header hgroup h2 {
+    font-size: large;
+    margin: 0px;
+    color: #006;
+}
+
+header #logo {
+    float: right;
+}
+
+nav#mainnav {
+    float: left;
+    width: 80px;
+    margin: 10px 0px 0px 20px;
+    border-left: 3px solid #ccf;
+    border-bottom: 3px solid #ccf;
+    padding: 15px;
+    background-color: #eee;
+    font-size: small;
+}
+
+nav#mainnav ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav#mainnav li {
+    display: block;
+}
+
+#content {
+    margin: 0px 20px;
+}
+
+#content h1 {
+    margin: 0px;
+    padding-top: 10px;
+    font-size: x-large;
+    color: #006;
+    letter-spacing: 10px;
+    font-variant: small-caps;
+}
+
+#content section h2 {
+    float: right;
+    font-size: xx-large;
+    color: #006;
+}
+
+#content>article {
+    clear: both;
+}
+
+#content article section {
+    float: left;
+    padding: 10px;
+    width: 500px;
+    border: 1px solid #006;
+    font-size: small;
+}
+
+aside#partners {
+    clear: both;
+    margin: 0px 20px;
+    display: block;
+}
+
+aside#partners div {
+    width: 340px;
+    float: left;
+    padding: 5px;
+    font-size: x-small;
+}
+
+aside#partners h2 {
+    margin-bottom: 0px;
+    font-size: large;
+    color: #006;
+}
+
+footer {
+    margin: 0px 20px;
+    clear: both;
+    border-top: 1px solid #006;
+    font-style: italic;
+    width: 1050px;
+    text-align: right;
+}
+
+a:hover {
+    color: #f60;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Form Progress</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script>
+        window.addEventListener("load", function () {
+            document.getElementById("my-form").addEventListener("change", showProgress, false);
+        }, false);
+
+        function showProgress() {
+            var formInputs = [
+                document.getElementById("fname"),
+                document.getElementById("lname"),
+                document.getElementById("uname"),
+                document.getElementById("password")
+            ];
+            var numComplete = 0;
+
+            for (var i = 0; i < formInputs.length; ++i) {
+                if (formInputs[i].value.length > 0) numComplete++;
+            }
+
+            var formProgress = document.getElementById("form-progress");
+
+            formProgress.value = numComplete;
+
+            var percentComplete = Math.round(numComplete / formInputs.length * 100);
+            formProgress.getElementsByTagName("span")[0].innerHTML = percentComplete;
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="" id="my-form">
+        <div>
+            <label for="fname">First Name:</label>
+            <input type="text" name="fname" id="fname" required>
+        </div>
+        <div>
+            <label for="lname">Last Name:</label>
+            <input type="text" name="lname" id="lname" required>
+        </div>
+        <div>
+            <label for="uname">User Name:</label>
+            <input type="text" name="uname" id="uname" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+        </div>
+        <div>
+            <input type="submit" value="Register" id="register-button">
+        </div>
+    </form>
+    <progress id="form-progress" min="0" max="4" value="0">
+        Amount Complete: <span>0</span>%
+    </progress>
+</body>
+</html>

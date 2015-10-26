@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>CSS3: media queries - viewport dimensions</title>
+<style id="styleBlock">
+
+	/* short and narrow */
+	@media screen and (max-height: 500px) and (max-width: 500px)  {
+		#shortnarrow{ color:red; font-weight:900; background-color:#eee; }
+	}
+	/* short and wide */
+	@media screen and (max-height: 500px) and (min-width: 500px) {
+		#shortwide{ color:red; font-weight:900; background-color:#eee; }
+	}
+	/* tall and narrow */
+	@media screen and (min-height: 500px) and (max-width: 500px) {
+		#tallnarrow{ color:red; font-weight:900; background-color:#eee; }
+	}
+	/* tall and wide*/
+	@media screen and (min-height: 500px) and (min-width: 500px) {
+		#tallwide{ color:red; font-weight:900; background-color:#eee; }
+	}
+
+
+</style>
+</head>
+<body>
+
+
+<table width="400" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><p id="shortnarrow">narrow and short</p></td>
+    <td><p id="shortwide">wide and short</p></td>
+  </tr>
+  <tr>
+    <td><p id="tallnarrow">narrow and tall</p></td>
+    <td><p id="tallwide">wide and tall</p></td>
+  </tr>
+  <tr>
+  	<td colspan="2"><p>Resize your browser (both width and height) to see the effect of the media query applied to this page.</p></td>
+  </tr>
+</table>
+
+<aside>
+<script type="text/javascript" src="../../common/prettify.js"></script>
+<link type="text/css" rel="stylesheet" href="../../common/prettify.css">
+<pre id="styleCodeBlock" class="prettyprint">
+<script src="../../common/displayStyleBlock.js"></script>
+</pre>
+<button id="toggleBtn" onClick="toggle()">toggle style code</button>
+</aside>
+
+</body>
+</html>

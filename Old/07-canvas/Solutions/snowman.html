@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Snowman</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script>
+        function drawPath() {
+            var canvas = document.getElementById("my-canvas");
+            if (canvas.getContext) {
+                context = canvas.getContext("2d");
+                //day
+                context.canvas.style.backgroundColor = "rgb(153,153,255)";
+
+                //ground snow
+                context.beginPath();
+                context.fillStyle = "rgb(255,255,255)";
+                context.fillRect(0, 360, 400, 40);
+
+                //bottom ball
+                context.beginPath();
+                context.fillStyle = "rgb(255,255,255)";
+                context.arc(200, 300, 70, 0, degreesToRadians(360), true);
+                context.fill();
+
+                //middle ball
+                context.beginPath();
+                context.fillStyle = "rgb(255,255,255)";
+                context.arc(200, 200, 50, 0, degreesToRadians(360), true);
+                context.fill();
+
+                //head
+                context.beginPath();
+                context.fillStyle = "rgb(255,255,255)";
+                context.arc(200, 125, 35, 0, degreesToRadians(360), true);
+                context.fill();
+
+                //right eye
+                context.beginPath();
+                context.fillStyle = "rgb(0,0,0)";
+                context.arc(190, 115, 4, 0, degreesToRadians(360), true);
+                context.fill();
+
+                //left eye
+                context.beginPath();
+                context.fillStyle = "rgb(0,0,0)";
+                context.arc(210, 115, 4, 0, degreesToRadians(360), true);
+                context.fill();
+
+                //mouth
+                context.beginPath();
+                context.fillStyle = "rgb(255,0,0)";
+                context.arc(200, 125, 15, degreesToRadians(45), degreesToRadians(135), false);
+                context.fill();
+
+                //nose
+                context.beginPath();
+                context.fillStyle = "rgb(255,102,0)";
+                context.moveTo(200, 122);
+                context.lineTo(220, 126);
+                context.lineTo(200, 130);
+                context.fill();
+
+                //hat
+                context.beginPath();
+                context.fillStyle = "rgb(0,0,0)";
+                context.arc(200, 100, 25, 0, degreesToRadians(180), true);
+                context.fill();
+                context.fillRect(163, 94, 75, 8);
+
+                //left arm
+                context.beginPath();
+                context.lineWidth = 2;
+                context.strokeStyle = "rgb(155,85,0)";
+                context.moveTo(220, 180);
+                context.lineTo(300, 160);
+                context.lineTo(315, 165);
+                context.moveTo(300, 160);
+                context.lineTo(315, 158);
+                context.moveTo(300, 160);
+                context.lineTo(315, 150);
+                context.stroke();
+
+                //right arm
+                context.beginPath();
+                context.moveTo(170, 180);
+                context.lineTo(110, 240);
+                context.lineTo(115, 255);
+                context.moveTo(110, 240);
+                context.lineTo(95, 255);
+                context.moveTo(110, 240);
+                context.lineTo(85, 255);
+                context.stroke();
+
+                //buttons
+                context.beginPath();
+                context.fillStyle = "rgb(0,0,0)";
+                context.arc(200, 180, 5, 0, degreesToRadians(360), true);
+                context.arc(200, 220, 5, 0, degreesToRadians(360), true);
+                context.arc(200, 260, 5, 0, degreesToRadians(360), true);
+                context.fill();
+
+                //sun
+                context.beginPath();
+                context.fillStyle = "rgb(255,255,0)";
+                context.arc(400, 0, 70, 0, degreesToRadians(360), true);
+                context.fill();
+            }
+        }
+
+        function degreesToRadians(degrees) {
+            return (Math.PI / 180) * degrees;
+        }
+    </script>
+</head>
+<body>
+    <canvas id="my-canvas" height="400" width="400">Your browser doesn't support canvas.</canvas>
+    <button onclick="drawPath();">Draw</button>
+</body>
+</html>

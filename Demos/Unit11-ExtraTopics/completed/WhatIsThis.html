@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>What Is This?</title>
+    <script src="js/jquery-1.6.2.min.js"></script>
+
+    <script>
+        var app = {};
+        app.property = 'I\'m a simple property of the app object.';
+
+        var person = {
+            firstName : 'Joe',
+            lastName : 'Shmoe',
+            whoAreYou : function () {
+                return this.firstName + ' ' + this.lastName;
+            }
+        }
+
+        function Person(firstName) {
+            this.firstName = firstName;
+            this.toString = function () {
+                return 'Your name is ' + this.firstName;
+            };
+        }
+
+        $(document).ready(function () {
+            $('#testButton1').click(function () {
+                alert(person.whoAreYou());
+            });
+            $('#testButton2').click(function () {
+                var me = new Person('Fred');
+                alert(me.toString());
+            });
+            $('#testButton4').click(function () {
+                alert(this);	// The button input element
+            });
+        });
+
+        function testThis(obj) {
+            alert(obj);	// Put a breakpoint here in Chrome and inspect this (DOM window) and obj (the button input)
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="button" value="Call person.whoAreYou()" id="testButton1"/><br/>
+    <input type="button" value="Create Person object and alert name" id="testButton2"/><br/>
+    <input type="button" value="Pass this to a function with onclick" id="testButton3" onclick="testThis(this)"/><br/>
+    <input type="button" value="Call function using jQuery event handler" id="testButton4"/><br/>
+
+</body>
+</html>

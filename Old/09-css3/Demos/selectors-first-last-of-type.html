@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>CSS3: pseudo classes - first and last of type</title>
+<style id="styleBlock">
+	/* target any div that is the first child of its parent */
+	div:nth-of-type(1) { color: red; }
+	div:first-of-type { text-decoration: underline; } 
+
+	/* target any paragraph that is the last child of its parent */
+	p:nth-last-of-type(1) { color: green; }
+	p:last-of-type { text-decoration: underline; } 
+</style>
+<style>
+	section { 
+		border: 1px solid black; 
+		margin: 10px; padding: 10px;
+	}
+</style>
+</head>
+<body>
+
+<section>
+	<div>div1</div>
+	<div>div2</div>
+</section>
+<section>
+	<p>p1</p>
+	<p>p2</p>
+</section>
+
+
+<aside>
+<script type="text/javascript" src="../../common/prettify.js"></script>
+<link type="text/css" rel="stylesheet" href="../../common/prettify.css">
+<pre id="styleCodeBlock" class="prettyprint">
+<script src="../../common/displayStyleBlock.js"></script>
+</pre>
+<button id="toggleBtn" onClick="toggle()">toggle style code</button>
+</aside>
+
+</body>
+</html>

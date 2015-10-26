@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>CSS3 3D Transforms - Scale</title>
+
+<link rel="stylesheet" type="text/css" href="3DTransformBaseStyles.css">
+<style>
+#scaleXO { background-color: orange; }
+#scaleYO { background-color: yellow; }
+#scaleZO { background-color: lightgray; }
+
+#childBox {
+	-webkit-transform: scaleX(10deg) scaleY(10deg) scaleZ(10deg);
+}
+</style>
+
+<script>
+window.addEventListener('load', function () {
+	document.getElementById('resetBtn').addEventListener('click', doReset);
+	document.getElementById('perspective').addEventListener('change', updateParentPerspective);	
+	document.getElementById('scaleX').addEventListener('change', updateChildScale);
+	document.getElementById('scaleY').addEventListener('change', updateChildScale);
+	document.getElementById('scaleZ').addEventListener('change', updateChildScale);
+
+	document.getElementById('transformOriginX').addEventListener('change', updateChildTransformOrigin);
+	document.getElementById('transformOriginY').addEventListener('change', updateChildTransformOrigin);
+});
+
+function updateParentPerspective(event) {
+	var targetValue = document.getElementById(event.target.id).value;
+	document.getElementById(event.target.id+'OT').innerHTML = targetValue;
+	document.getElementById(event.target.id+'OD').innerHTML = targetValue;
+	document.getElementById('parentBox').style['webkitPerspective']=targetValue+'px';
+}
+
+function updateChildTransformOrigin(event) {
+
+	var xOutputT = document.getElementById('transformOriginXOT');
+	var yOutputT = document.getElementById('transformOriginYOT');
+	var xValue = document.getElementById('transformOriginX').value+'%';
+	var yValue = document.getElementById('transformOriginY').value+'%';
+	
+	xOutputT.innerHTML = xValue;
+	yOutputT.innerHTML = yValue;
+	
+	document.getElementById('childBox').style['webkitTransformOriginX'] = xValue;
+	document.getElementById('childBox').style['webkitTransformOriginY'] = yValue;
+}
+
+
+function updateChildScale(event) {
+	if (event.target.type == 'range') {
+		var xOutput = document.getElementById('scaleXO');
+		var xOutputT = document.getElementById('scaleXOT');
+		var yOutput = document.getElementById('scaleYO');
+		var yOutputT = document.getElementById('scaleYOT');
+		var zOutput = document.getElementById('scaleZO');
+		var zOutputT = document.getElementById('scaleZOT');
+		
+		var xValue = document.getElementById('scaleX').value / 10;
+		var yValue = document.getElementById('scaleY').value / 10;
+		var zValue = document.getElementById('scaleZ').value / 10;
+
+		xOutput.innerHTML = xValue;
+		xOutputT.innerHTML = xValue;
+		yOutput.innerHTML = yValue;
+		yOutputT.innerHTML = yValue;
+		zOutput.innerHTML = zValue;
+		zOutputT.innerHTML = zValue;
+		
+		document.getElementById('childBox').style['webkitTransform'] = 'scaleX(' + xValue + ') scaleY(' + yValue + ')  scaleZ(' + zValue + ')';
+	} 
+}
+
+function doReset() {
+	document.getElementById('perspective').value = 500;
+	
+	document.getElementById('transformOriginX').value = 50;
+	document.getElementById('transformOriginY').value = 50;
+	
+	document.getElementById('scaleX').value = 10;
+	document.getElementById('scaleY').value = 10;
+	document.getElementById('scaleZ').value = 10;
+}
+
+</script>
+</head>
+<body>
+
+
+<form>
+  <table border="1" cellspacing="0" cellpadding="5">
+  	<tr>
+    	<th>property</th>
+    	<th>min</th>
+    	<th>change it here</th>
+    	<th>max</th>
+    	<th>current</th>
+    </tr>
+    <tr>
+    	<td><label for="perspective">perspective</label></td>
+      <td class="min">100</td>
+      <td><input id="perspective" type="range" min="100" max="900" value="500" step="25"></td>
+      <td class="max">900</td>
+      <td class="currVal"><output id="perspectiveOT">500</output></td>
+    </tr>
+
+
+    <tr>
+    	<td><label for="transformOriginX">transform origin X</label></td>
+      <td class="min">0</td>
+      <td><input id="transformOriginX" type="range" min="0" max="100" value="50" step="10"></td>
+      <td class="max">100</td>
+      <td class="currVal"><output id="transformOriginXOT">50%</output></td>
+    </tr>
+    <tr>
+    	<td><label for="transformOriginY">transform origin Y</label></td>
+      <td class="min">0</td>
+      <td><input id="transformOriginY" type="range" min="0" max="100" value="50" step="10"></td>
+      <td class="max">100</td>
+      <td class="currVal"><output id="transformOriginYOT">50%</output></td>
+    </tr>
+
+
+    <tr>
+    	<td><label for="scaleX">scaleX</label></td>
+      <td class="min">0.5</td>
+      <td><input id="scaleX" type="range" min="5" max="20" value="10" step="1"></td>
+      <td class="max">2</td>
+      <td class="currVal" bgcolor="orange"><output id="scaleXOT">1</output></td>
+    </tr>
+    <tr>
+    	<td><label for="scaleY">scaleY</label></td>
+      <td class="min">0.5</td>
+      <td><input id="scaleY" type="range" min="5" max="20" value="10" step="1"></td>
+      <td class="max">2</td>
+      <td class="currVal" bgcolor="yellow"><output id="scaleYOT">1</output></td>
+    </tr>
+    <tr>
+    	<td><label for="scaleZ">scaleZ</label></td>
+      <td class="min">0.5</td>
+      <td><input id="scaleZ" type="range" min="5" max="20" value="10" step="1"></td>
+      <td class="max">2</td>
+      <td class="currVal" bgcolor="lightgray"><output id="scaleZOT">1</output></td>
+    </tr>
+
+		<tr>
+    	<td colspan="4"></td>
+      <td><button id="resetBtn">Reset</button></td>
+		</tr>
+  </table>
+</form>
+
+
+<div id="floater">
+  <div id="parentBox">
+		Perspective: <output id="perspectiveOD">500</output>
+    <div id="childBox">
+      scaleX(<output id="scaleXO">1</output>);<br>
+      scaleY(<output id="scaleYO">1</output>);<br>
+    	scaleZ(<output id="scaleZO">1</output>);
+    </div>
+ </div>
+</div>
+
+</body>
+</html>

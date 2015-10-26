@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas: Lines</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script>
+        function drawLine(x1, y1, x2, y2, color, width, cap) {
+            var canvas = document.getElementById("my-canvas");
+            if (!canvas.getContext) return;
+            var context = canvas.getContext("2d");
+            context.lineWidth = width;
+            context.lineCap = cap; //butt,round,square
+            context.strokeStyle = color;
+            context.beginPath();
+            context.moveTo(x1, y1);
+            context.lineTo(x2, y2);
+            context.stroke();
+        }
+    </script>
+</head>
+<body>
+    <canvas id="my-canvas" height="400" width="400">Your browser doesn't support canvas.</canvas>
+    <button onclick="drawLine(10,10,200,200,'rgb(0,0,255)',10,'round');">Line</button>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Table</title>
+    <script>
+        function addCaption() {
+            var myTable = document.getElementById("webucator-employees");
+            var myCaption = myTable.createCaption();
+            myCaption.innerHTML = "Webucator Employees";
+            myCaption.style.backgroundColor = "#eee";
+            myCaption.style.fontWeight = "bold";
+            myCaption.style.borderBottom = "2px solid #006";
+        }
+
+        window.addEventListener("load", addCaption, false);
+    </script>
+</head>
+<body>
+    <table id="webucator-employees">
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Nat</td>
+            <td>Dunn</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

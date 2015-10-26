@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Degrees</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script>
+        function drawPath(counterclockwise) {
+            var canvas = document.getElementById("my-canvas");
+            if (canvas.getContext) {
+                context = canvas.getContext("2d");
+                context.restore();
+                context.save();
+                context.scale(1.5, 1.5);
+                context.clearRect(0, 0, 200, 200);
+                context.fillText("Degrees", 80, 20);
+                if (counterclockwise) {
+                    context.fillText("counter-clockwise", 10, 190);
+                } else {
+                    context.fillText("clockwise", 10, 190);
+                }
+                context.moveTo(100, 100);
+                context.arc(100, 100, 70, 0, degreesToRadians(90), counterclockwise);
+                context.fillText("90", 100, 169);
+                context.stroke();
+                context.beginPath();
+                context.arc(100, 100, 60, 0, degreesToRadians(180), counterclockwise);
+                context.fillText("180", 40, 100);
+                context.stroke();
+                context.beginPath();
+                context.arc(100, 100, 50, 0, degreesToRadians(270), counterclockwise);
+                context.fillText("270", 90, 50);
+                context.stroke();
+                context.beginPath();
+                context.arc(100, 100, 40, 0, degreesToRadians(360), counterclockwise);
+                context.fillText("360", 120, 100);
+                context.stroke();
+            }
+        }
+
+        function degreesToRadians(degrees) {
+            return (Math.PI / 180) * degrees;
+        }
+
+    </script>
+</head>
+<body>
+    <canvas id="my-canvas" height="300" width="300">Your browser doesn't support canvas.</canvas>
+    <br>
+    <button onclick="drawPath(true);">Draw Counterclockwise Circles</button>
+    <button onclick="drawPath(false);">Draw Clockwise Circles</button>
+</body>
+</html>

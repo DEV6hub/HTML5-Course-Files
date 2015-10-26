@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Feature Check</title>
+    <style>
+        .true {
+            color: #060;
+        }
+
+        .false {
+            color: #f00;
+        }
+
+        .probably {
+            color: #3c3;
+        }
+
+        .maybe {
+            color: #960;
+        }
+
+        table {
+            width: 400px;
+            margin: auto;
+        }
+
+        caption {
+            font-weight: bold;
+        }
+
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+    <script src="../../common/modernizr.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <table>
+        <caption>
+            Your Browser's Feature Support according to <a href="http://www.modernizr.com">Modernizr</a>
+        </caption>
+        <thead>
+        <tr>
+            <th>Feature</th>
+            <th>Your Browser Support</th>
+        </tr>
+        </thead>
+        <tbody>
+        <script>
+            var i, j, o, prop;
+            for (i in Modernizr) {
+                if (typeof(Modernizr[i]) == "boolean") {
+                    document.write("<tr class='" + Modernizr[i] + "'>");
+                    document.write("<td>" + i + "</td>");
+                    document.write("<td>" + Modernizr[i] + "</td>");
+                    document.write("</tr>");
+                } else if (typeof(Modernizr[i]) == "object") {
+                    document.write("<tr class='" + Modernizr[i] + "'>");
+                    document.write("<td>" + i + "</td>");
+                    document.write("<td><table>");
+                    o = Modernizr[i];
+                    for (j in o) {
+                        document.write("<tr class='" + o[j] + "'>");
+                        document.write("<td>" + j + "</td>");
+                        if (o[j] == '') {
+                            prop = 'unknown';
+                        } else {
+                            prop = o[j];
+                        }
+                        document.write("<td>" + prop + "</td>");
+                        document.write("</tr>");
+                    }
+                    document.write("</table></td>");
+                    document.write("</tr>");
+                }
+            }
+        </script>
+        </tbody>
+    </table>
+</body>
+</html>

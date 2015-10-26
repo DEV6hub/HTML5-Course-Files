@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>CSS3: structural pseudo classes - the target selector</title>
+<style id="styleBlock">
+	/* select any paragraph that is the target of a link */
+	p:target { color: #eee; background-color: darkred; font-weight:700; }
+</style>
+<style>
+	body { margin: 10px; padding: 10px; }
+	a { background-color: black; color: white; text-decoration: none; padding: 10px; }
+	p { padding: 10px; }
+</style>
+</head>
+<body>
+
+<a href="#a">Click to highlight A</a>
+<a href="#b">Click to highlight B</a>
+<a href="">Reload</a>
+
+<p id="a">This is A. It will change when you click "highlight A" above.</p>
+<p id="b">This is B. It will change when you click "highlight B" above.</p>
+
+<aside>
+<script type="text/javascript" src="../../common/prettify.js"></script>
+<link type="text/css" rel="stylesheet" href="../../common/prettify.css">
+<pre id="styleCodeBlock" class="prettyprint">
+<script src="../../common/displayStyleBlock.js"></script>
+</pre>
+<button id="toggleBtn" onClick="toggle()">toggle style code</button>
+</aside>
+
+
+</body>
+</html>

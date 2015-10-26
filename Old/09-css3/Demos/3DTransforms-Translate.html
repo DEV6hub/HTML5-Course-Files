@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>CSS3 3D Transforms - Translation</title>
+
+<link rel="stylesheet" type="text/css" href="3DTransformBaseStyles.css">
+<style>
+#translateXO { background-color: orange; }
+#translateYO { background-color: yellow; }
+#translateZO { background-color: lightgray; }
+
+#childBox {
+	-webkit-transform: translateX(10px) translateY(10px) translateZ(10px);
+}
+</style>
+
+<script>
+window.addEventListener('load', function () {
+	document.getElementById('resetBtn').addEventListener('click', doReset);
+	document.getElementById('perspective').addEventListener('change', updateParentPerspective);	
+	document.getElementById('translateX').addEventListener('change', updateChildTranslation);
+	document.getElementById('translateY').addEventListener('change', updateChildTranslation);
+	document.getElementById('translateZ').addEventListener('change', updateChildTranslation);
+});
+
+function updateParentPerspective(event) {
+	var targetValue = document.getElementById(event.target.id).value;
+	document.getElementById(event.target.id+'OT').innerHTML = targetValue;
+	document.getElementById(event.target.id+'OD').innerHTML = targetValue;
+	document.getElementById('parentBox').style['webkitPerspective']=targetValue+'px';
+}
+
+
+function updateChildTranslation(event) {
+	if (event.target.type == 'range') {
+		var xOutput = document.getElementById('translateXO');
+		var xOutputT = document.getElementById('translateXOT');
+		var yOutput = document.getElementById('translateYO');
+		var yOutputT = document.getElementById('translateYOT');
+		var zOutput = document.getElementById('translateZO');
+		var zOutputT = document.getElementById('translateZOT');
+		
+		var xValue = document.getElementById('translateX').value;
+		var yValue = document.getElementById('translateY').value;
+		var zValue = document.getElementById('translateZ').value;
+
+		xOutput.innerHTML = xValue;
+		xOutputT.innerHTML = xValue;
+		yOutput.innerHTML = yValue;
+		yOutputT.innerHTML = yValue;
+		zOutput.innerHTML = zValue;
+		zOutputT.innerHTML = zValue;
+		
+		
+		var styleValue = 'translateX(' + xValue + 'px) translateY(' + yValue + 'px) translateZ(' + zValue + 'px)';
+		//var styleValue = 'translate3d(' + xValue + 'px, ' + yValue + 'px, ' + zValue + 'px)';
+		
+		document.getElementById('childBox').style['webkitTransform'] = styleValue;
+	} 
+}
+
+function doReset() {
+	document.getElementById('perspective').value = 500;	
+	document.getElementById('translateX').value = 10;
+	document.getElementById('translateY').value = 10;
+	document.getElementById('translateZ').value = 10;
+}
+
+</script>
+</head>
+<body>
+
+
+<form>
+  <table border="1" cellspacing="0" cellpadding="5">
+  	<tr>
+    	<th>property</th>
+    	<th>min</th>
+    	<th>change it here</th>
+    	<th>max</th>
+    	<th>current</th>
+    </tr>
+    <tr>
+    	<td><label for="perspective">perspective</label></td>
+      <td class="min">100</td>
+      <td><input id="perspective" type="range" min="100" max="900" value="500" step="25"></td>
+      <td class="max">900</td>
+      <td class="currVal"><output id="perspectiveOT">500</output></td>
+    </tr>
+
+    <tr>
+    	<td><label for="translateX">translateX</label></td>
+      <td class="min">-200</td>
+      <td><input id="translateX" type="range" min="-200" max="200" value="10" step="5"></td>
+      <td class="max">200</td>
+      <td class="currVal" bgcolor="orange"><output id="translateXOT">10</output></td>
+    </tr>
+    <tr>
+    	<td><label for="translateY">translateY</label></td>
+      <td class="min">-200</td>
+      <td><input id="translateY" type="range" min="-200" max="200" value="10" step="5"></td>
+      <td class="max">200</td>
+      <td class="currVal" bgcolor="yellow"><output id="translateYOT">10</output></td>
+    </tr>
+    <tr>
+    	<td><label for="translateZ">translateZ</label></td>
+      <td class="min">-200</td>
+      <td><input id="translateZ" type="range" min="-200" max="200" value="10" step="5"></td>
+      <td class="max">200</td>
+      <td class="currVal" bgcolor="lightgray"><output id="translateZOT">10</output></td>
+    </tr>
+
+		<tr>
+    	<td colspan="4"></td>
+      <td><button id="resetBtn">Reset</button></td>
+		</tr>
+  </table>
+</form>
+
+
+<div id="floater">
+  <div id="parentBox">
+		Perspective: <output id="perspectiveOD">500</output>
+    <div id="childBox">
+      translateX(<output id="translateXO">10</output>px);<br>
+      translateY(<output id="translateYO">10</output>px);<br>
+    	translateZ(<output id="translateZO">10</output>px);
+    </div>
+ </div>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Form - Input Range Type</title>
+</head>
+<body>
+    <form method="post" action="../../html5-forms/Demos/example.xyz">
+        <label for="pace">
+            <strong>How is the pace of the class?</strong><br>
+            <small>(1=way too slow, 9=way too fast, 5=perfect):</small>
+        </label><br>
+        <input type="range" name="pace" id="pace" min="1" max="9" value="5"
+               title="5" onchange="this.title=this.value">
+    </form>
+</body>
+</html>

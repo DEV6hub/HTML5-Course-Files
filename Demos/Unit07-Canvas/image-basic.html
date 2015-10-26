@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Image - Basic</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script>
+        window.addEventListener("load", draw, false);
+
+        function draw() {
+            var canvas = document.getElementById("my-canvas");
+            if (canvas.getContext) {
+                var context = canvas.getContext("2d");
+                var logo = new Image();
+                logo.src = 'Images/logo.png';
+                logo.onload = function () {
+                    context.drawImage(logo, 50, 50);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="my-canvas" height="200" width="400">Your browser doesn't support canvas.</canvas>
+</body>
+</html>

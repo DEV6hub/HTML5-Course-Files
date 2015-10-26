@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WebKit color type with required Bug</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>WebKit color type with required Bug</h1>
+
+    <p>Without filling anything in:</p>
+    <ol>
+        <li>Click the first <samp>check</samp> button. Alerts "false" in all browsers that support validity.</li>
+        <li>Click the second <samp>check</samp> button. Alerts "false" in Opera and Firefox 4. Alerts true in Chrome and
+            Safari. That's the bug.
+        </li>
+    </ol>
+    <form method="post" action="../../html5-forms/Demos/process.xyz">
+        <div>
+            <input type="text" name="q1" id="q1" required placeholder="Enter Color">
+            <button type="button" onclick="alert(document.getElementById('q1').validity.valid)">check</button>
+        </div>
+        <div>
+            <input type="color" name="q2" id="q2" required placeholder="Enter Color">
+            <button type="button" onclick="alert(document.getElementById('q2').validity.valid)">check</button>
+        </div>
+    </form>
+</body>
+</html>

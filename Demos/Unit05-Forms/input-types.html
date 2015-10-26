@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Form Input Types</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <form method="post" action="">
+        <fieldset>
+            <legend>Input Types</legend>
+            <fieldset>
+                <legend>Date Pickers</legend>
+                <div>
+                    <label for="date">date:</label>
+                    <input type="date" name="date" id="date" required>
+                </div>
+                <div>
+                    <label for="datetime">datetime:</label>
+                    <input type="datetime" name="datetime" id="datetime" required>
+                </div>
+                <div>
+                    <label for="datetime-local">datetime-local:</label>
+                    <input type="datetime-local" name="datetime-local" id="datetime-local" required>
+                </div>
+                <div>
+                    <label for="time">time:</label>
+                    <input type="time" name="time" id="time" required>
+                </div>
+                <div>
+                    <label for="month">month:</label>
+                    <input type="month" name="month" id="month" required>
+                </div>
+                <div>
+                    <label for="week">week:</label>
+                    <input type="week" name="week" id="week" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Contact Information</legend>
+                <div>
+                    <label for="tel">tel:</label>
+                    <input type="tel" name="tel" id="tel" required>
+                </div>
+                <div>
+                    <label for="email">email:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div>
+                    <label for="url">url:</label>
+                    <input type="url" name="url" id="url" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Other</legend>
+                <div>
+                    <label for="number">number:</label>
+                    <input type="number" name="number" id="number" required>
+                </div>
+                <div>
+                    <label for="range">range:</label>
+                    <input type="range" name="range" id="range" min="0" max="10" value="5">
+                    <output for="range" id="rangeoutput"></output>
+                </div>
+                <div>
+                    <label for="color">color:</label>
+                    <input type="color" name="color" id="color" required>
+                </div>
+                <div>
+                    <label for="search">search:</label>
+                    <input type="search" name="search" id="search" autocomplete="off" required>
+                </div>
+            </fieldset>
+        </fieldset>
+    </form>
+</body>
+</html>

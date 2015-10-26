@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>In Closing</title>
+    <script src="js/jquery-1.6.2.min.js"></script>
+
+    <script>
+        var com = {};
+        com.newyyz = {};
+        com.newyyz.myApp = {}; // Put all functions and other objects under this object
+        com.newyyz.myApp.main = {};
+        com.newyyz.myApp.main.property = 'One million dollars!';
+
+        com.newyyz.myApp.main.testFunction = function () {
+            alert('Hello from com.newyyz.myApp.main.testFunction()!\n\nThe property value is: ' + com.newyyz.myApp.main.property);
+        };
+
+        $(document).ready(function () {
+            $('#testButton1').click(function () {
+                com.newyyz.myApp.main.testFunction();
+            });
+            $('#testButton2').click(function () {
+                alert('Hidden property: ' + com.newyyz.myApp.other.getHiddenProperty());
+            });
+            $('#testButton3').click(function () {
+                alert('Public property: ' + com.newyyz.myApp.other.publicProperty);
+            });
+        });
+
+    </script>
+    <script src="js/in.closing.js"></script>
+</head>
+
+<body>
+
+    <input type="button" value="Call com.newyyz.myApp.main.testFunction()" id="testButton1"/><br/>
+    <input type="button" value="Call com.newyyz.myApp.other.getHiddenProperty()" id="testButton2"/><br/>
+    <input type="button" value="Get com.newyyz.myApp.other.publicProperty" id="testButton3"/><br/>
+
+</body>
+</html>
