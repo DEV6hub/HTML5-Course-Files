@@ -1,0 +1,11 @@
+.show-grid [class^=col-] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #CCFF99;
+    border: 1px solid #009900;
+    border: 1px solid rgba(86,61,124,.2);
+}
+
+#level2 {
+    background-color: #009900;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Selectors</title>
+    <style>
+
+        article[id ^="content"] {
+            /* All article ids beginning with "content" */
+            background-color: #ddd;
+            display: block;
+            padding: 2px;
+            margin-bottom: 8px;
+            border: 1px solid #000;
+        }
+
+        input[type="text"]:enabled {
+            background: #dfd;
+        }
+
+        input[type="text"]:disabled {
+            background: #ff6;
+            color: #eee;
+        }
+
+        p {
+            margin: 0;
+            padding: 1px;
+        }
+
+        p.paraColours:nth-child(odd) {
+            background-color: #fdf;
+            color: #f00;
+        }
+
+        p.paraColours:nth-child(even) {
+            background-color: #dff;
+            color: #00f;
+        }
+
+        p.paraColours:nth-of-type(1) {
+            margin-top: 10px;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .selectMe {
+            font-weight: bold;
+            padding: 8px;
+            margin-top: 10px;
+            border: 1px solid #000;
+        }
+
+        .selectMe::selection {
+            color: #f0f;
+            background-color: #000;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section>
+        <article id="content1">First chunk of content.</article>
+        <article id="content2">Second chunk of content.</article>
+    </section>
+
+    <input type="text" disabled="disabled" value="Disabled"/>
+    <input type="text" value="Enabled"/>
+
+    <p class="paraColours">
+        Paragraph 1
+    </p>
+
+    <p class="paraColours">
+        Paragraph 2
+    </p>
+
+    <p class="paraColours">
+        Paragraph 3
+    </p>
+
+    <p class="paraColours">
+        Paragraph 4
+    </p>
+
+    <p class="paraColours">
+        Paragraph 5
+    </p>
+
+    <p class="selectMe">
+        Select me!
+    </p>
+
+</body>
+</html>
