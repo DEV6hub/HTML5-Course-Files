@@ -4,18 +4,6 @@
             window.addEventListener("load", addLoadEvents, false);
         }
 
-        function addLoadEvents() {
-            setFormDates();
-            if (Modernizr.inputtypes.range) {
-                document.getElementById('rangeoutput').style.display = "inline";
-            }
-            document.getElementById("range").addEventListener("change", function () {
-                if (Modernizr.inputtypes.range) {
-                    document.getElementById('rangeoutput').innerHTML = this.value;
-                }
-            }, false);
-        }
-
         function setFormDates() {
             var dateFieldTypes = ["date", "datetime", "datetime-local", "time", "month", "week"];
             var myForm = document.getElementById("my-form");
@@ -54,28 +42,28 @@
                     break;
                     formFieldCount--;
                     default :
-                    if (Modernizr.input.placeholder) {
-                        field.placeholder = "enter valid " + field.type;
-                    } else if (field.value.length == 0) {
-                        field.value = "enter valid " + field.type;
-                        field.style.opacity = .5;
-                        field.addEventListener("focus", function () {
-                            this.style.opacity = 1;
-                            if (this.value == "enter valid " + this.type) {
-                                this.value = "";
-                            }
-                        }, false);
-                    }
-                    field.addEventListener("blur", function () {
-                        if (Modernizr.input.validity && !this.validity.valid) {
-                            this.value = "enter valid " + this.type;
-                            if (!Modernizr.input.placeholder) {
-                                this.style.opacity = .5;
-                            }
-                        } else if (!Modernizr.input.placeholder) {
-                            this.style.opacity = 1;
-                        }
-                    }, false);
+                    // if (Modernizr.input.placeholder) {
+                    //     field.placeholder = "enter valid " + field.type;
+                    // } else if (field.value.length == 0) {
+                    //     field.value = "enter valid " + field.type;
+                    //     field.style.opacity = .5;
+                    //     field.addEventListener("focus", function () {
+                    //         this.style.opacity = 1;
+                    //         if (this.value == "enter valid " + this.type) {
+                    //             this.value = "";
+                    //         }
+                    //     }, false);
+                    // }
+                    // field.addEventListener("blur", function () {
+                    //     if (Modernizr.input.validity && !this.validity.valid) {
+                    //         this.value = "enter valid " + this.type;
+                    //         if (!Modernizr.input.placeholder) {
+                    //             this.style.opacity = .5;
+                    //         }
+                    //     } else if (!Modernizr.input.placeholder) {
+                    //         this.style.opacity = 1;
+                    //     }
+                    // }, false);
                 }
             }
             //myForm.addEventListener("formchange",updateProgress,false);

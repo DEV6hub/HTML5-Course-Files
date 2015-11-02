@@ -1,1 +1,0 @@
-Exercise 3 Determining the Outline10 to 20 minutesIn this exercise, you will try to determine the outline of an HTML page.1. Review the code below.2. Create a list either on paper or in a text editor or word processor that shows theHTML outline as specified by the HTML5 specification.
