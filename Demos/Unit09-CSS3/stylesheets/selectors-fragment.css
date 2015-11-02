@@ -1,0 +1,4 @@
+ /* target the portion of the paragraph that is selected by the user */
+ p::selection {
+  background-color:
+  black; color: red;  }

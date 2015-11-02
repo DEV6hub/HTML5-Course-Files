@@ -1,0 +1,13 @@
+#scaleXO {
+  background-color: orange;
+}
+#scaleYO {
+  background-color: yellow;
+}
+#scaleZO {
+  background-color: lightgray;
+}
+
+#childBox {
+ -webkit-transform: scaleX(10deg) scaleY(10deg) scaleZ(10deg);
+}

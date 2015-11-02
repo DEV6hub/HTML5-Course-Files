@@ -1,0 +1,29 @@
+.true {
+    color: #060;
+}
+
+.false {
+    color: #f00;
+}
+
+.probably {
+    color: #3c3;
+}
+
+.maybe {
+    color: #960;
+}
+
+table {
+    width: 400px;
+    margin: auto;
+}
+
+caption {
+    font-weight: bold;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: center;
+}

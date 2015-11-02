@@ -1,0 +1,31 @@
+body {
+  margin: 10px;
+  padding: 10px;
+}
+p {
+  margin-top: -10px
+  margin-bottom: 40px;
+  font-size: 1.5em;
+  border:solid thick blue;
+  background-color: #eee;
+  text-align:center;
+}
+code {
+  color: red;
+  font-size:1.25em;
+}
+
+/* starting state */
+p {
+  margin-left: 100px;
+}
+
+/* ending state */
+p:hover {
+  margin-left: 300px;
+}
+
+/* HOW the margin-left property changes */
+.transitionable {
+  -webkit-transition: margin-left 0.5s ease-in 0s;
+}

@@ -1,20 +1,15 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>HTML5 Form - Validity Support</title>
-    <script>
-        function check() {
-            var input = document.createElement("input");
-            if (input.validity) {
-                alert("validity is supported");
-            } else {
-                alert("validity is NOT supported");
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
 </head>
 <body>
-    <button onclick="check( );">Check Validity</button>
+    <div class="container">
+        <br>
+        <button class="btn btn-default" onclick="check( );">Check Validity</button>
+    </div>
 </body>
+<script src="scripts/input-validity-support.js"></script>
 </html>

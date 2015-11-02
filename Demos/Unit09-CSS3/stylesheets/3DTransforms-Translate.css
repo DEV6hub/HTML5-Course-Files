@@ -1,0 +1,13 @@
+#translateXO {
+  background-color: orange;
+}
+#translateYO {
+  background-color: yellow;
+}
+#translateZO {
+  background-color: lightgray;
+}
+
+#childBox {
+ -webkit-transform: translateX(10px) translateY(10px) translateZ(10px);
+}

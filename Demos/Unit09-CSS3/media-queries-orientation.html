@@ -1,41 +1,26 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 <head>
-    <title>CSS3: media queries - orientation</title>
-<style id="styleBlock">
-
-	/* styles for portrait mode  */
-	@media screen and (orientation: portrait) {
-		#landscape { display: none; }
-	}
-
-	/* styles for landscape mode  */
-	@media screen and (orientation: landscape) {
-		#portrait { display: none; }
-	}
-	
-	/* default text size on iPhone is too small */
-	@media screen and (max-device-width: 480px) {
-		h1, p, button { font-size: 2em; }
-	}
-
-</style>
+	<title>CSS3: media queries - orientation</title>
+	<link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="stylesheets/media-queries-orientation.css">
+	<link type="text/css" rel="stylesheet" href="stylesheets/prettify.css">
 </head>
+	<script type="text/javascript" src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <body>
+	<div class="container">
+		<h1 id="portrait">portrait mode</h1>
+		<h1 id="landscape">landscape mode</h1>
 
-<h1 id="portrait">portrait mode</h1>
-<h1 id="landscape">landscape mode</h1>
+		<p>Resize your browser or reorient your device to see the effect of the media query applied to this page.</p>
 
-<p>Resize your browser or reorient your device to see the effect of the media query applied to this page.</p>
+		<aside ipt type="text/javascript" src="scripts/prettify.js"></script>
 
-<aside>
-<script type="text/javascript" src="../../common/prettify.js"></script>
-<link type="text/css" rel="stylesheet" href="../../common/prettify.css">
-<pre id="styleCodeBlock" class="prettyprint">
-<script src="../../common/displayStyleBlock.js"></script>
-</pre>
-<button id="toggleBtn" onClick="toggle()">toggle style code</button>
-</aside>
-
+			<pre id="styleCodeBlock" class="prettyprint">
+				<script src="scripts/displayStyleBlock.js"></script>
+			</pre>
+			<button class="btn btn-default" id="toggleBtn" onClick="toggle()">toggle style code</button>
+		</aside>
+	</div>
 </body>
 </html>

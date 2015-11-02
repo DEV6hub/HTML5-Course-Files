@@ -1,19 +1,22 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>HTML5 Form Field Attribute - pattern</title>
-    <style>
-        input:invalid {
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="stylesheets/pattern.css">
 </head>
 <body>
-    <form method="post" action="">
-        <label for="telephone">Telephone: </label>
-        <input type="tel" name="telephone" id="telephone" pattern="^\(?([2-9]\d\d)\)?[\-\. ]?([2-9]\d\d)[\-\. ]?(\d{4})$">
-        <input type="submit">
-    </form>
+    <div class="container">
+    <br>
+        <div class="form-group">
+            <form method="post" action="">
+                <label for="telephone">Telephone: </label>
+                <input class="form-control" type="tel" name="telephone" id="telephone" pattern="^\(?([2-9]\d\d)\)?[\-\. ]?([2-9]\d\d)[\-\. ]?(\d{4})$">
+                <br>
+                <input class="btn btn-default" type="submit">
+            </form>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,21 @@
+h1, h2, h3 {
+    background-color: #eee;
+}
+
+h1 {
+    font-size: x-large;
+}
+
+h2, aside>article>h1 {
+    font-size: large;
+    margin-left: 50px;
+}
+
+aside>article>h2 {
+    font-size: medium;
+    margin-left: 100px;
+}
+
+ul, p {
+    display: none;
+}

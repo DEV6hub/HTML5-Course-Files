@@ -1,0 +1,20 @@
+/* styles for portrait mode  */
+@media screen and (orientation: portrait) {
+  #landscape {
+    display: none;
+  }
+}
+
+/* styles for landscape mode  */
+@media screen and (orientation: landscape) {
+  #portrait {
+    display: none;
+  }
+}
+
+/* default text size on iPhone is too small */
+@media screen and (max-device-width: 480px) {
+  h1, p, button {
+    font-size: 2em;
+  }
+}

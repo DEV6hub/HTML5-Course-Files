@@ -1,36 +1,24 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>HTML5 Form Attributes</title>
-    <script>
-        window.addEventListener("load", function () {
-            document.getElementById("my-form").addEventListener("submit", validate, false);
-        }, false);
-
-        function validate(e) {
-            var myForm = this;
-            var errMsg = "";
-            if (this.fullname.value.length == 0) {
-                errMsg += "\n\t*Full Name must be filled out";
-            }
-            if (this.email.value.length > 0 && !/^(\w+[\-\.])*\w+@(\w+\.)+[A-Za-z]+$/.test(this.email.value)) {
-                errMsg += "\n\t*Email is not valid";
-            }
-            if (errMsg.length > 0) {
-                alert(errMsg);
-                e.preventDefault();
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
 </head>
 <body>
-    <form id="my-form" method="post" action="" novalidate>
-        <label for="fullname">Name: </label>
-        <input type="text" name="fullname" id="fullname" required>
-        <label for="email">Email: </label>
-        <input type="email" name="email" id="email">
-        <input type="submit">
-    </form>
+    <br/>
+    <div class="container">
+        <div class='form-group'>
+            <form id="my-form" method="post" action="" novalidate>
+                <label for="fullname">Name: </label>
+                <input class="form-control" type="text" name="fullname" id="fullname" required/>
+                <label for="email">Email: </label>
+                <input class="form-control" type="email" name="email" id="email"/>
+                <br/>
+                <input class="btn btn-default" type="submit"/>
+            </form>
+        </div>
+    </div>
+    <script src="scripts/form-validate-override.js"></script>
 </body>
 </html>

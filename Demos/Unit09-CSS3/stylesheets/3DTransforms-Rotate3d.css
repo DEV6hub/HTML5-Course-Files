@@ -1,0 +1,16 @@
+#multiplierXO {
+  background-color: orange;
+}
+#multiplierYO {
+  background-color: yellow;
+}
+#multiplierZO {
+  background-color: lightgray;
+}
+#rotateDegO {
+  background-color: darkgray;
+}
+
+#childBox {
+ -webkit-transform: rotate3d(0, 0, 0, 0deg);
+}

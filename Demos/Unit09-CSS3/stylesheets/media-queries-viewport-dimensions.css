@@ -1,0 +1,31 @@
+   @media screen and (max-height: 500px) and (max-width: 500px)  {
+    #shortnarrow{
+      color:red;
+      font-weight:900;
+      background-color:#eee;
+    }
+  }
+  /* short and wide */
+  @media screen and (max-height: 500px) and (min-width: 500px) {
+    #shortwide{
+      color:red;
+      font-weight:900;
+      background-color:#eee;
+    }
+  }
+  /* tall and narrow */
+  @media screen and (min-height: 500px) and (max-width: 500px) {
+    #tallnarrow{
+      color:red;
+      font-weight:900;
+      background-color:#eee;
+    }
+  }
+  /* tall and wide*/
+  @media screen and (min-height: 500px) and (min-width: 500px) {
+    #tallwide{
+      color:red;
+      font-weight:900;
+      background-color:#eee;
+    }
+  }

@@ -1,39 +1,30 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 <head>
-    <title>CSS3: structural pseudo classes - the only child selector</title>
-<style id="styleBlock">
-	/* target any paragraph that is the only child of its parent */
-	p:only-child { color: red; }
-</style>
-
-<style>
-	section { 
-		border: 1px solid black; 
-		margin: 10px; padding: 10px;
-	}
-</style>
+	<title>CSS3: structural pseudo classes - the only child selector</title>
+	<link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
+	<link type="text/css" rel="stylesheet" href="stylesheets/prettify.css">
+	<link type="text/css" rel="stylesheet" href="stylesheets/selectors-nth-of-type.css">
 </head>
 <body>
 
-<section>
-	<p>p1</p>
-</section>
-<section>
-	<p>p2</p>
-	<p>p3</p>
-</section>
+	<div class="container">
+		<section>
+			<p>p1</p>
+		</section>
+		<section>
+			<p>p2</p>
+			<p>p3</p>
+		</section>
 
-
-
-<aside>
-<script type="text/javascript" src="../../common/prettify.js"></script>
-<link type="text/css" rel="stylesheet" href="../../common/prettify.css">
-<pre id="styleCodeBlock" class="prettyprint">
-<script src="../../common/displayStyleBlock.js"></script>
-</pre>
-<button id="toggleBtn" onClick="toggle()">toggle style code</button>
-</aside>
+		<aside>
+			<script type="text/javascript" src="scripts/prettify.js"></script>
+			<pre id="styleCodeBlock" class="prettyprint">
+				<script src="scripts/displayStyleBlock.js"></script>
+			</pre>
+			<button class="btn btn-default" id="toggleBtn" onClick="toggle()">toggle style code</button>
+		</aside>
+	</div>
 
 </body>
 </html>

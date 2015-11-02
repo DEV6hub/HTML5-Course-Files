@@ -1,0 +1,29 @@
+/* the third child of its parent, any element */
+ :nth-child(3) {
+  color: red;
+}
+
+/* the second last element of any parent */
+p:nth-last-child(2) {
+  color: blue;
+}
+
+/* the second div element */
+div:nth-of-type(3) {
+  color: green;
+}
+
+/* the second last div element */
+div:nth-last-of-type(2){
+  text-decoration: underline;
+}
+section {
+  border: 1px solid black;
+  margin: auto; padding: 10px;
+  background-color: #ddd;
+}
+article {
+  border: 2px solid black;
+  margin: auto; padding: 10px;
+  background-color: #eee;
+}

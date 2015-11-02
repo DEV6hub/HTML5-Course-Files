@@ -1,24 +1,22 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 <head>
-    <title>CSS3: structural pseudo classes - the fragment selector</title>
-<style id="styleBlock">
-	/* target the portion of the paragraph that is selected by the user */
-	p::selection { background-color: black; color: red;  }
-</style>
+  <title>CSS3: structural pseudo classes - the fragment selector</title>
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link type="text/css" rel="stylesheet" href="stylesheets/prettify.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/selectors-fragment.css">
 </head>
 <body>
+  <div class="container">
 
-<p>Select a word or two from this paragraph</p>
-
-<aside>
-<script type="text/javascript" src="../../common/prettify.js"></script>
-<link type="text/css" rel="stylesheet" href="../../common/prettify.css">
-<pre id="styleCodeBlock" class="prettyprint">
-<script src="../../common/displayStyleBlock.js"></script>
-</pre>
-<button id="toggleBtn" onClick="toggle()">toggle style code</button>
-</aside>
-
+    <p>Select a word or two from this paragraph</p>
+    <aside>
+    <script type="text/javascript" src="scripts/prettify.js"></script>
+      <pre id="styleCodeBlock" class="prettyprint">
+        <script src="scripts/displayStyleBlock.js"></script>
+      </pre>
+      <button class="btn btn-default" id="toggleBtn" onClick="toggle()">toggle style code</button>
+    </aside>
+  </div>
 </body>
 </html>

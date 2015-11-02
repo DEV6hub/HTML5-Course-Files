@@ -1,14 +1,21 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>HTML5 Form Field Attribute - required</title>
+  <meta charset="UTF-8">
+  <title>HTML5 Form Field Attribute - required</title>
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
 </head>
 <body>
-    <form method="post" action="">
+  <div class="container">
+    <div class="form-group">
+    <br>
+      <form method="post" action="">
         <label for="fullname">Name: </label>
-        <input type="text" name="fullname" id="fullname" required>
-        <input type="submit">
-    </form>
+        <input class="form-control" type="text" name="fullname" id="fullname" required>
+        <br>
+        <input class="btn btn-default" type="submit">
+      </form>
+    </div>
+  </div>
 </body>
 </html>

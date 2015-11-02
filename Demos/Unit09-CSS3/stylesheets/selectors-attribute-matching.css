@@ -1,0 +1,18 @@
+/* the id must begin with 'paragraph' */
+p[id^="paragraph"] {
+  color:red;
+}
+
+/* the id must end with 'abc' */
+p[id$="abc"] {
+  color:green;
+}
+
+/* the id must contain 'xyz' */
+p[id*="xyz"] {
+  color:blue;
+}
+section {
+  border: 1px solid black;
+  margin: 10px; padding: 10px;
+}

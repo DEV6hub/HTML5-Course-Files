@@ -1,0 +1,29 @@
+header {
+  background-color: #D9EDF7;
+  border: 2px solid black;
+}
+
+nav {
+  background-color: #31708F;
+  border: 2px solid black;
+}
+
+aside {
+  background-color: #A94442;
+  border: 2px solid black;
+}
+
+section {
+  background-color: #45A942;
+  border: 2px solid black;
+}
+
+article {
+  background-color: #F0AD4E;
+  border: 2px solid black;
+}
+
+footer {
+  background-color: #999999;
+  border: 2px solid black;
+}

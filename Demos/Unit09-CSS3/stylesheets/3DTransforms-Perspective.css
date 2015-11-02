@@ -1,0 +1,30 @@
+div {
+  width: 350px;
+  padding: 20px;
+  font-size: 1.5em;
+  text-align:center;
+}
+
+#range-low {
+  text-align: left;
+}
+
+#range-high {
+  text-align: right;
+}
+
+#parentBox {
+  border:dashed thin black;
+  background-color: white;
+  /* withough perspective, 3d is meaningless
+  -webkit-perspective: 500px; */
+  font-size: 20px;
+}
+
+#childBox {
+  border:solid thick blue;
+  background-color:lightblue;
+  margin-top: 50px;
+  font-size: 20px;
+  -webkit-transform: rotateX(15deg) rotateY(15deg) rotateZ(15deg);
+}

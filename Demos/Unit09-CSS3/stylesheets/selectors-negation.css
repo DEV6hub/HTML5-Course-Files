@@ -1,0 +1,4 @@
+/* target any paragraph whose class attribute is not set to styleMeNot */
+p:not(.styleMeNot) {
+  color: red;
+}

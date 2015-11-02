@@ -1,0 +1,10 @@
+/* select any text input that is enabled */
+input[type="text"]:enabled {
+  font-weight: bold;
+  color: blue;
+}
+
+/* select any text input that is disabled */
+input[type="text"]:disabled {
+  font-style: italic;
+}

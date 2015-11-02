@@ -1,0 +1,8 @@
+/* target any paragraph that is preceded by a div anywhere in the same parent */
+div ~ p {
+  color: red;
+}
+section {
+  border: 1px solid black;
+  margin: 10px; padding: 10px;
+}

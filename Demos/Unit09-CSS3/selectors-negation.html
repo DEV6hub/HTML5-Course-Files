@@ -1,27 +1,25 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 <head>
-    <title>CSS3: structural pseudo classes - the not selector</title>
-<style id="styleBlock">
-	/* target any paragraph whose class attribute is not set to styleMeNot */
-	p:not(.styleMeNot) { color: red; }
-</style>
+  <title>CSS3: structural pseudo classes - the not selector</title>
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link type="text/css" rel="stylesheet" href="stylesheets/prettify.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/selectors-negation.css">
 </head>
 <body>
+  <div class="container">
+    <p class="styleMe">styled paragraph one - because class != 'styleMeNot'</p>
+    <p class="styleMe">styled paragraph two - because class != 'styleMeNot'</p>
+    <p class="styleMeNot">unstyled paragraph - because class = = 'styleMeNot'</p>
+    <p class="styleMe">styled paragraph three - because class != 'styleMeNot'</p>
 
-<p class="styleMe">styled paragraph one - because class != 'styleMeNot'</p>
-<p class="styleMe">styled paragraph two - because class != 'styleMeNot'</p>
-<p class="styleMeNot">unstyled paragraph - because class = = 'styleMeNot'</p>
-<p class="styleMe">styled paragraph three - because class != 'styleMeNot'</p>
-
-<aside>
-<script type="text/javascript" src="../../common/prettify.js"></script>
-<link type="text/css" rel="stylesheet" href="../../common/prettify.css">
-<pre id="styleCodeBlock" class="prettyprint">
-<script src="../../common/displayStyleBlock.js"></script>
-</pre>
-<button id="toggleBtn" onClick="toggle()">toggle style code</button>
-</aside>
-
+    <aside>
+      <script type="text/javascript" src="scripts/prettify.js"></script>
+      <pre id="styleCodeBlock" class="prettyprint">
+      <script src="scripts/displayStyleBlock.js"></script>
+      </pre>
+      <button class="btn btn-default" id="toggleBtn" onClick="toggle()">toggle style code</button>
+    </aside>
+  </div>
 </body>
 </html>

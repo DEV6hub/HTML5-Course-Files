@@ -1,16 +1,23 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>HTML5 Form Field - Autofocus</title>
+  <meta charset="UTF-8">
+  <title>HTML5 Form Field - Autofocus</title>
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
 </head>
 <body>
+  <div class="container">
+    <br>
     <form method="post" action="">
+      <div class="form-group">
         <label for="fullname">Name: </label>
-        <input type="text" name="fullname" id="fullname" autofocus>
+        <input class="form-control" type="text" name="fullname" id="fullname" autofocus/>
         <label for="email">Email: </label>
-        <input type="email" name="email" id="email">
-        <input type="submit">
+        <input class="form-control" type="email" name="email" id="email"/>
+        <br>
+        <input class="form-control" class="btn btn-default" type="submit"/>
+      </div>
     </form>
+  </div>
 </body>
 </html>

@@ -1,53 +1,22 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 <head>
     <title>JavaScript Variables &mdash; Passing</title>
-    <script>
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css"/>
 
-        var obj,
-            a,
-            b,
-            startValue,
-            x,
-            valueChanger,
-            propertyChanger;
-
-        // Assignments are by reference
-        obj = {};
-        a = obj;
-        b = obj;
-        console.log('Does a === b ? ' + (a === b));
-        console.log('------------------------');
-
-        // Block 1: Simple types are passed by value
-//        startValue = 'Original value';
-//        valueChanger = function (value) {
-//            return 'NEW value';
-//        };
-//        valueChanger(startValue);
-//        console.log('After the function call, startValue is: ' + startValue);
-//        console.log('------------------------');
-
-        // Block 2:
-//        x = {name : 'value', inner : {variable : 'hey'} };
-//        propertyChanger = function (o) {
-//            o.name = 'CHANGED VALUE!';
-//            console.log('Does o === x ? ' + (o === x));
-//        };
-//        propertyChanger(x);
-//        console.log('x.name is: ' + x.name);
-    </script>
 </head>
 <body>
-    <h1>JavaScript Variables &mdash; Passing</h1>
-    Rules:
-    <ul>
-        <li>variable assignments are by reference</li>
-        <li>simple variables are passed to functions by <strong>value</strong></li>
-        <li>objects are passed to functions by <strong>reference</strong></li>
-    </ul>
-    <br/>
-    <br/>
-
+    <div class="container">
+        <h1>JavaScript Variables &mdash; Passing</h1>
+        Rules:
+        <ul>
+            <li>variable assignments are by reference</li>
+            <li>simple variables are passed to functions by <strong>value</strong></li>
+            <li>objects are passed to functions by <strong>reference</strong></li>
+        </ul>
+        <br/>
+        <br/>
+    </div>
+    <script type="text/javascript" src="scripts/07-variablesPassing.js"></script>
 </body>
 </html>

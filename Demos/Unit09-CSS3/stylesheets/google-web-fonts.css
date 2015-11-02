@@ -1,0 +1,16 @@
+#hp {
+  font-family: 'Henny Penny', cursive;
+  font-size: 48px;
+  text-shadow: 4px 4px 4px #aaa;
+  font-weight: 400;
+}
+#ls {
+  font-family: 'Londrina Shadow', cursive;
+  font-size: 48px;
+}
+
+#pt {
+  font-family: 'PT Mono';
+  font-size: 48px;
+  text-shadow: 2px 2px 2px #aaa;
+}

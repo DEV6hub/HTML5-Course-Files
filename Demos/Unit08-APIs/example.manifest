@@ -8,10 +8,10 @@ NETWORK:
 *
 
 FALLBACK:
-Images/online.gif Images/offline.gif
+images/online.gif images/offline.gif
 
 #COMMENTS
-##We could use the following fallback settings to use 
+##We could use the following fallback settings to use
 ##a different stylesheet and script when offline
 ##style.css offline-style.css
 ##script.js offline-script.js
