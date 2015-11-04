@@ -1,8 +1,8 @@
 CACHE MANIFEST
 #Version 1.2
-offline.html
-offline/style.css
-offline/script.js
+01-offline.html
+stylesheets/offline.css
+scripts/offline.js
 
 NETWORK:
 *
