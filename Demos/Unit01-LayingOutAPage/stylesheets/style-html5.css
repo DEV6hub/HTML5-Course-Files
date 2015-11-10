@@ -2,35 +2,36 @@ body {
     font-family: tahoma;
 }
 
-header {
+.header {
     display: block;
     padding: 5px;
     height: 80px;
     margin: auto;
 }
 
-header hgroup {
+.header .hgroup {
     display: block;
     float: left;
 }
 
-header hgroup h1 {
+.header .hgroup h1 {
     font-size: x-large;
     margin-bottom: 5px;
     margin-top: 10px;
 }
 
-header hgroup h2 {
+.header .hgroup h2 {
     font-size: large;
     margin: 0px;
 }
 
-header #logo {
+.header #logo {
     float: right;
     width: 77px;
 }
 
-nav#mainnav {
+#mainnav{
+    list-style-type: none;
     clear: both;
     display: block;
     padding: 10px;
@@ -38,43 +39,44 @@ nav#mainnav {
     background-color: cornflowerblue;
 }
 
-nav#mainnav a {
+.nav #mainnav a {
     color: white;
 }
 
-nav#mainnav ul {
+.nav #mainnav ul {
     margin: 0px;
     padding: 0px;
 }
 
-nav#mainnav li {
-    display: inline;
-    margin-right: 10px;
-    padding-right: 10px;
+#mainnav li {
+   text-decoration: none;
+   display: inline;
+   margin-right: 10px;
+   padding-right: 10px;
 }
 
 #container {
     margin: auto;
 }
 
-aside h2 {
+.aside h2 {
     margin-bottom: 0px;
     font-size: large;
     color: #006;
 }
 
-aside {
+.aside {
     width: 250px;
     float: left;
     margin-bottom: 5px;
 }
 
-aside ul {
+.aside ul {
     margin: 0px;
     padding: 0px;
 }
 
-aside li {
+.aside li {
     display: block;
     width: 50%;
     height: 100%;
@@ -83,11 +85,11 @@ aside li {
     background-color: cornflowerblue;
 }
 
-aside li:hover {
+.aside li:hover {
     background-color: #fff;
 }
 
-aside a {
+.aside a {
     text-decoration: none;
     display: block;
     width: 100%;
@@ -103,7 +105,7 @@ li a{
     border-left: 2px solid cornflowerblue;
 }
 
-footer {
+.footer {
     display: block;
     clear: both;
     border-top: 1px solid #006;

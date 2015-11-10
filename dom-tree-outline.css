@@ -1,21 +1,25 @@
 h1, h2, h3 {
     background-color: #eee;
 }
-
+#logo {
+  width: 80px;
+  float: right;
+  content: url("../images/logo.png");
+}
 h1 {
     font-size: x-large;
 }
 
-h2, aside>article>h1 {
+h2 {
     font-size: large;
     margin-left: 50px;
 }
 
-aside>article>h2 {
+aside {
     font-size: medium;
     margin-left: 100px;
 }
 
 ul, p {
-    display: none;
+  background-color: #FFE4B9;
 }

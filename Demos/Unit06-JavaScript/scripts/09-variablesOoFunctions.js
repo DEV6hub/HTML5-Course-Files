@@ -1,19 +1,19 @@
-    var Person = function () {
-            this.firstName = '';
-            this.lastName = '';
+var Person = function () {
+    this.firstName = '';
+    this.lastName = '';
 
-            var age = 32;
+    var age = 32;
 
-            this.getAge = function () {
-                return 'Private age: ' + age;
-            };
+    this.getAge = function () {
+        return 'Private age: ' + age;
+    };
 
-            this.getName = function () {
-                return 'Expensive function: ' + this.firstName + ' ' + this.lastName +
-                '\n*** Move it to the prototype object!***';
-            };
-            // "return this;" is implied
-        };
+    this.getName = function () {
+        return 'Expensive function: ' + this.firstName + ' ' + this.lastName +
+        '\n*** Move it to the prototype object!***';
+    };
+        // "return this;" is implied
+};
 
 //        Person.prototype.getName = function () {
 //            return 'EFFICIENT function: ' + this.firstName + ' ' + this.lastName;

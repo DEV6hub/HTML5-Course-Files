@@ -11,49 +11,21 @@ header {
     float: left;
 }
 
-.header {
-    display: block;
-    padding: 5px;
-    height: 80px;
-    margin: auto;
-}
-
-.header .hgroup {
-    display: block;
-    float: left;
-}
-
 header hgroup {
     display: block;
     float: left;
 }
 
-.header .hgroup h1 {
-    font-size: x-large;
-    margin-bottom: 5px;
-    margin-top: 10px;
-}
-
 header hgroup h1 {
     font-size: x-large;
     margin-bottom: 5px;
-    color: #E44B32;
-}
-
-.header .hgroup h2 {
-    font-size: large;
-    margin: 0px;
+    color: #006;
 }
 
 header hgroup h2 {
     font-size: large;
     margin: 0px;
-    color: #F16338;
-}
-
-.header #logo {
-    float: right;
-    width: 77px;
+    color: #006;
 }
 
 header #logo {
@@ -62,13 +34,8 @@ header #logo {
     margin-top: 10px;
 }
 
-#mainnav{
-    list-style-type: none;
-    clear: both;
-    display: block;
-    padding: 10px;
-    margin: 10px auto;
-    background-color: cornflowerblue;
+img{
+    width: 77px;
 }
 
 nav#mainnav {
@@ -83,25 +50,9 @@ nav#mainnav {
     font-size: small;
 }
 
-.nav #mainnav a {
-    color: white;
-}
-
-.nav #mainnav ul {
-    margin: 0px;
-    padding: 0px;
-}
-
 nav#mainnav ul {
     margin: 0px;
     padding: 0px;
-}
-
-#mainnav li {
-   text-decoration: none;
-   display: inline;
-   margin-right: 10px;
-   padding-right: 10px;
 }
 
 nav#mainnav li {
@@ -110,56 +61,6 @@ nav#mainnav li {
 
 nav#mainnav a {
     color: #B4AFAD;
-}
-
-#container {
-    margin: auto;
-}
-
-.aside h2 {
-    margin-bottom: 0px;
-    font-size: large;
-    color: #006;
-}
-
-.aside {
-    width: 250px;
-    float: left;
-    margin-bottom: 5px;
-}
-
-.aside ul {
-    margin: 0px;
-    padding: 0px;
-}
-
-.aside li {
-    display: block;
-    width: 50%;
-    height: 100%;
-    border: 1px solid white;
-    padding: 2px;
-    background-color: cornflowerblue;
-}
-
-.aside li:hover {
-    background-color: #fff;
-}
-
-.aside a {
-    text-decoration: none;
-    display: block;
-    width: 100%;
-}
-
-li a{
-    color: white;
-}
-
-#content {
-    float: left;
-    padding: 10px;
-    border-left: 2px solid cornflowerblue;
 }
 
 #content {
@@ -209,8 +110,8 @@ aside#partners div {
 aside#partners h2 {
     margin-bottom: 0px;
     font-size: large;
+    color: #006;
 }
-
 
 footer {
     display: block;
@@ -219,15 +120,6 @@ footer {
     border-top: 1px solid #F16338;
     font-style: italic;
     width: 1050px;
-    text-align: right;
-}
-
-.footer {
-    display: block;
-    clear: both;
-    border-top: 1px solid #006;
-    margin: 5px auto;
-    font-style: italic;
     text-align: right;
 }
 

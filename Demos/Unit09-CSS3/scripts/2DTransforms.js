@@ -1,4 +1,4 @@
-  window.addEventListener('load', function () {
+window.addEventListener('load', function () {
    document.getElementById('skewDegrees').addEventListener('change', updateDivStyles);
    document.getElementById('scaleX').addEventListener('change', updateDivStyles);
    document.getElementById('scaleY').addEventListener('change', updateDivStyles);
@@ -8,9 +8,9 @@
    document.getElementById('originX').addEventListener('change', updateDivStyles);
    document.getElementById('originY').addEventListener('change', updateDivStyles);
    document.getElementById('resetBtn').addEventListener('click', doReset);
- });
+});
 
-  function updateDivStyles(event) {
+function updateDivStyles(event) {
 
    var prefixW = '-webkit-';
    var prefixM = '-moz-';
@@ -55,9 +55,9 @@
    document.getElementById(targetOutput).innerHTML = targetValue;
    document.getElementById('styleRule').innerHTML = styleRuleToDisplay;
    document.getElementById('transformed').setAttribute('style', styleRuleToApply);
- }
+}
 
- function doReset() {
+function doReset() {
    document.getElementById('skewDegrees').value = 0;
    document.getElementById('scaleX').value = 0;
    document.getElementById('scaleY').value = 0;
@@ -66,4 +66,4 @@
    document.getElementById('translateY').value = 0;
    document.getElementById('originX').value = 0;
    document.getElementById('originY').value = 0;
- }
+}

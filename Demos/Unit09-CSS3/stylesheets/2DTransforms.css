@@ -1,56 +1,56 @@
 body {
-      margin: 10px;
-      padding: 10px;
-    }
-    #t1 {
-      float: left;
-    }
-    .min, .max {
-      color: #33F;
-    }
-    .min {
-      text-align:right;
-    }
-    .currVal, .min, .max {
-      text-align:center;
-    }
-    label {
-      font-family: Verdana, Geneva, sans-serif;
-    }
-    output {
-      font-weight:700;
-      color: #F00;
-      width:50px;
-    }
-    code {
-      color: red;
-      font: 1.5em sans-serif;
-    }
-    div {
-     position:absolute;
-     width: 250px;
-     padding: 20px;
-     margin:auto;
-     margin-top: 50px;
-     border:solid thick blue;
-     font-size: 2em;
-     background-color: #eee;
-     color: blue;
-     text-align:center;
-   }
-   #original {
-    opacity:0.4;
-  }
+  margin: 10px;
+  padding: 10px;
+}
+#t1 {
+  float: left;
+}
+.min, .max {
+  color: #33F;
+}
+.min {
+  text-align:right;
+}
+.currVal, .min, .max {
+  text-align:center;
+}
+label {
+  font-family: Verdana, Geneva, sans-serif;
+}
+output {
+  font-weight:700;
+  color: #F00;
+  width:50px;
+}
+code {
+  color: red;
+  font: 1.5em sans-serif;
+}
+div {
+ position:absolute;
+ width: 250px;
+ padding: 20px;
+ margin:auto;
+ margin-top: 50px;
+ border:solid thick blue;
+ font-size: 2em;
+ background-color: #eee;
+ color: blue;
+ text-align:center;
+}
+#original {
+  opacity:0.4;
+}
 
-  #transformed, #original {
-    transform:         skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
-    -webkit-transform: skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
-    -moz-transform:    skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
-    -o-transform:      skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
-    -ms-transform:     skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
-    transform-origin:         0% 0%;
-    -webkit-transform-origin: 0% 0%;
-    -moz-transform-origin:    0% 0%;
-    -o-transform-origin:      0% 0%;
-    -ms-transform-origin:     0% 0%;
-  }
+#transformed, #original {
+  transform:         skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
+  -webkit-transform: skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
+  -moz-transform:    skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
+  -o-transform:      skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
+  -ms-transform:     skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
+  transform-origin:         0% 0%;
+  -webkit-transform-origin: 0% 0%;
+  -moz-transform-origin:    0% 0%;
+  -o-transform-origin:      0% 0%;
+  -ms-transform-origin:     0% 0%;
+}
