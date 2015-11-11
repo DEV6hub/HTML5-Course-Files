@@ -29,3 +29,7 @@
       background-color:#eee;
     }
   }
+
+  code{
+    display: none;
+  }

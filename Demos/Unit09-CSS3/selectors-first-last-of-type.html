@@ -19,13 +19,20 @@
 			<p>p2</p>
 		</section>
 		<aside>
-			<script type="text/javascript" src="scripts/prettify.js"></script>
-			<pre id="styleCodeBlock" class="prettyprint">
-				<script src="scripts/displayStyleBlock.js"></script>
-			</pre>
+			<pre id="styleCodeBlock" class="prettyprint"></pre>
 			<button class="btn btn-default" id="toggleBtn" onClick="toggle()">toggle style code</button>
 		</aside>
 	</div>
+	<code id="styleBlock">
+			/* target any div that is the first child of its parent */
+			div:nth-of-type(1) { color: red; }
+			div:first-of-type { text-decoration: underline; }
 
+			/* target any paragraph that is the last child of its parent */
+			p:nth-last-of-type(1) { color: green; }
+			p:last-of-type { text-decoration: underline; }
+	</code>
+	<script type="text/javascript" src="scripts/prettify.js"></script>
+	<script src="scripts/displayStyleBlock.js"></script>
 </body>
 </html>

@@ -19,12 +19,19 @@
 		<div>div3</div>
 
 		<aside>
-			<script type="text/javascript" src="scripts/prettify.js"></script>
-			<pre id="styleCodeBlock" class="prettyprint">
-				<script src="scripts/displayStyleBlock.js"></script>
-			</pre>
+			<pre id="styleCodeBlock" class="prettyprint"></pre>
 			<button class="btn btn-default" id="toggleBtn" onClick="toggle()">toggle style code</button>
 		</aside>
+		<code id="styleBlock">
+			/* target the second paragraph element */
+			p:nth-of-type(2) { color: red; }
+			/* target the second last paragraph element */
+			p:nth-last-of-type(2) { color: blue; }
+			/* target all odd numbered divs */
+			div:nth-of-type(odd) { color: green; }
+		</code>
 	</div>
+	<script type="text/javascript" src="scripts/prettify.js"></script>
+	<script src="scripts/displayStyleBlock.js"></script>
 </body>
 </html>

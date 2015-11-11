@@ -26,3 +26,7 @@
     /* HOW the margin-left property changes */
     -webkit-transition: margin-left 0.5s ease-in 0.5s, opacity 0.5s ease-in 1s;
   }
+
+  #styleBlock{
+    display: none;
+  }

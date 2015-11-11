@@ -4,7 +4,7 @@
   <title>CSS3: media queries - viewport dimensions</title>
   <link type="text/css" rel="stylesheet" href="stylesheets/prettify.css">
   <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="stylesheets/media-queries-viewport-dimensions.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/media-queries-viewport-dimensions.css">
 </head>
 <body>
   <div class="container">
@@ -22,14 +22,31 @@
        <td colspan="2"><p>Resize your browser (both width and height) to see the effect of the media query applied to this page.</p></td>
      </tr>
    </table>
-
-   <aside>
-    <script type="text/javascript" src="scripts/prettify.js"></script>
+  <aside>
     <pre id="styleCodeBlock" class="prettyprint">
-      <script src="scripts/displayStyleBlock.js"></script>
     </pre>
     <button class="btn btn-default" id="toggleBtn" onClick="toggle()">toggle style code</button>
   </aside>
+  <code id="styleBlock">
+      /* short and narrow */
+      @media screen and (max-height: 500px) and (max-width: 500px)  {
+        #shortnarrow{ color:red; font-weight:900; background-color:#eee; }
+      }
+      /* short and wide */
+      @media screen and (max-height: 500px) and (min-width: 500px) {
+        #shortwide{ color:red; font-weight:900; background-color:#eee; }
+      }
+      /* tall and narrow */
+      @media screen and (min-height: 500px) and (max-width: 500px) {
+        #tallnarrow{ color:red; font-weight:900; background-color:#eee; }
+      }
+      /* tall and wide*/
+      @media screen and (min-height: 500px) and (min-width: 500px) {
+        #tallwide{ color:red; font-weight:900; background-color:#eee; }
+      }
+  </code>
 </div>
+<script type="text/javascript" src="scripts/prettify.js"></script>
+<script src="scripts/displayStyleBlock.js"></script>
 </body>
 </html>

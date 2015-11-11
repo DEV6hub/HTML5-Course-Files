@@ -4,7 +4,7 @@
 	<title>CSS3: structural pseudo classes - the general sibling selector</title>
 	<link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
 	<link type="text/css" rel="stylesheet" href="stylesheets/prettify.css">
-<link rel="stylesheet" type="text/css" href="stylesheets/selectors-general-sibling.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/selectors-general-sibling.css">
 </head>
 <body>
 	<div class="container">
@@ -18,12 +18,15 @@
 
 
 		<aside>
-			<script type="text/javascript" src="scripts/prettify.js"></script>
-			<pre id="styleCodeBlock" class="prettyprint">
-				<script src="scripts/displayStyleBlock.js"></script>
-			</pre>
+			<pre id="styleCodeBlock" class="prettyprint"></pre>
 			<button class="btn btn-default" id="toggleBtn" onClick="toggle()">toggle style code</button>
 		</aside>
 	</div>
+	<code id="styleBlock">
+			/* target any paragraph that is preceded by a div anywhere in the same parent */
+			div ~ p { color: red; }
+	</code>
+	<script type="text/javascript" src="scripts/prettify.js"></script>
+	<script src="scripts/displayStyleBlock.js"></script>
 </body>
 </html>

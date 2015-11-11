@@ -22,7 +22,7 @@ output {
   color: #F00;
   width:50px;
 }
-code {
+#code-top {
   color: red;
   font: 1.5em sans-serif;
 }
@@ -40,6 +40,10 @@ div {
 }
 #original {
   opacity:0.4;
+}
+
+#styleBlock{
+  display: none;
 }
 
 #transformed, #original {

@@ -58,12 +58,33 @@
     </article>
 
     <aside>
-      <script type="text/javascript" src="scripts/prettify.js"></script>
       <pre id="styleCodeBlock" class="prettyprint">
-        <script src="scripts/displayStyleBlock.js"></script>
       </pre>
       <button class="btn btn-default" id="toggleBtn" onClick="toggle()">toggle style code</button>
     </aside>
   </div>
+  <code id="styleBlock">
+      /* the third child of its parent, any element */
+      :nth-child(3) {
+        color: red;
+      }
+
+      /* the second last element of any parent */
+      p:nth-last-child(2) {
+        color: blue;
+      }
+
+      /* the second div element */
+      div:nth-of-type(3) {
+        color: green;
+      }
+
+      /* the second last div element */
+      div:nth-last-of-type(2){
+        text-decoration: underline;
+      }
+  </code>
+  <script type="text/javascript" src="scripts/prettify.js"></script>
+  <script src="scripts/displayStyleBlock.js"></script>
 </body>
 </html>

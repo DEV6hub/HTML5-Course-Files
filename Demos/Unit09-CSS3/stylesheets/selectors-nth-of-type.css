@@ -10,3 +10,7 @@ p:nth-last-of-type(2) {
 div:nth-of-type(odd) {
   color: green;
 }
+
+code{
+  display: none;
+}

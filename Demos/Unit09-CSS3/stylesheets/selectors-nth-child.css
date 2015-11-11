@@ -12,3 +12,7 @@ div:nth-last-child(2) {
 p:nth-child(even) {
   text-decoration: underline;
 }
+
+code{
+  display: none;
+}

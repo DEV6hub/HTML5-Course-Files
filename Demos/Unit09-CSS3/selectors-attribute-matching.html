@@ -31,12 +31,27 @@
     </section>
 
     <aside>
-      <script type="text/javascript" src="scripts/prettify.js"></script>
-      <pre id="styleCodeBlock" class="prettyprint">
-        <script src="scripts/displayStyleBlock.js"></script>
-      </pre>
+      <pre id="styleCodeBlock" class="prettyprint"></pre>
       <button class="btn btn-default" id="toggleBtn" onClick="toggle()">toggle style code</button>
     </aside>
+    <code id="styleBlock">
+        /* the id must begin with 'paragraph' */
+        p[id^="paragraph"] {
+          color:red;
+        }
+
+        /* the id must end with 'abc' */
+        p[id$="abc"] {
+          color:green;
+        }
+
+        /* the id must contain 'xyz' */
+        p[id*="xyz"] {
+          color:blue;
+        }
+    </code>
   </div>
+  <script type="text/javascript" src="scripts/prettify.js"></script>
+  <script src="scripts/displayStyleBlock.js"></script>
 </body>
 </html>

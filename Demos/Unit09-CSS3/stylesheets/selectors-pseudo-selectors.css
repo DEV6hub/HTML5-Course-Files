@@ -27,3 +27,7 @@ article {
   margin: auto; padding: 10px;
   background-color: #eee;
 }
+
+code{
+  display: none;
+}

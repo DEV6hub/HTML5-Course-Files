@@ -18,12 +18,21 @@
 		<div>div5 this div is the second last child of its parent</div>
 
 		<aside>
-			<script type="text/javascript" src="scripts/prettify.js"></script>
-			<pre id="styleCodeBlock" class="prettyprint">
-				<script src="scripts/displayStyleBlock.js"></script>
-			</pre>
+			<pre id="styleCodeBlock" class="prettyprint"></pre>
 			<button class="btn btn-default" id="toggleBtn" onClick="toggle()">toggle style code</button>
 		</aside>
+		<code id="styleBlock">
+				/* target the second paragraph */
+				p:nth-child(2) { color: red; }
+
+				/* target the second last child, only if it's a div */
+				div:nth-last-child(2) { color: blue; }
+
+				/* target all even numbered child elements, only if they are paragraphs */
+				p:nth-child(even) { text-decoration: underline; }
+		</code>
 	</div>
+	<script type="text/javascript" src="scripts/prettify.js"></script>
+	<script src="scripts/displayStyleBlock.js"></script>
 </body>
 </html>

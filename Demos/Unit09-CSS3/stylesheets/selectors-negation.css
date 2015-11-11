@@ -2,3 +2,7 @@
 p:not(.styleMeNot) {
   color: red;
 }
+
+code{
+  display: none;
+}

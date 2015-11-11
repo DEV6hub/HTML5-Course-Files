@@ -1,9 +1,10 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 <head>
 	<title>CSS3: structural pseudo classes - the only of type selector</title>
 	<link type="text/css" rel="stylesheet" href="stylesheets/prettify.css">
 	<link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
+	<link rel="stylesheet" href="stylesheets/selectors-only-of-type.css">
 </head>
 <body>
 	<div class="container">
@@ -16,12 +17,15 @@
 			<div>only div</div>
 		</section>
 		<aside>
-			<script type="text/javascript" src="scripts/prettify.js"></script>
-			<pre id="styleCodeBlock" class="prettyprint">
-				<script src="scripts/displayStyleBlock.js"></script>
-			</pre>
+			<pre id="styleCodeBlock" class="prettyprint"></pre>
 			<button class="btn btn-default" id="toggleBtn" onClick="toggle()">toggle style code</button>
 		</aside>
 	</div>
+	<code id="styleBlock">
+		/* target any div that is the only div-type child of its parent */
+		div:only-of-type { color: red; }
+	</code>
+	<script type="text/javascript" src="scripts/prettify.js"></script>
+	<script src="scripts/displayStyleBlock.js"></script>
 </body>
 </html>

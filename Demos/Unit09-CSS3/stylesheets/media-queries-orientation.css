@@ -3,6 +3,9 @@
   #landscape {
     display: none;
   }
+  #mobile {
+    display: none;
+  }
 }
 
 /* styles for landscape mode  */
@@ -10,11 +13,23 @@
   #portrait {
     display: none;
   }
+  #mobile {
+    display: none;
+  }
+}
+/* mobile views */
+@media screen and (max-width: 480px) {
+ #portrait {
+  display: none;
+  }
+  #landscape {
+    display: none;
+  }
+  #mobile{
+    display: block;
+  }
 }
 
-/* default text size on iPhone is too small */
-@media screen and (max-device-width: 480px) {
-  h1, p, button {
-    font-size: 2em;
-  }
+code{
+  display:none;
 }

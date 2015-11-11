@@ -28,3 +28,7 @@ p {
 #jsTransition.transitionable {
   margin-left: 100px;
 }
+
+#styleBlock{
+  display: none;
+}

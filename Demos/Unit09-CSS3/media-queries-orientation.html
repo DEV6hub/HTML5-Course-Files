@@ -6,21 +6,55 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/media-queries-orientation.css">
 	<link type="text/css" rel="stylesheet" href="stylesheets/prettify.css">
 </head>
-	<script type="text/javascript" src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <body>
 	<div class="container">
+		<h1 id="mobile">mobile mode</h1>
 		<h1 id="portrait">portrait mode</h1>
 		<h1 id="landscape">landscape mode</h1>
 
 		<p>Resize your browser or reorient your device to see the effect of the media query applied to this page.</p>
-
-		<aside ipt type="text/javascript" src="scripts/prettify.js"></script>
-
-			<pre id="styleCodeBlock" class="prettyprint">
-				<script src="scripts/displayStyleBlock.js"></script>
+		<aside>
+			<pre id="styleCodeBlock">
 			</pre>
-			<button class="btn btn-default" id="toggleBtn" onClick="toggle()">toggle style code</button>
+			<button class="btn btn-success" id="toggleBtn" onClick="toggle()">toggle style code</button>
 		</aside>
+
+		<code id="styleBlock">
+				/* styles for portrait mode  */
+				@media screen and (orientation: portrait) {
+					#landscape {
+						display: none;
+					}
+					#mobile {
+						display: none;
+					}
+				}
+
+				/* styles for landscape mode  */
+				@media screen and (orientation: landscape) {
+					#portrait {
+						display: none;
+					}
+					#mobile {
+						display: none;
+					}
+				}
+				/* mobile views */
+				@media screen and (max-width: 480px) {
+					#portrait {
+						display: none;
+					}
+					#landscape {
+						display: none;
+					}
+					#mobile{
+						display: block;
+					}
+				}
+		</code>
 	</div>
+	<script ipt type="text/javascript" src="scripts/prettify.js"></script>
+	<script src="scripts/displayStyleBlock.js"></script>
 </body>
 </html>
