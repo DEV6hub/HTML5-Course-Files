@@ -10,10 +10,17 @@
 <body>
   <div class="container">
     <h1>Weather</h1>
-    <p>Toronto's weather is:</p>
-    <button class="btn btn-default" onclick="getWeather()">GET</button>
-    <div id="weather"></div>
-    <div id="main"></div>
+    <hr>
+    <p>Find the weather of your city:</p>
+    <form>
+    <div class="well">
+      Find the weather of any city:
+    </div>
+    <input class="form-control" type="text" id="userInput">
+        <div id="weather"></div>
+    <br>
+      <button class="btn btn-default" onclick="getWeather()">GET</button>
+    </form>
   </div>
   <script type="text/javascript" src="scripts/weather.js"></script>
 

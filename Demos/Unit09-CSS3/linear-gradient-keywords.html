@@ -8,7 +8,27 @@
 <body>
 	<div class="container">
 		<span id="frameContainer">
-			<iframe id="frame" src="linear-gradient-keywords-iframe.html"></iframe>
+			<table>
+			<tr>
+				<td><input id="tl" name="directionKeyword" type="radio" value="tl"></td>
+				<td align="center"><input id="top" name="directionKeyword" type="radio" value="top"></td>
+				<td><input id="tr" name="directionKeyword" type="radio" value="tr"></td>
+			</tr>
+			<tr>
+				<td><input id="left" name="directionKeyword" type="radio" value="left"></td>
+				<td><canvas id="canvas" width="250" height="250">No canvas support</canvas></td>
+				<td><input id="right" name="directionKeyword" type="radio" value="right"></td>
+			</tr>
+			<tr>
+				<td><input id="bl" name="directionKeyword" type="radio" value="bl"></td>
+				<td align="center"><input id="bottom" name="directionKeyword" type="radio" value="bottom"></td>
+				<td><input id="br" name="directionKeyword" type="radio" value="br"></td>
+			</tr>
+		</table>
+
+		<code>
+			<output id="styleCodeSnippet"></output>
+		</code>
 		</span>
 		<br>
 		<div id="div_r">
@@ -38,6 +58,7 @@
 		</div>
 	</div>
 </body>
+<script type="text/javascript" src="scripts/linear-gradient-keywords.js"></script>
 </html>
 
 

@@ -1,0 +1,16 @@
+label {
+    display: block;
+}
+
+*:invalid {
+    color: #f00;
+}
+
+progress, meter {
+    width: 100px;
+    margin-right: 20px;
+}
+
+#dateLastSaved {
+    text-decoration: underline;
+}

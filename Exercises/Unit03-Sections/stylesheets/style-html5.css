@@ -3,12 +3,10 @@ body {
 }
 
 header {
-    display: block;
-    padding: 0px 0px 5px 0px;
-    margin: 0px 20px;
-    height: 80px;
-    width: 890px;
-    float: left;
+   display: block;
+   padding: 5px;
+   height: 80px;
+   margin: auto;
 }
 
 .header {
@@ -23,7 +21,7 @@ header {
     float: left;
 }
 
-header hgroup {
+hgroup {
     display: block;
     float: left;
 }
@@ -37,7 +35,7 @@ header hgroup {
 header hgroup h1 {
     font-size: x-large;
     margin-bottom: 5px;
-    color: #E44B32;
+    color: #000;
 }
 
 .header .hgroup h2 {
@@ -56,7 +54,7 @@ header hgroup h2 {
     width: 77px;
 }
 
-header #logo {
+#logo {
     float: right;
     width: 80px;
     margin-top: 10px;
@@ -69,18 +67,6 @@ header #logo {
     padding: 10px;
     margin: 10px auto;
     background-color: cornflowerblue;
-}
-
-nav#mainnav {
-    display: block;
-    float: left;
-    width: 80px;
-    margin: 10px 0px 0px 20px;
-    border-left: 3px solid #E44B32;
-    border-bottom: 3px solid #F16338;
-    padding: 15px;
-    background-color: #eee;
-    font-size: small;
 }
 
 .nav #mainnav a {
@@ -112,11 +98,13 @@ nav#mainnav a {
     color: #B4AFAD;
 }
 
-#container {
-    margin: auto;
+.aside h2 {
+    margin-bottom: 0px;
+    font-size: large;
+    color: #006;
 }
 
-.aside h2 {
+aside h2 {
     margin-bottom: 0px;
     font-size: large;
     color: #006;
@@ -128,7 +116,18 @@ nav#mainnav a {
     margin-bottom: 5px;
 }
 
+aside {
+    width: 250px;
+    float: left;
+    margin-bottom: 5px;
+}
+
 .aside ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+aside ul {
     margin: 0px;
     padding: 0px;
 }
@@ -142,11 +141,30 @@ nav#mainnav a {
     background-color: cornflowerblue;
 }
 
+aside li {
+    display: block;
+    width: 50%;
+    height: 100%;
+    border: 1px solid white;
+    padding: 2px;
+    background-color: cornflowerblue;
+}
+
 .aside li:hover {
     background-color: #fff;
 }
 
+aside li:hover {
+    background-color: #fff;
+}
+
 .aside a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+aside a {
     text-decoration: none;
     display: block;
     width: 100%;
@@ -160,11 +178,9 @@ li a{
     float: left;
     padding: 10px;
     border-left: 2px solid cornflowerblue;
-}
-
-#content {
     margin: 0px 20px;
 }
+
 
 #content h1 {
     margin: 0px;
@@ -193,32 +209,12 @@ li a{
     font-size: small;
 }
 
-aside#partners {
-    clear: both;
-    margin: 0px 20px;
-    display: block;
-}
-
-aside#partners div {
-    width: 340px;
-    float: left;
-    padding: 5px;
-    font-size: x-small;
-}
-
-aside#partners h2 {
-    margin-bottom: 0px;
-    font-size: large;
-}
-
-
 footer {
     display: block;
-    margin: 0px 20px;
     clear: both;
-    border-top: 1px solid #F16338;
+    border-top: 1px solid #006;
+    margin: 5px auto;
     font-style: italic;
-    width: 1050px;
     text-align: right;
 }
 

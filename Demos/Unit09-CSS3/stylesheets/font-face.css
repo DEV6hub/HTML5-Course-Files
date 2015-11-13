@@ -1,0 +1,22 @@
+@font-face{
+  font-family: 'Henny Penny';
+  src: url('../fonts/HennyPenny-Regular.ttf');
+}
+
+@font-face{
+ font-family: 'Londrina Shadow';
+  src: url('../fonts/LondrinaShadow-Regular.ttf');
+}
+
+
+#hp{
+  font-family: 'Henny Penny';
+}
+
+#ls{
+  font-family: 'Londrina Shadow';
+}
+
+code{
+  display: none;
+}

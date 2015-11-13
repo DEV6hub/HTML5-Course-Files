@@ -1,0 +1,65 @@
+.container{
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  -ms-transform: rotate(50deg); /* IE 9 */
+  -webkit-transform: rotate(50deg); /* Chrome, Safari, Opera */
+  transform: rotate(50deg);
+  -webkit-transition: margin-left 0.5s, ease-out 0.5s, opacity 0.5s ease-out 1s;
+}
+
+.container:hover{
+  -webkit-transform: rotateX(40deg) rotateY(40deg) rotateZ(40deg);
+  -webkit-transition: margin-left 0.5s, ease-in 0.5s, opacity 0.5s ease-in 1s;
+}
+
+@font-face{
+ font-family: 'Londrina Shadow';
+  src: url('../fonts/LondrinaShadow-Regular.ttf');
+}
+
+h3:first-child{
+  font-family: 'Londrina Shadow';
+  font-size: 50px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+h3[title=second-line]{
+  font-family: 'Playball', cursive;
+  font-size: 50px;
+  text-align: center;
+}
+
+h3:nth-child(3){
+  font-family: 'Codystar', cursive;
+  font-size: 50px;
+  text-align: center;
+}
+
+@media screen and (orientation: portrait) {
+  .container{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    background-image: -webkit-linear-gradient(90deg, yellow, green); /* Chrome 10+, Saf5.1+, iOS 5+ */
+    background-image:    -moz-linear-gradient(90deg, yellow, green); /* FF3.6 */
+    background-image:     -ms-linear-gradient(90deg, yellow, green); /* IE10 */
+    background-image:      -o-linear-gradient(90deg, yellow, green); /* Opera 11.10+ */
+    background-image:         linear-gradient(to top, yellow, green);
+  }
+}
+
+
+@media screen and (orientation: landscape) {
+  .container{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    background-image: -webkit-linear-gradient(90deg, yellow, green); /* Chrome 10+, Saf5.1+, iOS 5+ */
+    background-image:    -moz-linear-gradient(90deg, yellow, green); /* FF3.6 */
+    background-image:     -ms-linear-gradient(90deg, yellow, green); /* IE10 */
+    background-image:      -o-linear-gradient(90deg, yellow, green); /* Opera 11.10+ */
+    background-image:         linear-gradient(to bottom, yellow, green);
+  }
+}
