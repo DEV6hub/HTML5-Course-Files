@@ -5,7 +5,7 @@
 
 // stuff the style block into a box on the page...
 var str = '';
-str += '<link type="text/css" rel="stylesheet" href="stylesheets/displayStyleBlock.css"/>';
+str += '<link type="text/css" rel="stylesheet" href="stylesheets/displayStyleBlock.css">';
 str += '&lt;style&gt;' + document.getElementById('styleBlock').innerHTML + '&lt;/style&gt;';
 document.getElementById('styleCodeBlock').innerHTML = str;
 prettyPrint();

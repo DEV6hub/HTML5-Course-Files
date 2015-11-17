@@ -35,9 +35,11 @@ console.log('---------');
 
 console.log('Objects');
 console.log('---------');
-console.log('typeof ({a:1}): ' + (typeof ({a:1})));
+console.log('typeof ({a:1}): ' + (typeof ({
+  a: 1
+})));
 console.log('---------');
-console.log('typeof ([1,2,4]): ' + (typeof ([1,2,4])));
+console.log('typeof ([1,2,4]): ' + (typeof ([1, 2, 4])));
 console.log('---------');
 console.log('typeof (new Date()): ' + (typeof (new Date())));
 console.log('---------');
@@ -49,10 +51,10 @@ console.log('typeof (undefined): ' + (typeof (undefined)));
 console.log('---------');
 console.log('How to test an Array?');
 //        // Polyfill - in case not using ECMAScript 5:
-       if (!Array.isArray) {
-           Array.isArray = function (arg) {
-               return Object.prototype.toString.call(arg) == '[object Array]';
-           };
-       }
-       console.log(Array.isArray([]));
-       console.log(Array.isArray({}));
+if (!Array.isArray) {
+  Array.isArray = function (arg) {
+    return Object.prototype.toString.call(arg) == '[object Array]';
+  };
+}
+console.log(Array.isArray([]));
+console.log(Array.isArray({}));

@@ -1,9 +1,7 @@
-
-
-function getWeather(){
+function getWeather() {
   var xhr = new XMLHttpRequest();
   console.log('ready');
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
       var xDoc = JSON.parse(xhr.responseText);
       var weather = JSON.stringify(xDoc.weather);

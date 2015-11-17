@@ -1,29 +1,30 @@
 .true {
-    color: #060;
+  color: #060;
 }
 
 .false {
-    color: #f00;
+  color: #f00;
 }
 
 .probably {
-    color: #3c3;
+  color: #3c3;
 }
 
 .maybe {
-    color: #960;
+  color: #960;
 }
 
 table {
-    width: 400px;
-    margin: auto;
+  width: 400px;
+  margin: auto;
 }
 
 caption {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-th, td {
-    border: 1px solid black;
-    text-align: center;
+th,
+td {
+  border: 1px solid black;
+  text-align: center;
 }

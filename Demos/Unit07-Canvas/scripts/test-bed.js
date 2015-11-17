@@ -1,10 +1,10 @@
 window.addEventListener("load", setup, false);
 
 function setup() {
-    var canvas = document.getElementById("my-canvas");
-    var context;
-    if (canvas.getContext) {
-        context = canvas.getContext("2d");
+  var canvas = document.getElementById("my-canvas");
+  var context;
+  if (canvas.getContext) {
+    context = canvas.getContext("2d");
     //Start paste from code generated from bezier.html or quadratic.html
     context.beginPath();
     context.strokeStyle = 'rgb(255,0,0)';
@@ -26,5 +26,5 @@ function setup() {
 
     //End paste
     context.stroke();
-}
+  }
 }

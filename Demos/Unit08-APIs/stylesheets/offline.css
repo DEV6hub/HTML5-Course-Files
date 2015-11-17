@@ -1,10 +1,10 @@
 body {
-    background-color: #f00;
+  background-color: #f00;
 }
 
 #output {
-    background-color: white;
-    float: left;
-    width: 200px;
-    margin-right: 25px;
+  background-color: white;
+  float: left;
+  width: 200px;
+  margin-right: 25px;
 }

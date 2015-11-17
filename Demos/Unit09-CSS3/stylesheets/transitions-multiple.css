@@ -1,32 +1,39 @@
-  body {
-    margin: 10px;
-    padding: 10px;
-  }
-  p {
-    margin-top: -10px;
-    margin-bottom: 40px;
-    font-size: 1.5em;
-    border:solid thick blue;
-    background-color: #eee;
-    text-align:center;
-  }
-  code {
-    color: red;
-    font-size:1.25em;
-  }
-  p {
-    /* starting state */
-    margin-left: 100px; opacity: .25;
-  }
-  p:hover {
-    /* ending state */
-    margin-left: 300px; opacity: 1;
-  }
-  .transitionable {
-    /* HOW the margin-left property changes */
-    -webkit-transition: margin-left 0.5s ease-in 0.5s, opacity 0.5s ease-in 1s;
-  }
+body {
+  margin: 10px;
+  padding: 10px;
+}
 
-  #styleBlock{
-    display: none;
-  }
+p {
+  margin-top: -10px;
+  margin-bottom: 40px;
+  font-size: 1.5em;
+  border: solid thick blue;
+  background-color: #eee;
+  text-align: center;
+}
+
+code {
+  color: red;
+  font-size: 1.25em;
+}
+
+p {
+  /* starting state */
+  margin-left: 100px;
+  opacity: .25;
+}
+
+p:hover {
+  /* ending state */
+  margin-left: 300px;
+  opacity: 1;
+}
+
+.transitionable {
+  /* HOW the margin-left property changes */
+  -webkit-transition: margin-left 0.5s ease-in 0.5s, opacity 0.5s ease-in 1s;
+}
+
+#styleBlock {
+  display: none;
+}

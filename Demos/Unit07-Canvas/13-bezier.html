@@ -1,53 +1,56 @@
 <!doctype html>
 <html>
+
 <head>
-    <title>Canvas - Bezier Curve</title>
-    <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <title>Canvas - Bezier Curve</title>
+  <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
 </head>
+
 <body>
-    <div class="container">
+  <div class="container">
     <br>
-        <canvas id="my-canvas" height="500" width="500" style="float:left;">Your browser doesn't support canvas.</canvas>
-        <menu>
-            <button class="btn btn-default" onclick="erase()">Start Over</button>
-            <h1>Set Color</h1>
-            <label for="red">Red: </label>
-            <input type="range" min="0" max="255" step="5" id="red" value="0" size="5">
-            <output id="red-output">0</output>
-            <br>
-            <label for="green">Green: </label>
-            <input type="range" min="0" max="255" step="5" id="green" value="0" size="5">
-            <output id="green-output">0</output>
-            <br>
-            <label for="blue">Blue: </label>
-            <input type="range" min="0" max="255" step="5" id="blue" value="0" size="5">
-            <output id="blue-output">0</output>
-            <br>
-            <output id="color" style="display:block;width:200px;height:20px;"></output>
-        </menu>
-        <div id="codecontainer">
-            <textarea id="code" placeholder="Generated Code Goes Here"></textarea>
-            <section id="coordinates">
-                <label>startx:</label>
-                <output id="startx">unknown</output>
-                <label>starty:</label>
-                <output id="starty">unknown</output>
-                <label>endx:</label>
-                <output id="endx">unknown</output>
-                <label>endy:</label>
-                <output id="endy">unknown</output>
-                <label>cp1x:</label>
-                <output id="cp1x">unknown</output>
-                <label>cp1y:</label>
-                <output id="cp1y">unknown</output>
-                <label>cp2x:</label>
-                <output id="cp2x">unknown</output>
-                <label>cp2y:</label>
-                <output id="cp2y">unknown</output>
-            </section>
-        </div>
+    <canvas id="my-canvas" height="500" width="500" style="float:left;">Your browser doesn't support canvas.</canvas>
+    <menu>
+      <button class="btn btn-default" onclick="erase()">Start Over</button>
+      <h1>Set Color</h1>
+      <label for="red">Red: </label>
+      <input type="range" min="0" max="255" step="5" id="red" value="0" size="5">
+      <output id="red-output">0</output>
+      <br>
+      <label for="green">Green: </label>
+      <input type="range" min="0" max="255" step="5" id="green" value="0" size="5">
+      <output id="green-output">0</output>
+      <br>
+      <label for="blue">Blue: </label>
+      <input type="range" min="0" max="255" step="5" id="blue" value="0" size="5">
+      <output id="blue-output">0</output>
+      <br>
+      <output id="color" style="display:block;width:200px;height:20px;"></output>
+    </menu>
+    <div id="codecontainer">
+      <textarea id="code" placeholder="Generated Code Goes Here"></textarea>
+      <section id="coordinates">
+        <label>startx:</label>
+        <output id="startx">unknown</output>
+        <label>starty:</label>
+        <output id="starty">unknown</output>
+        <label>endx:</label>
+        <output id="endx">unknown</output>
+        <label>endy:</label>
+        <output id="endy">unknown</output>
+        <label>cp1x:</label>
+        <output id="cp1x">unknown</output>
+        <label>cp1y:</label>
+        <output id="cp1y">unknown</output>
+        <label>cp2x:</label>
+        <output id="cp2x">unknown</output>
+        <label>cp2y:</label>
+        <output id="cp2y">unknown</output>
+      </section>
     </div>
-     <script src="scripts/bezier.js"></script>
+  </div>
+  <script src="scripts/bezier.js"></script>
 </body>
+
 </html>

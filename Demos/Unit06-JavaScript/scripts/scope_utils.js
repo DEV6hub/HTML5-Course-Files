@@ -1,18 +1,18 @@
 APP.utils = (function () {
-    'use strict';
+  'use strict';
 
-    var pub = {};
+  var pub = {};
 
-    var userName = 'Barney';
-    var userStatus = 'Administrator';
+  var userName = 'Barney';
+  var userStatus = 'Administrator';
 
-    pub.getUser = function () {
-        return userName + ' is of type: ' + userStatus;
-    };
+  pub.getUser = function () {
+    return userName + ' is of type: ' + userStatus;
+  };
 
-//	with(this) {
-//	}
+  //	with(this) {
+  //	}
 
-    return pub;
+  return pub;
 
 }());

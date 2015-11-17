@@ -1,16 +1,23 @@
 /* target the second paragraph element */
+
 p:nth-of-type(2) {
   color: red;
 }
+
+
 /* target the second last paragraph element */
+
 p:nth-last-of-type(2) {
   color: blue;
 }
+
+
 /* target all odd numbered divs */
+
 div:nth-of-type(odd) {
   color: green;
 }
 
-code{
+code {
   display: none;
 }

@@ -1,78 +1,79 @@
 <!doctype html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>HTML5 Quiz</title>
-    <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <title>HTML5 Quiz</title>
+  <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Quiz</h1>
-        <form class="form" method="post" id="quiz">
-            <!--         <form method="post" action="../../html5-forms/Exercises/process.xyz" id="quiz"> -->
-            <ol>
-                <div class="form-group">
-                    <li>
-                        <label for="q1">
-                            What color do you get when you mix red and yellow?
-                        </label>
-                        <input type="color" name="q1" id="q1" required/>
-                    </li>
-                </div>
-                <div class="form-group">
-                    <li>
-                        <label for="q2">
-                            What is the first primary number greater than 20?
-                        </label>
-                        <input class="form-control" type="number" name="q2" id="q2" min="20" placeholder="Enter Number" required/>
-                    </li>
-                </div>
-                <div class="form-group">
-                    <li>
-                        <label for="q3">
-                            Using exactly four 9s and no other digits, write an equation which evaluates to 100. You
-                            may use addition (+), subtraction (-), multiplication (*), and division (/). Do not include
-                            spaces.
-                        </label>
-                        <input class="form-control" type="text" name="q3" id="q3" placeholder="Enter Equation" pattern="[9\+\-\*/]{4,7}" required/>
-                        <output for="q3" id="equation_output"/>
-                    </li>
-                </div>
-                <div class="form-group">
-                    <li>
-                        <label for="q4">
-                            What date was John F. Kennedy assasinated?
-                        </label>
-                        <input class="form-control" type="date" name="q4" id="q4" required/>
-                    </li>
-                </div>
-                <div class="form-group">
-                    <li>
-                        <label for="q5">
-                            What is the world's most popular search engine?
-                        </label>
-                        <input class="form-control" type="url" name="q5" id="q5" placeholder="Enter URL" list="search-list" required/>
-                        <datalist id="search-list">
-                            <option value="https://www.google.ca"/>
-                            <option value="https://ca.search.yahoo.com/"/>
-                            <option value="https://www.bing.com/"/>
-                            <option value="http://www.ask.com/"/>
-                        </datalist>
-                    </li>
-                </div>
-            </ol>
-            <input class="btn btn-default" type="submit"/>
-            <strong>Progress:</strong>
-            <progress id="quiz-progress" min="0" max="100" title="Shows percentage of valid answers">
-                <span>0</span>%
-            </progress>
-            <strong>Success:</strong>
-            <meter id="quiz-success" min="0" max="100" title="Shows percentage of correct answers">
-                <span>0</span>%
-            </meter>
-        </form>
-    </div>
-    <script src="scripts/quiz.js"></script>
+  <div class="container">
+    <h1>Quiz</h1>
+    <form class="form" method="post" id="quiz">
+      <!--         <form method="post" action="../../html5-forms/Exercises/process.xyz" id="quiz"> -->
+      <ol>
+        <div class="form-group">
+          <li>
+            <label for="q1">
+              What color do you get when you mix red and yellow?
+            </label>
+            <input type="color" name="q1" id="q1" required/>
+          </li>
+        </div>
+        <div class="form-group">
+          <li>
+            <label for="q2">
+              What is the first primary number greater than 20?
+            </label>
+            <input class="form-control" type="number" name="q2" id="q2" min="20" placeholder="Enter Number" required/>
+          </li>
+        </div>
+        <div class="form-group">
+          <li>
+            <label for="q3">
+              Using exactly four 9s and no other digits, write an equation which evaluates to 100. You may use addition (+), subtraction (-), multiplication (*), and division (/). Do not include spaces.
+            </label>
+            <input class="form-control" type="text" name="q3" id="q3" placeholder="Enter Equation" pattern="[9\+\-\*/]{4,7}" required/>
+            <output for="q3" id="equation_output" />
+          </li>
+        </div>
+        <div class="form-group">
+          <li>
+            <label for="q4">
+              What date was John F. Kennedy assasinated?
+            </label>
+            <input class="form-control" type="date" name="q4" id="q4" required/>
+          </li>
+        </div>
+        <div class="form-group">
+          <li>
+            <label for="q5">
+              What is the world's most popular search engine?
+            </label>
+            <input class="form-control" type="url" name="q5" id="q5" placeholder="Enter URL" list="search-list" required/>
+            <datalist id="search-list">
+              <option value="https://www.google.ca" />
+              <option value="https://ca.search.yahoo.com/" />
+              <option value="https://www.bing.com/" />
+              <option value="http://www.ask.com/" />
+            </datalist>
+          </li>
+        </div>
+      </ol>
+      <input class="btn btn-default" type="submit" />
+      <strong>Progress:</strong>
+      <progress id="quiz-progress" min="0" max="100" title="Shows percentage of valid answers">
+        <span>0</span>%
+      </progress>
+      <strong>Success:</strong>
+      <meter id="quiz-success" min="0" max="100" title="Shows percentage of correct answers">
+        <span>0</span>%
+      </meter>
+    </form>
+  </div>
+  <script src="scripts/quiz.js"></script>
 </body>
+
 </html>

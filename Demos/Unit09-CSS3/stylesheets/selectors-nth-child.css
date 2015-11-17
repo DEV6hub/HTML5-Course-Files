@@ -1,18 +1,23 @@
 /* target the second paragraph */
+
 p:nth-child(2) {
   color: red;
 }
 
+
 /* target the second last child, only if it's a div */
+
 div:nth-last-child(2) {
   color: blue;
 }
 
+
 /* target all even numbered child elements, only if they are paragraphs */
+
 p:nth-child(even) {
   text-decoration: underline;
 }
 
-code{
+code {
   display: none;
 }

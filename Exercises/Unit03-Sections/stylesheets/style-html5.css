@@ -1,232 +1,231 @@
 body {
-    font-family: tahoma;
+  font-family: tahoma;
 }
 
 header {
-   display: block;
-   padding: 5px;
-   height: 80px;
-   margin: auto;
+  display: block;
+  padding: 5px;
+  height: 80px;
+  margin: auto;
 }
 
 .header {
-    display: block;
-    padding: 5px;
-    height: 80px;
-    margin: auto;
+  display: block;
+  padding: 5px;
+  height: 80px;
+  margin: auto;
 }
 
 .header .hgroup {
-    display: block;
-    float: left;
+  display: block;
+  float: left;
 }
 
 hgroup {
-    display: block;
-    float: left;
+  display: block;
+  float: left;
 }
 
 .header .hgroup h1 {
-    font-size: x-large;
-    margin-bottom: 5px;
-    margin-top: 10px;
+  font-size: x-large;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 header hgroup h1 {
-    font-size: x-large;
-    margin-bottom: 5px;
-    color: #000;
+  font-size: x-large;
+  margin-bottom: 5px;
+  color: #000;
 }
 
 .header .hgroup h2 {
-    font-size: large;
-    margin: 0px;
+  font-size: large;
+  margin: 0px;
 }
 
 header hgroup h2 {
-    font-size: large;
-    margin: 0px;
-    color: #F16338;
+  font-size: large;
+  margin: 0px;
+  color: #F16338;
 }
 
 .header #logo {
-    float: right;
-    width: 77px;
+  float: right;
+  width: 77px;
 }
 
 #logo {
-    float: right;
-    width: 80px;
-    margin-top: 10px;
+  float: right;
+  width: 80px;
+  margin-top: 10px;
 }
 
-#mainnav{
-    list-style-type: none;
-    clear: both;
-    display: block;
-    padding: 10px;
-    margin: 10px auto;
-    background-color: cornflowerblue;
+#mainnav {
+  list-style-type: none;
+  clear: both;
+  display: block;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: cornflowerblue;
 }
 
 .nav #mainnav a {
-    color: white;
+  color: white;
 }
 
 .nav #mainnav ul {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 nav#mainnav ul {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 #mainnav li {
-   text-decoration: none;
-   display: inline;
-   margin-right: 10px;
-   padding-right: 10px;
+  text-decoration: none;
+  display: inline;
+  margin-right: 10px;
+  padding-right: 10px;
 }
 
 nav#mainnav li {
-    display: block;
+  display: block;
 }
 
 nav#mainnav a {
-    color: #B4AFAD;
+  color: #B4AFAD;
 }
 
 .aside h2 {
-    margin-bottom: 0px;
-    font-size: large;
-    color: #006;
+  margin-bottom: 0px;
+  font-size: large;
+  color: #006;
 }
 
 aside h2 {
-    margin-bottom: 0px;
-    font-size: large;
-    color: #006;
+  margin-bottom: 0px;
+  font-size: large;
+  color: #006;
 }
 
 .aside {
-    width: 250px;
-    float: left;
-    margin-bottom: 5px;
+  width: 250px;
+  float: left;
+  margin-bottom: 5px;
 }
 
 aside {
-    width: 250px;
-    float: left;
-    margin-bottom: 5px;
+  width: 250px;
+  float: left;
+  margin-bottom: 5px;
 }
 
 .aside ul {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 aside ul {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .aside li {
-    display: block;
-    width: 50%;
-    height: 100%;
-    border: 1px solid white;
-    padding: 2px;
-    background-color: cornflowerblue;
+  display: block;
+  width: 50%;
+  height: 100%;
+  border: 1px solid white;
+  padding: 2px;
+  background-color: cornflowerblue;
 }
 
 aside li {
-    display: block;
-    width: 50%;
-    height: 100%;
-    border: 1px solid white;
-    padding: 2px;
-    background-color: cornflowerblue;
+  display: block;
+  width: 50%;
+  height: 100%;
+  border: 1px solid white;
+  padding: 2px;
+  background-color: cornflowerblue;
 }
 
 .aside li:hover {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 aside li:hover {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .aside a {
-    text-decoration: none;
-    display: block;
-    width: 100%;
+  text-decoration: none;
+  display: block;
+  width: 100%;
 }
 
 aside a {
-    text-decoration: none;
-    display: block;
-    width: 100%;
+  text-decoration: none;
+  display: block;
+  width: 100%;
 }
 
-li a{
-    color: white;
+li a {
+  color: white;
 }
 
 #content {
-    float: left;
-    padding: 10px;
-    border-left: 2px solid cornflowerblue;
-    margin: 0px 20px;
+  float: left;
+  padding: 10px;
+  border-left: 2px solid cornflowerblue;
+  margin: 0px 20px;
 }
 
-
 #content h1 {
-    margin: 0px;
-    padding-top: 10px;
-    font-size: x-large;
-    letter-spacing: 2px;
-    font-variant: small-caps;
+  margin: 0px;
+  padding-top: 10px;
+  font-size: x-large;
+  letter-spacing: 2px;
+  font-variant: small-caps;
 }
 
 #content div h2 {
-    float: right;
-    font-size: xx-large;
-    color: #F16338;
+  float: right;
+  font-size: xx-large;
+  color: #F16338;
 }
 
 #content>div {
-    clear: both;
+  clear: both;
 }
 
 #content div div {
-    float: left;
-    padding: 10px;
-    width: 500px;
-    height: 200px;
-    border: 1px solid #F16338;
-    font-size: small;
+  float: left;
+  padding: 10px;
+  width: 500px;
+  height: 200px;
+  border: 1px solid #F16338;
+  font-size: small;
 }
 
 footer {
-    display: block;
-    clear: both;
-    border-top: 1px solid #006;
-    margin: 5px auto;
-    font-style: italic;
-    text-align: right;
+  display: block;
+  clear: both;
+  border-top: 1px solid #006;
+  margin: 5px auto;
+  font-style: italic;
+  text-align: right;
 }
 
 .footer {
-    display: block;
-    clear: both;
-    border-top: 1px solid #006;
-    margin: 5px auto;
-    font-style: italic;
-    text-align: right;
+  display: block;
+  clear: both;
+  border-top: 1px solid #006;
+  margin: 5px auto;
+  font-style: italic;
+  text-align: right;
 }
 
 a:hover {
-    color: #f60;
+  color: #f60;
 }

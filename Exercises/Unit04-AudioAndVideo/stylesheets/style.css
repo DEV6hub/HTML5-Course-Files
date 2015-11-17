@@ -1,73 +1,82 @@
-header, footer, aside, section, article, nav, hgroup {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+header,
+footer,
+aside,
+section,
+article,
+nav,
+hgroup {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 hgroup {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-h1, h2, h3, h4 {
-    margin: 2px auto;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+h1,
+h2,
+h3,
+h4 {
+  margin: 2px auto;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
 h1 {
-    font-size: x-large;
-    margin-bottom: 10px;
+  font-size: x-large;
+  margin-bottom: 10px;
 }
 
 h2 {
-    font-size: large;
+  font-size: large;
 }
 
 h3 {
-    font-size: medium;
+  font-size: medium;
 }
 
 h4 {
-    font-size: small;
-    font-style: italic;
+  font-size: small;
+  font-style: italic;
 }
 
 aside h3 {
-    margin-left: 0px;
+  margin-left: 0px;
 }
 
 article {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    width: 480px;
-    margin: auto;
-    font-size: small;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  width: 480px;
+  margin: auto;
+  font-size: small;
 }
 
 article>div {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 #time-display {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 #poem p img {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 p {
-    text-indent: -32px;
+  text-indent: -32px;
 }
 
 .highlight {
-    background-color: #ff6;
+  background-color: #ff6;
 }
 
 video {
-    display: block;
-    margin: auto;
+  display: block;
+  margin: auto;
 }
 
 .warning {
-    color: red;
+  color: red;
 }

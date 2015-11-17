@@ -1,39 +1,40 @@
 div {
-    border: 1px dashed red;
-    margin: 5px;
-    padding: 5px;
-    background-color: #eee;
+  border: 1px dashed red;
+  margin: 5px;
+  padding: 5px;
+  background-color: #eee;
 }
 
 section {
-    display: block;
-    border: 2px dotted blue;
-    margin: 5px;
-    padding: 5px;
-    background-color: #eee;
+  display: block;
+  border: 2px dotted blue;
+  margin: 5px;
+  padding: 5px;
+  background-color: #eee;
 }
 
 h1 {
-    font-size: large;
+  font-size: large;
 }
 
 h2 {
-    font-size: medium;
-    margin: 0px;
+  font-size: medium;
+  margin: 0px;
 }
 
-ul, ol {
-    margin: 2px;
+ul,
+ol {
+  margin: 2px;
 }
 
 div#left {
-    float: left;
-    width: 45%;
-    background-color: #ffc;
+  float: left;
+  width: 45%;
+  background-color: #ffc;
 }
 
 div#right {
-    float: right;
-    width: 45%;
-    background-color: #ffc;
+  float: right;
+  width: 45%;
+  background-color: #ffc;
 }

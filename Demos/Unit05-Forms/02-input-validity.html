@@ -1,26 +1,28 @@
 <!doctype html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>HTML5 Form - Validity</title>
-    <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <meta charset="UTF-8">
+  <title>HTML5 Form - Validity</title>
+  <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css" >
 </head>
 
 <body>
-    <div class="container">
-        <div class="form-group">
-            <p>Numbers with decimal points aren't valid numbers</p>
-            <label for="number">Number:</label>
-            <input class="form-control" id="number" type="number">
-            <br>
-            <button class="btn btn-default" onclick="check( document.getElementById('number') );">Check Validity</button>
-            <hr>
-            <label for="color">Color:</label>
-            <input id="color" type="color">
-            <button class="btn btn-default" onclick="check( document.getElementById('color') );">Check Validity</button>
-        </div>
+  <div class="container">
+    <div class="form-group">
+      <p>Numbers with decimal points aren't valid numbers</p>
+      <label for="number">Number:</label>
+      <input class="form-control" id="number" type="number">
+      <br>
+      <button class="btn btn-default" onclick="check( document.getElementById('number') );">Check Validity</button>
+      <hr>
+      <label for="color">Color:</label>
+      <input id="color" type="color">
+      <button class="btn btn-default" onclick="check( document.getElementById('color') );">Check Validity</button>
     </div>
-    <script src="scripts/input-validity.js"></script>
+  </div>
+  <script src="scripts/input-validity.js"></script>
 </body>
+
 </html>

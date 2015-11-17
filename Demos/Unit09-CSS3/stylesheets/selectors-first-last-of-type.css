@@ -1,22 +1,28 @@
 /* target any div that is the first child of its parent */
+
 div:nth-of-type(1) {
   color: red;
 }
+
 div:first-of-type {
   text-decoration: underline;
 }
 
+
 /* target any paragraph that is the last child of its parent */
+
 p:nth-last-of-type(1) {
   color: green;
 }
+
 p:last-of-type {
   text-decoration: underline;
 }
 
 section {
   border: 1px solid black;
-  margin: 10px; padding: 10px;
+  margin: 10px;
+  padding: 10px;
 }
 
 code {

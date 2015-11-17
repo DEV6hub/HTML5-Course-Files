@@ -1,129 +1,130 @@
  var timer = null;
-        function drawPath() {
-            var canvas = document.getElementById("my-canvas");
-            if (canvas.getContext) {
-                context = canvas.getContext("2d");
-                //day
-                context.canvas.style.backgroundColor = "rgb(153,153,255)";
-                if (timer) clearTimeout(timer);
-                context.clearRect(0, 0, 400, 400);
 
-                //ground snow
-                context.beginPath();
-                context.fillStyle = "rgb(255,255,255)";
-                context.fillRect(0, 360, 400, 40);
+ function drawPath() {
+   var canvas = document.getElementById("my-canvas");
+   if (canvas.getContext) {
+     context = canvas.getContext("2d");
+     //day
+     context.canvas.style.backgroundColor = "rgb(153,153,255)";
+     if (timer) clearTimeout(timer);
+     context.clearRect(0, 0, 400, 400);
 
-                //bottom ball
-                context.beginPath();
-                context.fillStyle = "rgb(255,255,255)";
-                context.arc(200, 300, 70, 0, degreesToRadians(360), true);
-                context.fill();
+     //ground snow
+     context.beginPath();
+     context.fillStyle = "rgb(255,255,255)";
+     context.fillRect(0, 360, 400, 40);
 
-                //middle ball
-                context.beginPath();
-                context.fillStyle = "rgb(255,255,255)";
-                context.arc(200, 200, 50, 0, degreesToRadians(360), true);
-                context.fill();
+     //bottom ball
+     context.beginPath();
+     context.fillStyle = "rgb(255,255,255)";
+     context.arc(200, 300, 70, 0, degreesToRadians(360), true);
+     context.fill();
 
-                //head
-                context.beginPath();
-                context.fillStyle = "rgb(255,255,255)";
-                context.arc(200, 125, 35, 0, degreesToRadians(360), true);
-                context.fill();
+     //middle ball
+     context.beginPath();
+     context.fillStyle = "rgb(255,255,255)";
+     context.arc(200, 200, 50, 0, degreesToRadians(360), true);
+     context.fill();
 
-                //right eye
-                context.beginPath();
-                context.fillStyle = "rgb(0,0,0)";
-                context.arc(190, 115, 4, 0, degreesToRadians(360), true);
-                context.fill();
+     //head
+     context.beginPath();
+     context.fillStyle = "rgb(255,255,255)";
+     context.arc(200, 125, 35, 0, degreesToRadians(360), true);
+     context.fill();
 
-                //left eye
-                context.beginPath();
-                context.fillStyle = "rgb(0,0,0)";
-                context.arc(210, 115, 4, 0, degreesToRadians(360), true);
-                context.fill();
+     //right eye
+     context.beginPath();
+     context.fillStyle = "rgb(0,0,0)";
+     context.arc(190, 115, 4, 0, degreesToRadians(360), true);
+     context.fill();
 
-                //mouth
-                context.beginPath();
-                context.fillStyle = "rgb(255,0,0)";
-                context.arc(200, 125, 15, degreesToRadians(45), degreesToRadians(135), false);
-                context.fill();
+     //left eye
+     context.beginPath();
+     context.fillStyle = "rgb(0,0,0)";
+     context.arc(210, 115, 4, 0, degreesToRadians(360), true);
+     context.fill();
 
-                //nose
-                context.beginPath();
-                context.fillStyle = "rgb(255,102,0)";
-                context.moveTo(200, 122);
-                context.lineTo(220, 126);
-                context.lineTo(200, 130);
-                context.fill();
+     //mouth
+     context.beginPath();
+     context.fillStyle = "rgb(255,0,0)";
+     context.arc(200, 125, 15, degreesToRadians(45), degreesToRadians(135), false);
+     context.fill();
 
-                //hat bottom
-                context.beginPath();
-                context.fillStyle = "rgb(0,0,0)";
-                context.arc(200, 100, 25, 0, degreesToRadians(180), true);
-                context.fill();
-                context.fillRect(163, 94, 75, 8);
+     //nose
+     context.beginPath();
+     context.fillStyle = "rgb(255,102,0)";
+     context.moveTo(200, 122);
+     context.lineTo(220, 126);
+     context.lineTo(200, 130);
+     context.fill();
 
-                //left arm
-                context.beginPath();
-                context.lineWidth = 2;
-                context.strokeStyle = "rgb(155,85,0)";
-                context.moveTo(220, 180);
-                context.lineTo(300, 160);
-                context.lineTo(315, 165);
-                context.moveTo(300, 160);
-                context.lineTo(315, 158);
-                context.moveTo(300, 160);
-                context.lineTo(315, 150);
-                context.stroke();
+     //hat bottom
+     context.beginPath();
+     context.fillStyle = "rgb(0,0,0)";
+     context.arc(200, 100, 25, 0, degreesToRadians(180), true);
+     context.fill();
+     context.fillRect(163, 94, 75, 8);
 
-                //right arm
-                context.beginPath();
-                context.moveTo(170, 180);
-                context.lineTo(110, 240);
-                context.lineTo(115, 255);
-                context.moveTo(110, 240);
-                context.lineTo(95, 255);
-                context.moveTo(110, 240);
-                context.lineTo(85, 255);
-                context.stroke();
+     //left arm
+     context.beginPath();
+     context.lineWidth = 2;
+     context.strokeStyle = "rgb(155,85,0)";
+     context.moveTo(220, 180);
+     context.lineTo(300, 160);
+     context.lineTo(315, 165);
+     context.moveTo(300, 160);
+     context.lineTo(315, 158);
+     context.moveTo(300, 160);
+     context.lineTo(315, 150);
+     context.stroke();
 
-                //buttons
-                context.beginPath();
-                context.fillStyle = "rgb(0,0,0)";
-                context.arc(200, 180, 5, 0, degreesToRadians(360), true);
-                context.arc(200, 220, 5, 0, degreesToRadians(360), true);
-                context.arc(200, 260, 5, 0, degreesToRadians(360), true);
-                context.fill();
+     //right arm
+     context.beginPath();
+     context.moveTo(170, 180);
+     context.lineTo(110, 240);
+     context.lineTo(115, 255);
+     context.moveTo(110, 240);
+     context.lineTo(95, 255);
+     context.moveTo(110, 240);
+     context.lineTo(85, 255);
+     context.stroke();
 
-                //sun
-                context.beginPath();
-                context.fillStyle = "rgb(255,255,0)";
-                context.arc(400, 0, 70, 0, degreesToRadians(360), true);
-                context.fill();
+     //buttons
+     context.beginPath();
+     context.fillStyle = "rgb(0,0,0)";
+     context.arc(200, 180, 5, 0, degreesToRadians(360), true);
+     context.arc(200, 220, 5, 0, degreesToRadians(360), true);
+     context.arc(200, 260, 5, 0, degreesToRadians(360), true);
+     context.fill();
 
-                darken(context, 153, 153, 255, 1);
-            }
-        }
+     //sun
+     context.beginPath();
+     context.fillStyle = "rgb(255,255,0)";
+     context.arc(400, 0, 70, 0, degreesToRadians(360), true);
+     context.fill();
 
-        function darken(context, r, g, b, sunchop) {
-            context.canvas.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
-            context.beginPath();
-            context.strokeStyle = "rgb(" + r + "," + g + "," + b + ")";
-            context.lineWidth = sunchop;
-            context.arc(400, 0, 70, 0, degreesToRadians(360), true);
-            context.stroke();
-            if (r > 0) r -= 3;
-            if (g > 0) g -= 3;
-            if (b > 0) b -= 3;
-            sunchop += 2;
-            if (r > 0 || g > 0 || b > 0) {
-                timer = setTimeout(function () {
-                    darken(context, r, g, b, sunchop)
-                }, 100);
-            }
-        }
+     darken(context, 153, 153, 255, 1);
+   }
+ }
 
-        function degreesToRadians(degrees) {
-            return (Math.PI / 180) * degrees;
-        }
+ function darken(context, r, g, b, sunchop) {
+   context.canvas.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+   context.beginPath();
+   context.strokeStyle = "rgb(" + r + "," + g + "," + b + ")";
+   context.lineWidth = sunchop;
+   context.arc(400, 0, 70, 0, degreesToRadians(360), true);
+   context.stroke();
+   if (r > 0) r -= 3;
+   if (g > 0) g -= 3;
+   if (b > 0) b -= 3;
+   sunchop += 2;
+   if (r > 0 || g > 0 || b > 0) {
+     timer = setTimeout(function () {
+       darken(context, r, g, b, sunchop)
+     }, 100);
+   }
+ }
+
+ function degreesToRadians(degrees) {
+   return (Math.PI / 180) * degrees;
+ }
