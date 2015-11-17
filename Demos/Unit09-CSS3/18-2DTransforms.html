@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSS3 Transforms</title>
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link type="text/css" rel="stylesheet" href="stylesheets/prettify.css">
+  <link type="text/css" rel="stylesheet" href="stylesheets/displayStyleBlock.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/18-2DTransforms.css">
+</head>
+<body>
+  <span class="container">
+    <aside id="styleRule">
+      <code id="code-top">
+        <pre>
+          transform: skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
+          transform-origin: 0% 0%;
+        </pre>
+      </code>
+    </aside>
+    <form>
+      <button class="btn btn-danger" id="resetBtn">Reset</button>
+      <hr>
+      <table class="table" id="t1" border="1" cellspacing="0" cellpadding="5">
+        <tr>
+          <td><label for="originX">Origin X</label></td>
+          <td class="min">0</td>
+          <td><input id="originX" type="range" min="0" max="100" value="0" step="10"></td>
+          <td class="max">100</td>
+          <td class="currVal"><output id="originXO">0</output></td>
+        </tr>
+        <tr>
+          <td><label for="originY">Origin Y</label></td>
+          <td class="min">0</td>
+          <td><input id="originY" type="range" min="0" max="100" value="0" step="10"></td>
+          <td class="max">100</td>
+          <td class="currVal"><output id="originYO">0</output></td>
+        </tr>
+        <tr>
+          <td><label for="skewDegrees">Skew Degrees</label></td>
+          <td class="min">-45</td>
+          <td><input id="skewDegrees" type="range" min="-45" max="45" value="0" step="15"></td>
+          <td class="max">45</td>
+          <td class="currVal" width="30"><output id="skewDegreesO">0</output></td>
+        </tr>
+        <tr>
+          <td><label for="rotateDegrees">Rotate Degrees</label></td>
+          <td class="min">-360</td>
+          <td><input id="rotateDegrees" type="range" min="-360" max="360" value="0" step="15"></td>
+          <td class="max">360</td>
+          <td class="currVal"><output id="rotateDegreesO">0</output></td>
+        </tr>
+      </table>
+      <table class="table" id="t2" border="1" cellspacing="0" cellpadding="5">
+        <tr>
+          <td><label for="scaleX">ScaleX</label></td>
+          <td class="min">.5</td>
+          <td><input id="scaleX" type="range" min=".5" max="2" value="1" step=".5"></td>
+          <td class="max">2</td>
+          <td class="currVal" width="30"><output id="scaleXO">1</output></td>
+        </tr>
+        <tr>
+          <td><label for="scaleY">ScaleY</label></td>
+          <td class="min">.5</td>
+          <td><input id="scaleY" type="range" min=".5" max="2" value="1" step=".5"></td>
+          <td class="max">2</td>
+          <td class="currVal"><output id="scaleYO">1</output></td>
+        </tr>
+        <tr>
+          <td><label for="translateX">TranslateX</label></td>
+          <td class="min">0</td>
+          <td><input id="translateX" type="range" min="0" max="200" value="0" step="10"></td>
+          <td class="max">200</td>
+          <td class="currVal"><output id="translateXO">0</output></td>
+        </tr>
+        <tr>
+          <td><label for="translateY">TranslateY</label></td>
+          <td class="min">0</td>
+          <td><input id="translateY" type="range" min="0" max="200" value="0" step="10"></td>
+          <td class="max">200</td>
+          <td class="currVal"><output id="translateYO">0</output></td>
+        </tr>
+      </table>
+      <hr>
+    </form>
+
+    <div id="original">the<br>original<br>element</div>
+    <div id="transformed">experiment with the controls above to transform this</div>
+
+    <aside>
+      <pre id="styleCodeBlock">
+      </pre>
+      <button class="btn btn-success" id="toggleBtn" onClick="toggle()">toggle style code</button>
+    </aside>
+  </span>
+
+
+  <code id="styleBlock">
+    #transformed, #original {
+      transform:         skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
+      -webkit-transform: skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
+      -moz-transform:    skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
+      -o-transform:      skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
+      -ms-transform:     skew(0deg) scale(1, 1) rotate(0deg) translate(0px, 0px);
+      transform-origin:         0% 0%;
+      -webkit-transform-origin: 0% 0%;
+      -moz-transform-origin:    0% 0%;
+      -o-transform-origin:      0% 0%;
+      -ms-transform-origin:     0% 0%;
+    }
+  </code>
+
+  <script type="text/javascript" src="scripts/18-2DTransforms.js"></script>
+  <script type="text/javascript" src="scripts/prettify.js"></script>
+  <script src="scripts/displayStyleBlock.js"></script>
+
+</body>
+</html>

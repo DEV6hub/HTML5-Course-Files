@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<title>CSS3 Transitions - multiple properties</title>
+	<link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
+	<link type="text/css" rel="stylesheet" href="stylesheets/prettify.css"/>
+	<link rel="stylesheet" type="text/css" href="stylesheets/25-transitions-multiple.css">
+</head>
+
+<body>
+
+	<code>&lt;p&gt;</code>
+	<p>hover here to switch two property values<br><u>instantly</u></p>
+
+	<code>&lt;p class="transitionable"&gt;</code>
+	<p class="transitionable">hover here to switch two property values<br><u>gradually</u></p>
+
+	<aside>
+		<pre id="styleCodeBlock" class="prettyprint"></pre>
+		<button class="btn btn-default" id="toggleBtn" onClick="toggle()">toggle style code</button>
+	</aside>
+	<code id="styleBlock">
+			p	{
+				/* starting state */
+				margin-left: 100px; opacity: .25;
+			}
+			p:hover {
+				/* ending state */
+				margin-left: 300px; opacity: 1;
+			}
+			.transitionable {
+				/* HOW the margin-left property changes */
+				-webkit-transition: margin-left 0.5s ease-in 0.5s, opacity 0.5s ease-in 1s;
+			}
+	</code>
+	<script type="text/javascript" src="scripts/prettify.js"></script>
+	<script src="scripts/displayStyleBlock.js"></script>
+</body>
+</html>

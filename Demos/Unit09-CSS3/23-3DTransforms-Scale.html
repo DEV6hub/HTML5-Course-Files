@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSS3 3D Transforms - Scale</title>
+
+  <link rel="stylesheet" type="text/css" href="stylesheets/3D-stylesheet.css">
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="stylesheets/23-3DTransforms-Scale.css">
+
+</head>
+<body>
+  <span class="container">
+    <form>
+      <table class="table" border="1" cellspacing="0" cellpadding="5">
+       <tr>
+         <th>property</th>
+         <th>min</th>
+         <th>change it here</th>
+         <th>max</th>
+         <th>current</th>
+       </tr>
+       <tr>
+         <td><label for="perspective">perspective</label></td>
+         <td class="min">100</td>
+         <td><input id="perspective" type="range" min="100" max="900" value="500" step="25"></td>
+         <td class="max">900</td>
+         <td class="currVal"><output id="perspectiveOT">500</output></td>
+       </tr>
+
+
+       <tr>
+         <td><label for="transformOriginX">transform origin X</label></td>
+         <td class="min">0</td>
+         <td><input id="transformOriginX" type="range" min="0" max="100" value="50" step="10"></td>
+         <td class="max">100</td>
+         <td class="currVal"><output id="transformOriginXOT">50%</output></td>
+       </tr>
+       <tr>
+         <td><label for="transformOriginY">transform origin Y</label></td>
+         <td class="min">0</td>
+         <td><input id="transformOriginY" type="range" min="0" max="100" value="50" step="10"></td>
+         <td class="max">100</td>
+         <td class="currVal"><output id="transformOriginYOT">50%</output></td>
+       </tr>
+
+
+       <tr>
+         <td><label for="scaleX">scaleX</label></td>
+         <td class="min">0.5</td>
+         <td><input id="scaleX" type="range" min="5" max="20" value="10" step="1"></td>
+         <td class="max">2</td>
+         <td class="currVal" bgcolor="orange"><output id="scaleXOT">1</output></td>
+       </tr>
+       <tr>
+         <td><label for="scaleY">scaleY</label></td>
+         <td class="min">0.5</td>
+         <td><input id="scaleY" type="range" min="5" max="20" value="10" step="1"></td>
+         <td class="max">2</td>
+         <td class="currVal" bgcolor="yellow"><output id="scaleYOT">1</output></td>
+       </tr>
+       <tr>
+         <td><label for="scaleZ">scaleZ</label></td>
+         <td class="min">0.5</td>
+         <td><input id="scaleZ" type="range" min="5" max="20" value="10" step="1"></td>
+         <td class="max">2</td>
+         <td class="currVal" bgcolor="lightgray"><output id="scaleZOT">1</output></td>
+       </tr>
+
+       <tr>
+         <td colspan="4"></td>
+         <td><button class="btn btn-default" id="resetBtn">Reset</button></td>
+       </tr>
+     </table>
+   </form>
+
+   <h4>Perspective: </h4><output id="perspectiveOD">500</output>
+   <div id="childBox">
+    scaleX(<output id="scaleXO">1</output>);<br>
+    scaleY(<output id="scaleYO">1</output>);<br>
+    scaleZ(<output id="scaleZO">1</output>);
+  </div>
+</span>
+<script type="text/javascript" src="scripts/23-3DTransforms-Scale.js"></script>
+</body>
+</html>
