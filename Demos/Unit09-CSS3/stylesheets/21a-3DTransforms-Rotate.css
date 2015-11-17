@@ -1,19 +1,21 @@
-  #rotateXO {
-    background-color: orange;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #rotateYO {
-    background-color: yellow;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #rotateZO {
-    background-color: lightgray;
-    margin-left: auto;
-    margin-right: auto;
-  }
+#rotateXO {
+  background-color: orange;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  #childBox {
-   -webkit-transform: rotateX(10deg) rotateY(10deg) rotateZ(10deg);
- }
+#rotateYO {
+  background-color: yellow;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#rotateZO {
+  background-color: lightgray;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#childBox {
+  -webkit-transform: rotateX(10deg) rotateY(10deg) rotateZ(10deg);
+}

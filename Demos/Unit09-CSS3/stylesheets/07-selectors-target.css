@@ -1,23 +1,28 @@
 /* select any paragraph that is the target of a link */
- p:target {
+
+p:target {
   color: #eee;
   background-color: darkred;
-  font-weight:700;
+  font-weight: 700;
 }
+
 body {
   margin: 10px;
   padding: 10px;
 }
+
 a {
   background-color: black;
   color: white;
   text-decoration: none;
   padding: 10px;
 }
+
 p {
   padding: 10px;
   margin-top: 20px;
 }
-code{
+
+code {
   display: none;
 }

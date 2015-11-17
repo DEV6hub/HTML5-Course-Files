@@ -1,28 +1,28 @@
 label {
-    display: block;
-    float: left;
-    clear: both;
-    font-weight: bold;
-    width: 100px;
+  display: block;
+  float: left;
+  clear: both;
+  font-weight: bold;
+  width: 100px;
 }
 
 div {
-    margin: 8px 0px;
+  margin: 8px 0px;
 }
 
 legend {
-    font-weight: bold;
-    font-size: x-large;
+  font-weight: bold;
+  font-size: x-large;
 }
 
 fieldset fieldset legend {
-    font-size: large;
+  font-size: large;
 }
 
 *:invalid {
-    color: #f00;
+  color: #f00;
 }
 
 #rangeoutput {
-    display: none;
+  display: none;
 }

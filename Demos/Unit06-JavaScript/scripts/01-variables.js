@@ -14,6 +14,6 @@ var age = 25.2;
 var now = new Date();
 
 var show = function (value) {
-alert(value);
-// console.log(value);
+  alert(value);
+  // console.log(value);
 };

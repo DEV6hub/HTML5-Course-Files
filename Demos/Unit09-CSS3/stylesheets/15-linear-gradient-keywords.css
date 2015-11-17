@@ -2,7 +2,8 @@
   width: 100px;
   height: 100px;
 }*/
-div[id^="div"]{
+
+div[id^="div"] {
   display: inline-block;
   margin: 5px;
   width: 100px;
@@ -10,91 +11,136 @@ div[id^="div"]{
   margin-left: auto;
   margin-right: auto;
 }
+
 p {
   font-size: 1em;
   color: white;
   padding: 10px
 }
+
 #frameContainer {
   width: 600px;
-  height:600px;
+  height: 600px;
   padding: 10px;
 }
+
 #frame {
   width: 600px;
-  height:600px;
+  height: 600px;
   border: none;
 }
+
 #divsContainer {
   width: 455px;
   height: 225px;
   border: 5px solid black;
   padding: 7px;
 }
+
 output {
   width: 200px;
 }
+
 #div_r {
   background-colosr: red;
-  background-image: -webkit-linear-gradient(right, red, blue); /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image:    -moz-linear-gradient(right, red, blue); /* FF3.6 */
-  background-image:     -ms-linear-gradient(right, red, blue); /* IE10 */
-  background-image:      -o-linear-gradient(right, red, blue); /* Opera 11.10+ */
-  background-image:         linear-gradient(to right, red, blue);
+  background-image: -webkit-linear-gradient(right, red, blue);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(right, red, blue);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(right, red, blue);
+  /* IE10 */
+  background-image: -o-linear-gradient(right, red, blue);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(to right, red, blue);
 }
+
 #div_tr {
   background-color: red;
-  background-image: -webkit-linear-gradient(top right, red, blue); /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image:    -moz-linear-gradient(top right, red, blue); /* FF3.6 */
-  background-image:     -ms-linear-gradient(top right, red, blue); /* IE10 */
-  background-image:      -o-linear-gradient(top right, red, blue); /* Opera 11.10+ */
-  background-image:         linear-gradient(to top right, red, blue);
+  background-image: -webkit-linear-gradient(top right, red, blue);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top right, red, blue);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top right, red, blue);
+  /* IE10 */
+  background-image: -o-linear-gradient(top right, red, blue);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(to top right, red, blue);
 }
+
 #div_t {
   background-color: red;
-  background-image: -webkit-linear-gradient(top, red, blue); /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image:    -moz-linear-gradient(top, red, blue); /* FF3.6 */
-  background-image:     -ms-linear-gradient(top, red, blue); /* IE10 */
-  background-image:      -o-linear-gradient(top, red, blue); /* Opera 11.10+ */
-  background-image:         linear-gradient(to top, red, blue);
+  background-image: -webkit-linear-gradient(top, red, blue);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, red, blue);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top, red, blue);
+  /* IE10 */
+  background-image: -o-linear-gradient(top, red, blue);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(to top, red, blue);
 }
+
 #div_tl {
   background-color: red;
-  background-image: -webkit-linear-gradient(top left, red, blue); /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image:    -moz-linear-gradient(top left, red, blue); /* FF3.6 */
-  background-image:     -ms-linear-gradient(top left, red, blue); /* IE10 */
-  background-image:      -o-linear-gradient(top left, red, blue); /* Opera 11.10+ */
-  background-image:         linear-gradient(to top left, red, blue);
+  background-image: -webkit-linear-gradient(top left, red, blue);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top left, red, blue);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(top left, red, blue);
+  /* IE10 */
+  background-image: -o-linear-gradient(top left, red, blue);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(to top left, red, blue);
 }
+
 #div_l {
   background-color: red;
-  background-image: -webkit-linear-gradient(left, red, blue); /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image:    -moz-linear-gradient(left, red, blue); /* FF3.6 */
-  background-image:     -ms-linear-gradient(left, red, blue); /* IE10 */
-  background-image:      -o-linear-gradient(left, red, blue); /* Opera 11.10+ */
-  background-image:         linear-gradient(to left, red, blue);
+  background-image: -webkit-linear-gradient(left, red, blue);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(left, red, blue);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(left, red, blue);
+  /* IE10 */
+  background-image: -o-linear-gradient(left, red, blue);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(to left, red, blue);
 }
+
 #div_bl {
   background-color: red;
-  background-image: -webkit-linear-gradient(bottom left, red, blue); /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image:    -moz-linear-gradient(bottom left, red, blue); /* FF3.6 */
-  background-image:     -ms-linear-gradient(bottom left, red, blue); /* IE10 */
-  background-image:      -o-linear-gradient(bottom left, red, blue); /* Opera 11.10+ */
-  background-image:         linear-gradient(to bottom left, red, blue);
+  background-image: -webkit-linear-gradient(bottom left, red, blue);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(bottom left, red, blue);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(bottom left, red, blue);
+  /* IE10 */
+  background-image: -o-linear-gradient(bottom left, red, blue);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(to bottom left, red, blue);
 }
+
 #div_b {
   background-color: red;
-  background-image: -webkit-linear-gradient(bottom, red, blue); /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image:    -moz-linear-gradient(bottom, red, blue); /* FF3.6 */
-  background-image:     -ms-linear-gradient(bottom, red, blue); /* IE10 */
-  background-image:      -o-linear-gradient(bottom, red, blue); /* Opera 11.10+ */
-  background-image:         linear-gradient(to bottom, red, blue);
+  background-image: -webkit-linear-gradient(bottom, red, blue);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(bottom, red, blue);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(bottom, red, blue);
+  /* IE10 */
+  background-image: -o-linear-gradient(bottom, red, blue);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(to bottom, red, blue);
 }
+
 #div_br {
   background-color: red;
-  background-image: -webkit-linear-gradient(bottom right, red, blue); /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image:    -moz-linear-gradient(bottom right, red, blue); /* FF3.6 */
-  background-image:     -ms-linear-gradient(bottom right, red, blue); /* IE10 */
-  background-image:      -o-linear-gradient(bottom right, red, blue); /* Opera 11.10+ */
-  background-image:         linear-gradient(to bottom right, red, blue);
+  background-image: -webkit-linear-gradient(bottom right, red, blue);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(bottom right, red, blue);
+  /* FF3.6 */
+  background-image: -ms-linear-gradient(bottom right, red, blue);
+  /* IE10 */
+  background-image: -o-linear-gradient(bottom right, red, blue);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(to bottom right, red, blue);
 }

@@ -1,11 +1,11 @@
 var habitats,
-cities,
-numStreets,
-sequence,
-titles,
-mixed,
-explore,
-show;
+  cities,
+  numStreets,
+  sequence,
+  titles,
+  mixed,
+  explore,
+  show;
 
 // Array - verbose
 habitats = new Array();
@@ -34,27 +34,27 @@ titles = [
 // Block 5: Array of mixed element types
 mixed = [0, 'one', 2, 'three'];
 explore = function () {
- console.log(mixed);
- console.log('Mixed array: ' + mixed);
- console.log('Length: ' + mixed.length);
- console.log('Sorted: ' + mixed.sort());
- console.log('mixed[2]: ' + mixed[2]);
- console.log('mixed["2"]: ' + mixed["2"]);
- console.log('mixed["three"]: ' + mixed["three"]);
- console.log('typeof mixed: ' + (typeof mixed));
- console.log('mixed.constructor === Array: ' + (mixed.constructor === Array));
- console.log('--------------------');
+  console.log(mixed);
+  console.log('Mixed array: ' + mixed);
+  console.log('Length: ' + mixed.length);
+  console.log('Sorted: ' + mixed.sort());
+  console.log('mixed[2]: ' + mixed[2]);
+  console.log('mixed["2"]: ' + mixed["2"]);
+  console.log('mixed["three"]: ' + mixed["three"]);
+  console.log('typeof mixed: ' + (typeof mixed));
+  console.log('mixed.constructor === Array: ' + (mixed.constructor === Array));
+  console.log('--------------------');
 
- mixed[10] = 'I feel out of place here...';
- console.log('mixed[9]: ' + mixed[9]);
- console.log('mixed[10]: ' + mixed[10]);
- console.log('Length: ' + mixed.length);
- console.log(mixed);
- console.log('--------------------');
+  mixed[10] = 'I feel out of place here...';
+  console.log('mixed[9]: ' + mixed[9]);
+  console.log('mixed[10]: ' + mixed[10]);
+  console.log('Length: ' + mixed.length);
+  console.log(mixed);
+  console.log('--------------------');
 
- mixed['regular property'] = 'I\'m just a regular property';
- console.log('mixed[\'regular property\']: ' + mixed['regular property']);
- console.log(mixed);
+  mixed['regular property'] = 'I\'m just a regular property';
+  console.log('mixed[\'regular property\']: ' + mixed['regular property']);
+  console.log(mixed);
 };
 
 show = function (value) {

@@ -1,24 +1,35 @@
 <!doctype html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>HTML5 Form - Input Range Type</title>
-    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <meta charset="UTF-8">
+  <title>HTML5 Form - Input Range Type</title>
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css" >
 </head>
+
 <body>
-    <div class="container">
-        <div class="form-group">
+  <div class="container">
+    <div class="form-group">
+      <br>
+      <form method="post" action="../../html5-forms/Demos/example.xyz">
+        <label for="pace">
+          <strong>How is the pace of the class?</strong>
+          <br>
+          <small>(1=way too slow, 9=way too fast, 5=perfect):</small>
+        </label>
         <br>
-            <form method="post">
-                <label for="pace">
-                    <strong>How is the pace of the class?</strong><br>
-                    <small>(1=way too slow, 9=way too fast, 5=perfect):</small>
-                </label><br>
-                <input type="range" name="pace" id="pace" min="1" max="9" value="5"
-                onchange="document.getElementById('paceoutput').innerHTML=this.value;">
-                <output for="pace" id="paceoutput">5</output>
-            </form>
-        </div>
+        <form method="post">
+          <label for="pace">
+            <strong>How is the pace of the class?</strong><br>
+            <small>(1=way too slow, 9=way too fast, 5=perfect):</small>
+          </label><br>
+          <input type="range" name="pace" id="pace" min="1" max="9" value="5"
+          onchange="document.getElementById('paceoutput').innerHTML=this.value;">
+          <output for="pace" id="paceoutput">5</output>
+        </form>
+      </div>
     </div>
+  </div>
 </body>
+
 </html>

@@ -1,0 +1,22 @@
+{
+  "name": "HTML5-Course-Files",
+  "homepage": "https://github.com/NewTorontoGroup/HTML5-Course-Files",
+  "authors": [
+    "Douglas Riches <dougr@newyyz.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4"
+  }
+}

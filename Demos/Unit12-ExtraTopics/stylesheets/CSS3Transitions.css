@@ -1,92 +1,92 @@
-.center{
-    margin-left: 0 auto;
-    margin-right: 0 auto;
+.center {
+  margin-left: 0 auto;
+  margin-right: 0 auto;
 }
-#springy {
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
 
-    width: 150px;
-    height: 50px;
-    background-color: #CCC3D9;
-    border: 1px solid #000;
-    -webkit-box-shadow: 5px 5px 5px #aaa;
-    margin-bottom: 20px;
-    padding: 2px;
-    text-align: center;
-    cursor: pointer;
+#springy {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  width: 150px;
+  height: 50px;
+  background-color: #CCC3D9;
+  border: 1px solid #000;
+  -webkit-box-shadow: 5px 5px 5px #aaa;
+  margin-bottom: 20px;
+  padding: 2px;
+  text-align: center;
+  cursor: pointer;
 }
 
 #springy:hover {
-    width: 300px;
-    height: 300px;
-    cursor: pointer;
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
 }
 
 #whacky {
-    width: 150px;
-    height: 50px;
-    background-color: #fdf;
-    border: 1px solid #000;
-    -webkit-box-shadow: 5px 5px 5px #aaa;
-    margin-bottom: 20px;
-    padding: 2px;
-    text-align: center;
-    cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-color: #fdf;
+  border: 1px solid #000;
+  -webkit-box-shadow: 5px 5px 5px #aaa;
+  margin-bottom: 20px;
+  padding: 2px;
+  text-align: center;
+  cursor: pointer;
 }
 
 #whacky:hover {
-    cursor: pointer;
-    -webkit-transform: skew(30deg) scale(1.1, 1.1) rotate(40deg) translate(10px, 20px);
+  cursor: pointer;
+  -webkit-transform: skew(30deg) scale(1.1, 1.1) rotate(40deg) translate(10px, 20px);
 }
 
-#shake{
-    width: 150px;
-    height: 50px;
-    background-color: #DDF3FF;
-    border: 1px solid #000;
-    -webkit-box-shadow: 5px 5px 5px #aaa;
-    margin-bottom: 20px;
-    padding: 2px;
-    text-align: center;
-    cursor: pointer;
+#shake {
+  width: 150px;
+  height: 50px;
+  background-color: #DDF3FF;
+  border: 1px solid #000;
+  -webkit-box-shadow: 5px 5px 5px #aaa;
+  margin-bottom: 20px;
+  padding: 2px;
+  text-align: center;
+  cursor: pointer;
 }
 
-#wobble{
-    width: 150px;
-    height: 50px;
-    background-color: #DDFFE8;
-    border: 1px solid #000;
-    -webkit-box-shadow: 5px 5px 5px #aaa;
-    margin-bottom: 20px;
-    padding: 2px;
-    text-align: center;
-    cursor: pointer;
+#wobble {
+  width: 150px;
+  height: 50px;
+  background-color: #DDFFE8;
+  border: 1px solid #000;
+  -webkit-box-shadow: 5px 5px 5px #aaa;
+  margin-bottom: 20px;
+  padding: 2px;
+  text-align: center;
+  cursor: pointer;
 }
 
-#rubberBand{
-      width: 150px;
-    height: 50px;
-    background-color: #FFFDDD;
-    border: 1px solid #000;
-    -webkit-box-shadow: 5px 5px 5px #aaa;
-    margin-bottom: 20px;
-    padding: 2px;
-    text-align: center;
-    cursor: pointer;
+#rubberBand {
+  width: 150px;
+  height: 50px;
+  background-color: #FFFDDD;
+  border: 1px solid #000;
+  -webkit-box-shadow: 5px 5px 5px #aaa;
+  margin-bottom: 20px;
+  padding: 2px;
+  text-align: center;
+  cursor: pointer;
 }
 
-#pulse{
-      width: 150px;
-    height: 50px;
-    background-color: #FFE0DD;
-    border: 1px solid #000;
-    -webkit-box-shadow: 5px 5px 5px #aaa;
-    margin-bottom: 20px;
-    padding: 2px;
-    text-align: center;
-    cursor: pointer;
+#pulse {
+  width: 150px;
+  height: 50px;
+  background-color: #FFE0DD;
+  border: 1px solid #000;
+  -webkit-box-shadow: 5px 5px 5px #aaa;
+  margin-bottom: 20px;
+  padding: 2px;
+  text-align: center;
+  cursor: pointer;
 }

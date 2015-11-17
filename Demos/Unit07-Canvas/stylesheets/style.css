@@ -1,58 +1,58 @@
 #my-canvas {
-    border: 1px dotted #006;
+  border: 1px dotted #006;
 }
 
 label {
-    display: block;
-    float: left;
-    width: 100px;
-    clear: both;
-    font-weight: bold;
+  display: block;
+  float: left;
+  width: 100px;
+  clear: both;
+  font-weight: bold;
 }
 
 label[for='red'] {
-    color: red;
+  color: red;
 }
 
 label[for='green'] {
-    color: green;
+  color: green;
 }
 
 label[for='blue'] {
-    color: blue;
+  color: blue;
 }
 
 .container {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 output {
-    display: block;
-    float: left;
+  display: block;
+  float: left;
 }
 
 menu {
-    display: block;
-    float: left;
+  display: block;
+  float: left;
 }
 
 menu h1 {
-    font-size: large;
-    border-bottom: 1px solid #000;
+  font-size: large;
+  border-bottom: 1px solid #000;
 }
 
 #codecontainer {
-    clear: both;
+  clear: both;
 }
 
 #code {
-    width: 496px;
-    height: 200px;
-    float: left;
-    margin-right: 10px;
+  width: 496px;
+  height: 200px;
+  float: left;
+  margin-right: 10px;
 }
 
 section#coordinates {
-    display: block;
-    float: left;
+  display: block;
+  float: left;
 }

@@ -1,4 +1,4 @@
-function greetMe(x){
+function greetMe(x) {
   alert("Hello " + x);
   console.log("Hello " + x);
 }

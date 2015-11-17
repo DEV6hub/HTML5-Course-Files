@@ -3,11 +3,13 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 #translateYO {
   background-color: yellow;
   margin-left: auto;
   margin-right: auto;
 }
+
 #translateZO {
   background-color: lightgray;
   margin-left: auto;
@@ -15,5 +17,5 @@
 }
 
 #childBox {
- -webkit-transform: translateX(10px) translateY(10px) translateZ(10px);
+  -webkit-transform: translateX(10px) translateY(10px) translateZ(10px);
 }

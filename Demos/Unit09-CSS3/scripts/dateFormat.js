@@ -41,7 +41,7 @@ Date.prototype.getWeek = function (dowOffset) {
  * MIT license
  *
  * Includes enhancements by Scott Trenda <scott.trenda.net>
- * and Kris Kowal <cixar.com/~kris.kowal/>
+ * and Kris Kowal <cixar.com/~kris.kowal>
  *
  * Accepts a date, a mask, or a date and a mask.
  * Returns a formatted version of the given date.

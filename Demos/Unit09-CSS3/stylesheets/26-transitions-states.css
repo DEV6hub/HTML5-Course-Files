@@ -2,33 +2,42 @@ body {
   margin: 10px;
   padding: 10px;
 }
+
 p {
-  margin-top: -10px
+  margin-top: -10px;
   margin-bottom: 40px;
   font-size: 1.5em;
-  border:solid thick blue;
+  border: solid thick blue;
   background-color: #eee;
-  text-align:center;
+  text-align: center;
 }
+
 code {
   color: red;
-  font-size:1.25em;
+  font-size: 1.25em;
 }
+
+
 /* define HOW the margin-left property changes */
+
 p {
   -webkit-transition: margin-left 0.5s;
 }
 
+
 /* trigger the switch to the ending state using a dynamic pseudo class */
+
 #cssTransition:hover {
   margin-left: 100px;
 }
 
+
 /* trigger the switch to the ending state using a class selector that can be applied in JavaScript */
+
 #jsTransition.transitionable {
   margin-left: 100px;
 }
 
-#styleBlock{
+#styleBlock {
   display: none;
 }
