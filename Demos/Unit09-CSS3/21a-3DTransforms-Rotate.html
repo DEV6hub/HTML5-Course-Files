@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSS3 3D Transforms - Rotate</title>
+
+  <link rel="stylesheet" type="text/css" href="stylesheets/3D-stylesheet.css">
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/21a-3DTransforms-Rotate.css">
+
+</head>
+<body>
+  <span class="container">
+
+    <form class="form-group">
+      <table class="table" border="1" cellspacing="0" cellpadding="5">
+       <tr>
+         <th>property</th>
+         <th>min</th>
+         <th>change it here</th>
+         <th>max</th>
+         <th>current</th>
+       </tr>
+       <tr>
+         <td><label for="perspective">perspective</label></td>
+         <td class="min">100</td>
+         <td><input id="perspective" type="range" min="100" max="900" value="500" step="25"></td>
+         <td class="max">900</td>
+         <td class="currVal"><output id="perspectiveOT">500</output></td>
+       </tr>
+
+
+       <tr>
+         <td><label for="transformOriginX">transform origin X</label></td>
+         <td class="min">0</td>
+         <td><input id="transformOriginX" type="range" min="0" max="100" value="50" step="10"></td>
+         <td class="max">100</td>
+         <td class="currVal"><output id="transformOriginXOT">50%</output></td>
+       </tr>
+       <tr>
+         <td><label for="transformOriginY">transform origin Y</label></td>
+         <td class="min">0</td>
+         <td><input id="transformOriginY" type="range" min="0" max="100" value="50" step="10"></td>
+         <td class="max">100</td>
+         <td class="currVal"><output id="transformOriginYOT">50%</output></td>
+       </tr>
+
+
+       <tr>
+         <td><label for="rotateX">rotateX</label></td>
+         <td class="min">-90</td>
+         <td><input id="rotateX" type="range" min="-90" max="180" value="10" step="5"></td>
+         <td class="max">180</td>
+         <td class="currVal" bgcolor="orange"><output id="rotateXOT">10</output></td>
+       </tr>
+       <tr>
+         <td><label for="rotateY">rotateY</label></td>
+         <td class="min">-90</td>
+         <td><input id="rotateY" type="range" min="-90" max="180" value="10" step="5"></td>
+         <td class="max">180</td>
+         <td class="currVal" bgcolor="yellow"><output id="rotateYOT">10</output></td>
+       </tr>
+       <tr>
+         <td><label for="rotateZ">rotateZ</label></td>
+         <td class="min">-90</td>
+         <td><input id="rotateZ" type="range" min="-90" max="180" value="10" step="5"></td>
+         <td class="max">180</td>
+         <td class="currVal" bgcolor="lightgray"><output id="rotateZOT">10</output></td>
+       </tr>
+
+       <tr>
+        <td><label for="backface">backface visible</label></td>
+        <td colspan="3"><input id="backface" type="checkbox" value="1" checked></td>
+        <td class="currVal"><output id="backfaceOT">visible</output></td>
+      </tr>
+
+      <tr>
+       <td colspan="4"></td>
+       <td><button class="btn btn-default" id="resetBtn">Reset</button></td>
+     </tr>
+   </table>
+ </form>
+
+ <h4>Perspective:</h4>
+ <output id="perspectiveOD">500</output>
+ <div id="childBox">
+  rotateX(<output id="rotateXO">10</output>deg);<br>
+  rotateY(<output id="rotateYO">10</output>deg);<br>
+  rotateZ(<output id="rotateZO">10</output>deg);
+</div>
+</span>
+<script type="text/javascript" src="scripts/21a-3DTransforms-Rotate.js"></script>
+</body>
+</html>

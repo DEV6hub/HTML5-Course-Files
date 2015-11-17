@@ -18,9 +18,16 @@
           <small>(1=way too slow, 9=way too fast, 5=perfect):</small>
         </label>
         <br>
-        <input type="range" name="pace" id="pace" min="1" max="9" value="5" onchange="document.getElementById('paceoutput').innerHTML=this.value;">
-        <output for="pace" id="paceoutput">5</output>
-      </form>
+        <form method="post">
+          <label for="pace">
+            <strong>How is the pace of the class?</strong><br>
+            <small>(1=way too slow, 9=way too fast, 5=perfect):</small>
+          </label><br>
+          <input type="range" name="pace" id="pace" min="1" max="9" value="5"
+          onchange="document.getElementById('paceoutput').innerHTML=this.value;">
+          <output for="pace" id="paceoutput">5</output>
+        </form>
+      </div>
     </div>
   </div>
 </body>
