@@ -89,3 +89,9 @@ app.getFirstRecord = function (database) {
         });
     });
 };
+
+
+limit = !!parameters.limit ? parseInt(parameters.limit) : 20,
+data = Posts.find({}, {limit: limit, fields: {title: 1, author: 1, url: 1, submitted: 1, }}).fetch();
+
+
