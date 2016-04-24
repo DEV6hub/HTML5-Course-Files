@@ -1,0 +1,81 @@
+html
+  head
+    meta
+    title
+      "HTML5 Layout"
+    link
+  body
+    div#container
+      header
+        hgroup
+          h1
+            "HTML5 Solutions"
+          h2
+            "HTML5 Products and Services"
+        img
+      nav
+        ul
+          li
+            "Home"
+          li
+            a
+              "Products"
+          li
+            a
+              "Services"
+          li
+            a
+              "About"
+      div#content
+        div#services
+          h1
+            Services
+          div#training
+            h2
+              HTML5 Training
+            img
+            p
+              "Lorem ipsum ..."
+          div#consulting
+            h2
+              HTML5 Consulting
+            img
+            p
+              "Lorem ipsum ..."
+        div#products
+          h1
+            Products
+          div#editor
+            h2
+              HTML5 Editor
+            img
+            p
+              "Lorem ipsum ..."
+          div#templates
+            h2
+              HTML5 Templates
+            img
+            p
+              "Lorem ipsum ..."
+      aside
+        div
+          h3
+            Partner 1
+          hr
+          p
+            "Lorem ipsum ..."
+        div
+          h3
+            Partner 2
+          hr
+          p
+            "Lorem ipsum ..."
+        div
+          h3
+            Partner 3
+          hr
+          p
+            "Lorem ipsum ..."
+      footer
+        p
+          “DEV6. All rights reserved."

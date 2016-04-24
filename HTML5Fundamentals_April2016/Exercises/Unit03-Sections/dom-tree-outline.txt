@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta>
+    <title>
+      DOM Tree Outline Exercise
+    <link>
+              ##this link should reference your bootstrap file (optional)
+    <link>
+              ##this link should reference the stylesheet given to you
+  <body>
+    <div id="container">
+      ##optional
+      <header>
+        <h1>
+          HTML5 Course
+          <img>
+          ##reference the HTML5 logo that can be found in images
+      <hgroup>
+        <h1>
+          Document Object Model
+        <h2>
+          "DOM
+      <section>
+        <h3>
+          What is the DOM?
+        <p>
+          Document Object Model (DOM) is a programming interface for
+          <strong>
+            HTML
+          and XML documents.
+      <section>
+        <h3>
+          "What is the DOM tree?"
+        <p>
+          <strong>
+            Document Object Model (DOM)
+            ##this should be in strong tags
+          are organized in tree structures and can be addressed and manipulated by using methods on the object
+          ##this should not be in strong tags
+      <aside>
+        <h3>
+          Resources
+        <ul>
+          <li>
+            <a>
+              http://www.w3.org/DOM/
+              W3 DOM
+          <li>
+            <a>
+              https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+              Mozilla Developer Network
