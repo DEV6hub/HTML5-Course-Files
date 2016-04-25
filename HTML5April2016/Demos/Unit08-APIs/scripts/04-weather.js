@@ -12,6 +12,6 @@ function getWeather() {
       console.log(xDoc);
     }
   };
-  xhr.open("GET", "http://api.openweathermap.org/data/2.5/weather?q=Toronto,on&appid=2de143494c0b295cca9337e1e96b00e0");
+  xhr.open("GET", "http://api.openweathermap.org/data/2.5/weather?id=2172797&appid=822dac90eb59a49f6ef6eacbefbc4e74");
   xhr.send();
 }
